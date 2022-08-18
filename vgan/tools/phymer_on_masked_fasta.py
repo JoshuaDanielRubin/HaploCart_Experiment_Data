@@ -5,7 +5,8 @@ import concurrent.futures
 
 phymer="nice python /home/ctools/phy-mer-master/Phy-Mer.py /home/ctools/phy-mer-master/PhyloTree_b16_k12.txt"
 
-IDS = ["L0a1a1", "HV4b", "L1c4b", "B2b3a", "H2a2a1", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1"]
+IDS = ["L0a1a1", "HV4b", "L1c4b", "B2b3a", "H2a2a1", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1", \
+       ["X3a", "E1a1b", "V3", "S1a", "I2b", "F1a1", "U2e1b1", "L3b1", "P", "D1", "A2", "Z1a", "Y1b"]
 MASKN=range(0, 16001, 1000)
 REPLICATES = [str(x) for x in range(100)]
 

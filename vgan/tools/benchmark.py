@@ -4,7 +4,8 @@ from subprocess import STDOUT, call, PIPE
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Pool
 
-IDS = ["L0a1a1", "HV4b", "C1b", "L1c4b", "B2b3a", "H2a2a1", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1"]
+IDS = ["L0a1a1", "HV4b", "C1b", "L1c4b", "B2b3a", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1", \
+      "X3a", "E1a1b", "V3", "S1a", "I2b", "F1a1", "U2e1b1", "L3b1", "P", "D1", "A2", "Z1a", "Y1b"]
 THOUSAND_GENOME_IDS = ["NA19661", "HG00473","HG01051","HG02666","HG03112","NA18510","NA19036","NA20518"]
 LENGTHS=["50", "100"]
 FQRATES=["0.03", "0.04", "0.05", "0.06", "0.07", "0.08", "0.09", "0.1", "0.2", "0.3"]
@@ -53,7 +54,7 @@ def fastq_with_numt(tup):
 
 def mask(tup):
     (id, rep, N) = tup
-    return subprocess.Popen(["./../bin/vgan haplocart -t 15 -f " + "../src/simulations/mask/" + id + "_mask" + str(N) + "_rep" + str(rep) + \
+    return subprocess.Popen(["./../bin/vgan haplocart -t 35 -f " + "../src/simulations/mask/" + id + "_mask" + str(N) + "_rep" + str(rep) + \
     ".fa -s " + id + "_mask" + str(N) + "_rep" + str(rep) + " -o ../data/haplocart_results/mask.txt"], shell=True)
 
 
@@ -97,25 +98,25 @@ def run():
 
    # Thousand Genome BAMS
 
-    counter = 0
-    for replicate in REPLICATES:
-        for id in THOUSAND_GENOME_IDS:
-            for target in BAMTARGETS:
-                file = id+"_"+replicate+"."+target+".bam"
-                p = bam((id, target, replicate, file))
-                counter += 1
-                if counter % 15 == 0:
-                    p.wait()
+    #counter = 0
+    #for replicate in REPLICATES:
+    #    for id in THOUSAND_GENOME_IDS:
+    #        for target in BAMTARGETS:
+    #            file = id+"_"+replicate+"."+target+".bam"
+    #            p = bam((id, target, replicate, file))
+    #            counter += 1
+    #            if counter % 15 == 0:
+    #                p.wait()
 
     # Masking
-    #counter = 0
-    #for id in IDS:
-    #    for rep in REPLICATES:
-    #        for N in MASKN:
-    #            p = mask((id, rep, N))
-    #            counter += 1
-    #            if counter % 25 == 0:
-    #                p.wait()
+    counter = 0
+    for id in IDS:
+        for rep in REPLICATES:
+            for N in MASKN:
+                p = mask((id, rep, N))
+                counter += 1
+                if counter % 20 == 0:
+                    p.wait()
 
 
 if __name__ == "__main__":

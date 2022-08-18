@@ -3,6 +3,12 @@ from matplotlib import pyplot as plt
 import pickle
 import matplotlib.patches as mpatches
 
+def is_correct(score):
+    if str(score) == "0":
+        return 1
+    else:
+        return 0
+
 def define_box_properties(plot_name, color_code, label):
     for k, v in plot_name.items():
         plt.setp(plot_name.get(k), color=color_code)
@@ -52,27 +58,27 @@ pm_scores = [pm_0, pm_1000, pm_2000, pm_3000, pm_4000, pm_5000, pm_6000, pm_7000
 
 for sample, score in haplogrep_results.items():
     N = int(sample.split("mask")[-1].split("_")[0])
-    hg_scores[int(N/1000)].append(int(score))
+    hg_scores[int(N/1000)].append(is_correct(int(score)))
 
 for sample, score in phymer_results.items():
     N = int(sample.split("mask")[-1].split("_")[0])
-    pm_scores[int(N/1000)].append(int(score))
+    pm_scores[int(N/1000)].append(is_correct(int(score)))
 
 plt.figure(figsize=(10, 8))
 plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
 plt.ylabel("Levenshtein distance between true and predicted")
-plt.xlabel("Number of contniguous missing bases")
+plt.xlabel("Number of contiguous missing bases")
 
-pos = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33]
 nans = [float('nan'), float('nan')]
+hg_data_prop = [(sum(_) / len(_)) if len(_) > 0 else nans for _ in hg_data]
+hc_data_prop = [(sum(__) / len(__)) if len(__) > 0 else nans for __ in hc_data]
 
-hg_vplot = plt.violinplot([val or nans for val in hg_scores], positions = pos, showmeans=True)
-hc_vplot = plt.violinplot([val or nans for val in hc_scores], positions = [x - 0.25 for x in pos], showmeans=True)
-pm_vplot = plt.violinplot([val or nans for val in pm_scores], positions = [x + 0.25 for x in pos], showmeans=True)
+hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
+hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
 
-plt.setp(hc_vplot['bodies'], facecolor='orange', edgecolor='orange')
-plt.setp(hg_vplot['bodies'], facecolor='blue', edgecolor='blue')
-plt.setp(pm_vplot['bodies'], facecolor='green', edgecolor='green')
+hc_callrate_bar = plt.bar(hc_callrate_pos, hc_call_rate, color="orange", label="HaploCart call rate", width=0.2)
+hg_callrate_bar = plt.bar(hg_callrate_pos, hg_call_rate, color="blue", label="HaploGrep2 call rate", width=0.2)
+hg_callrate_bar = plt.bar(pm_callrate_pos, pm_call_rate, color="green", label="HaploGrep2 call rate", width=0.2)
 
 plt.xticks(pos, [str(x) for x in range(0, 16001, 1000)], rotation=45)
 

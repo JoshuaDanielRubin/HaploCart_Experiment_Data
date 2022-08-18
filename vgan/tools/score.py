@@ -67,6 +67,7 @@ def get_haplocheck_scores(score_dict, result_filepath, true, bam=False, numt=Fal
                 score_dict.update({file:predscore})
         return score_dict
 
+
 def get_haplogrep_mask_scores(score_dict, result_dirpath):
     for file in os.listdir(result_dirpath):
         with gzip.open(result_dirpath + file, "r") as g:
@@ -136,8 +137,8 @@ def score_fastq():
     #haplocart_score_dict_no_numt = get_haplocart_scores("../data/haplocart_results/fastq_no_numt.txt")
     #pickle.dump(haplocart_score_dict_no_numt, open("../data/pickles/haplocart_fastq_no_numt.pk", "wb"))
 
-    haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
-    pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
+    #haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
+    #pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
 
 
 def score_mask():
@@ -148,8 +149,11 @@ def score_mask():
     #with open("../data/pickles/haplogrep_mask.pk", "wb") as g:
     #    pickle.dump(haplocheck_score_dict, g)
 
-    haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
-    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
+    #haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
+    #pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
+
+    #phymer_score_dict = get_phymer_scores("../data/phymer_mask")
+    #pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
 
 
 def get_haplogrep_reported_confidence_bam():

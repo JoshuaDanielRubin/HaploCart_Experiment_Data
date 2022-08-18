@@ -184,7 +184,7 @@ def plot_fastq_no_bias():
 
     for i, _ in enumerate(ax_lst):
         _.set_ylabel("Reported Confidence")
-        _.set_xlabel("Coverage Depth (x)")
+        _.set_xlabel("Coverage Depth (X)")
         _.set_title(fastq_ids[i])
 
     nans = [float('nan'), float('nan')]
@@ -210,10 +210,10 @@ def plot_fastq_no_bias():
         ax_lst[i].plot(hgt, hgp(hgt), ':')
         ax_lst[i].plot(hct, hcp(hct), ':')
 
-    hg_patch = mpatches.Patch(color='blue', label='HaploGrep2')
-    hc_patch = mpatches.Patch(color='orange', label='HaploCart')
-    hg_trend_patch = mlines.Line2D([0], [0], color='green', label='HaploGrep2', linestyle=':', linewidth=1)
-    hc_trend_patch = mlines.Line2D([0], [0], color='red', label='HaploCart', linestyle=':', linewidth=1)
+    hg_patch = mpatches.Patch(color='blue', label='HaploGrep2 posterior distribution')
+    hc_patch = mpatches.Patch(color='orange', label='HaploCart posterior distribution')
+    hg_trend_patch = mlines.Line2D([0], [0], color='green', label='HaploGrep2 polynomial regression', linestyle=':', linewidth=1)
+    hc_trend_patch = mlines.Line2D([0], [0], color='red', label='HaploCart polynomial regression', linestyle=':', linewidth=1)
 
     fig.legend(handles=[hg_patch, hc_patch, hg_trend_patch, hc_trend_patch], borderpad=0.45, prop={'size': 6.5})
 

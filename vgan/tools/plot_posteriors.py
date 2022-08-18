@@ -58,14 +58,14 @@ def plot_posterior(fastq = False, numt=False, bam=False):
                 fig, ax = plt.subplots(2,4,figsize=(32, 27))
                 ax_dict = {0:ax[0][0], 1:ax[0][1], 2:ax[0][2], 3:ax[0][3],  4:ax[1][0], 5:ax[1][1],
                            6:ax[1][2], 7:ax[1][3]}
-                ax[0][0].set_title(merged_dfs[0]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][1].set_title(merged_dfs[1]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][2].set_title(merged_dfs[2]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][3].set_title(merged_dfs[3]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][0].set_title(merged_dfs[4]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][1].set_title(merged_dfs[5]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][2].set_title(merged_dfs[6]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][3].set_title(merged_dfs[7]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
+                ax[0][0].set_title(merged_dfs[0]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][1].set_title(merged_dfs[1]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][2].set_title(merged_dfs[2]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][3].set_title(merged_dfs[3]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][0].set_title(merged_dfs[4]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][1].set_title(merged_dfs[5]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][2].set_title(merged_dfs[6]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][3].set_title(merged_dfs[7]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
 
                 ax[0][0].set_xlabel('Coverage depth (X)')
                 ax[0][1].set_xlabel('Coverage depth (X)')
@@ -82,18 +82,18 @@ def plot_posterior(fastq = False, numt=False, bam=False):
                            7:ax[1][3], 8:ax[2][0], 9:ax[2][1], 10:ax[2][2], 11:ax[2][3], 12:ax[3][0],
                            13:ax[3][1], 14:ax[3][2], 15:ax[3][3], 16:ax[4][0], 17:ax[4][1], 18:ax[4][2], 19:ax[4][3],
                            20:ax[5][0], 21:ax[5][1], 22:ax[5][2], 23:ax[5][3]}
-                ax[0][0].set_title(merged_dfs[0]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][1].set_title(merged_dfs[1]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][2].set_title(merged_dfs[2]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[0][3].set_title(merged_dfs[3]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][0].set_title(merged_dfs[4]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][1].set_title(merged_dfs[5]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][2].set_title(merged_dfs[6]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[1][3].set_title(merged_dfs[7]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[2][0].set_title(merged_dfs[8]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[2][1].set_title(merged_dfs[9]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[2][2].set_title(merged_dfs[10]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
-                ax[2][3].set_title(merged_dfs[11]['ground_truth'].iloc[0] + "posterior confidence estimates (mean over replicates) ")
+                ax[0][0].set_title(merged_dfs[0]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][1].set_title(merged_dfs[1]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][2].set_title(merged_dfs[2]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][3].set_title(merged_dfs[3]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][0].set_title(merged_dfs[4]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][1].set_title(merged_dfs[5]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][2].set_title(merged_dfs[6]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][3].set_title(merged_dfs[7]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][0].set_title(merged_dfs[8]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][1].set_title(merged_dfs[9]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][2].set_title(merged_dfs[10]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][3].set_title(merged_dfs[11]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
 
                 ax[0][0].set_xlabel('Coverage Depth (X)')
                 ax[0][1].set_xlabel('Coverage Depth (X)')
@@ -141,7 +141,7 @@ def plot_posterior(fastq = False, numt=False, bam=False):
             plt.savefig(outfile, dpi=300)
 
 
-plot_posterior(bam=True)
+#plot_posterior(bam=True)
 plot_posterior(fastq=True, numt=False)
-plot_posterior(fastq=True, numt=True)
+#plot_posterior(fastq=True, numt=True)
 

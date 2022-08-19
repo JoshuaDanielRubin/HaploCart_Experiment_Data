@@ -1,4 +1,3 @@
-autodetect_format.py - Wrapper script for the web app to automatically detect input file format.
 
 get_depths.sh - Get average depth of coverage of files for use in downsampling experiments.
 
@@ -16,13 +15,17 @@ parse_pangenome_mapping.sh - Parse the output of create_pangenome_mapping.sh to 
 
 plot_downsample.py - Create plots for downsampling experiments.
 
-plot_mappability.py - Plot mabbability of the mitogenome from GenMap data.
+plot_mask.py - Plot distribution of edit distances for the masking experiment.
+
+plot_mask_correctness.py - Plot proportion exactly correct in the masking experiment.
 
 plot_qual.py - Plot reported confidences in predictions.
 
 run_pggb.sh - Construct the graph.
 
 score.py - Routines for scoring predictions in benchmarking experiments.
+
+wrapper.py - Wrapper script for the web app.
 
 write_hsd.py - Given a set of variants with respect to the RSRS, create HSD files (note this was not strictly
                necessary, we could have gone straight from variants to FASTA instead). 

@@ -61,16 +61,16 @@ for sample, score in phymer_results.items():
 plt.figure(figsize=(10, 8))
 plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
 plt.ylabel("Levenshtein distance between true and predicted")
-plt.xlabel("Number of contniguous missing bases")
+plt.xlabel("Number of contiguous missing bases")
 
 pos = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33]
 nans = [float('nan'), float('nan')]
 
 hg_vplot = plt.violinplot([val or nans for val in hg_scores], positions = pos, showmeans=True)
-hc_vplot = plt.violinplot([val or nans for val in hc_scores], positions = [x - 0.25 for x in pos], showmeans=True)
-pm_vplot = plt.violinplot([val or nans for val in pm_scores], positions = [x + 0.25 for x in pos], showmeans=True)
+#hc_vplot = plt.violinplot([val or nans for val in hc_scores], positions = [x - 0.5 for x in pos], showmeans=True)
+pm_vplot = plt.violinplot([val or nans for val in pm_scores], positions = [x + 0.5 for x in pos], showmeans=True)
 
-plt.setp(hc_vplot['bodies'], facecolor='orange', edgecolor='orange')
+#plt.setp(hc_vplot['bodies'], facecolor='orange', edgecolor='orange')
 plt.setp(hg_vplot['bodies'], facecolor='blue', edgecolor='blue')
 plt.setp(pm_vplot['bodies'], facecolor='green', edgecolor='green')
 

@@ -1,92 +1,92 @@
-22/05/30 17:32:02 No hdfs folders created.
-22/05/30 17:32:02 Executing Job installation....
-22/05/30 17:32:02 Executing Job setups....
-22/05/30 17:32:03 Planner: WDL evaluated.
-22/05/30 17:32:03 Planner: DAG created.
-22/05/30 17:32:03   Nodes: 1
-22/05/30 17:32:03     Validate Input
-22/05/30 17:32:03       Inputs: 
-22/05/30 17:32:03       Outputs: 
-22/05/30 17:32:03   Dependencies: 0
-22/05/30 17:32:03 Executor: execute DAG...
-22/05/30 17:32:03 ------------------------------------------------------
-22/05/30 17:32:03 Validate Input
-22/05/30 17:32:03 ------------------------------------------------------
-22/05/30 17:32:14   Validate Input [10 sec]
-22/05/30 17:32:14 Planner: WDL evaluated.
-22/05/30 17:32:16 Planner: WDL evaluated.
-22/05/30 17:32:16 Details:
-22/05/30 17:32:16   Name: job-20220530-173126
-22/05/30 17:32:16   Job-Id: job-20220530-173126
-22/05/30 17:32:16   Submitted On: Mon May 30 17:32:02 CEST 2022
-22/05/30 17:32:16   Completed On: Thu Jan 01 01:00:00 CET 1970
-22/05/30 17:32:16   Inputs:
-22/05/30 17:32:16     Input Files (VCF/BAM/CRAM): /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files
-22/05/30 17:32:16     Reference FASTA: rCRS.fasta
-22/05/30 17:32:16     Input Format: bam
-22/05/30 17:32:16     Level: 0.01
-22/05/30 17:32:16     Minimal Base Quality: 20
-22/05/30 17:32:16     Minimal Map Quality: 20
-22/05/30 17:32:16     Threads for Variant Calling: 64
-22/05/30 17:32:16   Outputs:
-22/05/30 17:32:16     Contamination HTML Report: /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/report/report
-22/05/30 17:32:16     Contamination File: /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/contamination/contamination
-22/05/30 17:32:16     Final Haplogroups (using complete input profile): /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups
-22/05/30 17:32:16     BAM Output Filename: /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/temp/output/output
-22/05/30 17:32:16 Preparing Job....
-22/05/30 17:32:16 Executing Job....
-22/05/30 17:32:16 Planner: WDL evaluated.
-22/05/30 17:32:16 Planner: DAG created.
-22/05/30 17:32:16   Nodes: 4
-22/05/30 17:32:16     Variant Calling using mutserve (v2.0.0-rc7)
-22/05/30 17:32:16       Inputs: files archive level baseQ mapQ threads 
-22/05/30 17:32:16       Outputs: 
-22/05/30 17:32:16     Haplogroup Classification
-22/05/30 17:32:16       Inputs: 
-22/05/30 17:32:16       Outputs: 
-22/05/30 17:32:16     Contamination Detection
-22/05/30 17:32:16       Inputs: 
-22/05/30 17:32:16       Outputs: 
-22/05/30 17:32:16     Sending Mail
-22/05/30 17:32:16       Inputs: 
-22/05/30 17:32:16       Outputs: 
-22/05/30 17:32:16   Dependencies: 3
-22/05/30 17:32:16     Variant Calling using mutserve (v2.0.0-rc7)->Haplogroup Classification
-22/05/30 17:32:16     Haplogroup Classification->Contamination Detection
-22/05/30 17:32:16     Contamination Detection->Sending Mail
-22/05/30 17:32:16 Executor: execute DAG...
-22/05/30 17:32:16 ------------------------------------------------------
-22/05/30 17:32:16 Variant Calling using mutserve (v2.0.0-rc7)
-22/05/30 17:32:16 ------------------------------------------------------
-22/05/30 17:32:16 Command: [/usr/lib/jvm/java-13-openjdk-amd64/bin/java, -jar, mutserve.jar, call, --level, 0.01, --reference, rCRS.fasta, --mapQ, 20, --baseQ, 20, --deletions, --output, /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files/out.vcf.gz, --no-ansi, /home/projects/mito_haplotype/scripts/inference/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files, --threads, 64]
-22/05/30 17:32:16 Working Directory: /home/projects/mito_haplotype/scripts/inference/vgan/dep/haplocheck/apps/haplocheck/1.3.2
-22/05/30 17:40:13 Exit Code: 0
-22/05/30 17:40:13   Variant Calling using mutserve (v2.0.0-rc7) [7 min 56 sec]
-22/05/30 17:40:13 ------------------------------------------------------
-22/05/30 17:40:13 Haplogroup Classification
-22/05/30 17:40:13 ------------------------------------------------------
-22/05/30 17:42:04   Haplogroup Classification [1 min 51 sec]
-22/05/30 17:42:04 ------------------------------------------------------
-22/05/30 17:42:04 Contamination Detection
-22/05/30 17:42:04 ------------------------------------------------------
-22/05/30 17:45:47   Contamination Detection [3 min 42 sec]
-22/05/30 17:45:47 ------------------------------------------------------
-22/05/30 17:45:47 Sending Mail
-22/05/30 17:45:47 ------------------------------------------------------
-22/05/30 17:45:47   Sending Mail [0 sec]
-22/05/30 17:45:47 Job Execution successful.
-22/05/30 17:45:47 Exporting Data...
-22/05/30 17:45:47   Exporting parameter report...
-22/05/30 17:45:47   Added 1 downloads.
-22/05/30 17:45:47   Added 0 custom downloads.
-22/05/30 17:45:47   Exporting parameter contamination...
-22/05/30 17:45:47   Added 1 downloads.
-22/05/30 17:45:47   Added 0 custom downloads.
-22/05/30 17:45:47   Exporting parameter haplogroups...
-22/05/30 17:45:47   Added 1 downloads.
-22/05/30 17:45:47   Added 0 custom downloads.
-22/05/30 17:45:47 Data Export successful.
-22/05/30 17:45:47 Cleaning up...
-22/05/30 17:45:47 Cleaning up uploaded local files...
-22/05/30 17:45:49 Cleaning up temporary local files...
-22/05/30 17:45:49 Cleanup successful.
+22/08/12 16:49:56 No hdfs folders created.
+22/08/12 16:49:56 Executing Job installation....
+22/08/12 16:49:56 Executing Job setups....
+22/08/12 16:49:56 Planner: WDL evaluated.
+22/08/12 16:49:56 Planner: DAG created.
+22/08/12 16:49:56   Nodes: 1
+22/08/12 16:49:56     Validate Input
+22/08/12 16:49:56       Inputs: 
+22/08/12 16:49:56       Outputs: 
+22/08/12 16:49:56   Dependencies: 0
+22/08/12 16:49:56 Executor: execute DAG...
+22/08/12 16:49:56 ------------------------------------------------------
+22/08/12 16:49:56 Validate Input
+22/08/12 16:49:56 ------------------------------------------------------
+22/08/12 16:50:14   Validate Input [18 sec]
+22/08/12 16:50:14 Planner: WDL evaluated.
+22/08/12 16:50:19 Planner: WDL evaluated.
+22/08/12 16:50:19 Details:
+22/08/12 16:50:19   Name: job-20220812-164919
+22/08/12 16:50:19   Job-Id: job-20220812-164919
+22/08/12 16:50:19   Submitted On: Fri Aug 12 16:49:56 CEST 2022
+22/08/12 16:50:19   Completed On: Thu Jan 01 01:00:00 CET 1970
+22/08/12 16:50:19   Inputs:
+22/08/12 16:50:19     Input Files (VCF/BAM/CRAM): /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files
+22/08/12 16:50:19     Reference FASTA: rCRS.fasta
+22/08/12 16:50:19     Input Format: bam
+22/08/12 16:50:19     Level: 0.01
+22/08/12 16:50:19     Minimal Base Quality: 20
+22/08/12 16:50:19     Minimal Map Quality: 20
+22/08/12 16:50:19     Threads for Variant Calling: 64
+22/08/12 16:50:19   Outputs:
+22/08/12 16:50:19     Contamination HTML Report: /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/report/report
+22/08/12 16:50:19     Contamination File: /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/contamination/contamination
+22/08/12 16:50:19     Final Haplogroups (using complete input profile): /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups
+22/08/12 16:50:19     BAM Output Filename: /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/temp/output/output
+22/08/12 16:50:19 Preparing Job....
+22/08/12 16:50:19 Executing Job....
+22/08/12 16:50:19 Planner: WDL evaluated.
+22/08/12 16:50:19 Planner: DAG created.
+22/08/12 16:50:19   Nodes: 4
+22/08/12 16:50:19     Variant Calling using mutserve (v2.0.0-rc7)
+22/08/12 16:50:19       Inputs: files archive level baseQ mapQ threads 
+22/08/12 16:50:19       Outputs: 
+22/08/12 16:50:19     Haplogroup Classification
+22/08/12 16:50:19       Inputs: 
+22/08/12 16:50:19       Outputs: 
+22/08/12 16:50:19     Contamination Detection
+22/08/12 16:50:19       Inputs: 
+22/08/12 16:50:19       Outputs: 
+22/08/12 16:50:19     Sending Mail
+22/08/12 16:50:19       Inputs: 
+22/08/12 16:50:19       Outputs: 
+22/08/12 16:50:19   Dependencies: 3
+22/08/12 16:50:19     Variant Calling using mutserve (v2.0.0-rc7)->Haplogroup Classification
+22/08/12 16:50:19     Haplogroup Classification->Contamination Detection
+22/08/12 16:50:19     Contamination Detection->Sending Mail
+22/08/12 16:50:19 Executor: execute DAG...
+22/08/12 16:50:19 ------------------------------------------------------
+22/08/12 16:50:19 Variant Calling using mutserve (v2.0.0-rc7)
+22/08/12 16:50:19 ------------------------------------------------------
+22/08/12 16:50:19 Command: [/usr/lib/jvm/java-13-openjdk-amd64/bin/java, -jar, mutserve.jar, call, --level, 0.01, --reference, rCRS.fasta, --mapQ, 20, --baseQ, 20, --deletions, --output, /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files/out.vcf.gz, --no-ansi, /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/haplocheck_results/sims/input/files, --threads, 64]
+22/08/12 16:50:19 Working Directory: /home/projects/mito_haplotype/vgan/dep/haplocheck/apps/haplocheck/1.3.2
+22/08/12 17:08:10 Exit Code: 0
+22/08/12 17:08:10   Variant Calling using mutserve (v2.0.0-rc7) [17 min 50 sec]
+22/08/12 17:08:16 ------------------------------------------------------
+22/08/12 17:08:16 Haplogroup Classification
+22/08/12 17:08:16 ------------------------------------------------------
+22/08/12 17:12:01   Haplogroup Classification [3 min 45 sec]
+22/08/12 17:12:01 ------------------------------------------------------
+22/08/12 17:12:01 Contamination Detection
+22/08/12 17:12:01 ------------------------------------------------------
+22/08/12 17:19:37   Contamination Detection [7 min 35 sec]
+22/08/12 17:19:37 ------------------------------------------------------
+22/08/12 17:19:37 Sending Mail
+22/08/12 17:19:37 ------------------------------------------------------
+22/08/12 17:19:37   Sending Mail [0 sec]
+22/08/12 17:19:37 Job Execution successful.
+22/08/12 17:19:37 Exporting Data...
+22/08/12 17:19:37   Exporting parameter report...
+22/08/12 17:19:37   Added 1 downloads.
+22/08/12 17:19:37   Added 0 custom downloads.
+22/08/12 17:19:37   Exporting parameter contamination...
+22/08/12 17:19:37   Added 1 downloads.
+22/08/12 17:19:37   Added 0 custom downloads.
+22/08/12 17:19:37   Exporting parameter haplogroups...
+22/08/12 17:19:37   Added 1 downloads.
+22/08/12 17:19:37   Added 0 custom downloads.
+22/08/12 17:19:37 Data Export successful.
+22/08/12 17:19:37 Cleaning up...
+22/08/12 17:19:37 Cleaning up uploaded local files...
+22/08/12 17:19:55 Cleaning up temporary local files...
+22/08/12 17:19:55 Cleanup successful.

@@ -208,9 +208,9 @@ def get_haplogrep_reported_confidence_fastq():
         pickle.dump(confidence_dict, f)
 
 
-#score_bam()
+score_bam()
 #score_fastq()
-score_mask()
+#score_mask()
 #get_haplogrep_reported_confidence_fastq()
 
 

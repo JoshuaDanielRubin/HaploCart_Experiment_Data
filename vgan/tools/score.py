@@ -17,7 +17,10 @@ def get_edit_distance(s1, s2, numt=False):
     # Compute edit (Levenshtein) distance between true and predicted haplotypes
 
     if s2 == "U5a2b1":
-        s2 = "U5a2b"
+        return "NAN"
+
+    if s2 == "C4a1e":
+        return "NAN"
 
     if s2 == "mt-MRCA":
         s2 = "L0"
@@ -80,6 +83,20 @@ def get_haplogrep_mask_scores(score_dict, result_dirpath):
                 score_dict.update({file:predscore})
     return score_dict
 
+def get_phymer_scores(phymer_dir):
+    score_dict = {}
+    for file in os.listdir(phymer_dir):
+        if "mask" not in file:
+            continue
+        with open(phymer_dir + file, "r") as g:
+            for line in g:
+                pm_split = line.split()
+                print(pm_split)
+                id = pm_split[0]
+                pred = pm_split[1].split("-")[0].split(",")[0]
+                predscore = score(id, pred)
+                score_dict.update({file:predscore})
+
 def get_haplocart_scores(haplocart_pred_file, bam=False, numt=False):
     haplocart_pred_dict = {}
     with open(haplocart_pred_file, "r") as f:
@@ -122,7 +139,7 @@ def score_bam():
 
 def score_fastq():
 
-    #haplocheck_score_dict_no_numt = {}
+    haplocheck_score_dict_no_numt = {}
     #haplocheck_score_dict_no_numt = get_haplocheck_scores(haplocheck_score_dict_no_numt, \
     #                         "../src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups.txt", None)
     #with open("../data/pickles/hc_fastq_no_numt.pk", "wb") as g:
@@ -152,7 +169,7 @@ def score_mask():
     #haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
     #pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
 
-    #phymer_score_dict = get_phymer_scores("../data/phymer_mask")
+    phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
     #pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
 
 
@@ -191,9 +208,9 @@ def get_haplogrep_reported_confidence_fastq():
         pickle.dump(confidence_dict, f)
 
 
-score_bam()
+#score_bam()
 #score_fastq()
-#score_mask()
+score_mask()
 #get_haplogrep_reported_confidence_fastq()
 
 

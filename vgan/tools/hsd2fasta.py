@@ -1,13 +1,14 @@
 from Bio import SeqIO, Seq, SeqRecord
 import os
 import csv
+import gzip
 
 missing_hsds = os.listdir("../data/hsds")
 
 for file in missing_hsds:
     with open("../data/RSRS.fa", "r") as g:
         RSRS = list(SeqIO.parse(g, "fasta"))[0]
-        reader = csv.reader(open("missing_hsds/"+file, "r"), delimiter="\t")
+        reader = csv.reader(open("../data/hsds/"+file, "r"), delimiter="\t")
         for row in reader:
             RSRS_map = {i:base for i, base in enumerate(str(RSRS.seq))}
             for var in row[2:]:
@@ -35,6 +36,6 @@ for file in missing_hsds:
 
             rec = SeqRecord.SeqRecord(id=file.split(".")[0], description="", seq=Seq.Seq(rec_seq))
 
-            with open("testing"+file.split(".")[0]+".fasta", "w") as h:
+            with gzip.open("../data/synthetic_fastas"+file.split(".")[0]+".fasta", "wb") as h:
                 SeqIO.write(rec, h, "fasta")
 

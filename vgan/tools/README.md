@@ -1,4 +1,6 @@
 
+get_count_per_bin.sh - Get counts per window of mean coverage depth for plotting purposes.
+
 get_depths.sh - Get average depth of coverage of files for use in downsampling experiments.
 
 hsd2fasta.py - Convert HSD to FASTA.

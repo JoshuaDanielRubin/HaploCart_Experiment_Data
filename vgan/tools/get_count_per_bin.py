@@ -4,7 +4,7 @@ import pandas as pd
 def bam():
 
     bam_depth_file = "../data/1kdepths.txt"
-    bins=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2]
+    bins=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 2.0]
 
     with open(bam_depth_file, "r") as f:
         df = pd.read_csv(f, sep=' ', names=["sample", "depth"])
@@ -22,4 +22,5 @@ def fastq_no_numt():
         print(df["depth"].value_counts(bins=bins))
 
 
-fastq_no_numt()
+bam()
+#fastq_no_numt()

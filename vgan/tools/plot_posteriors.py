@@ -39,10 +39,14 @@ def plot_posterior(fastq = False, numt=False, bam=False):
     with open(result_file, "rt") as f:
         with open(posterior_file, "rt") as g:
             result_df = pd.read_csv(f, sep='\t', header=None)
-            result_df.columns=['sample', 'pred', 'threads', 'ms', 'n_reads']
+            if fastq:
+                result_df.columns=['sample', 'pred', 'threads', 'ms', 'n_reads']
+            else:
+                result_df.columns=['sample', 'pred', 'threads', 'ms', 'n_reads']
             posterior_df = pd.read_csv(g, sep='\t', header=None)
             posterior_df.columns=['sample', 'clade', 'posterior', 'tree_depth']
             posterior_df['ground_truth'] = posterior_df.apply (lambda row: row['sample'].split("_")[0], axis=1)
+            print(posterior_df['ground_truth'].unique())
             if fastq:
                 posterior_df['target_depth'] = posterior_df.apply (lambda row: float(row['sample'].split("_s")[-1].split("_interleave_tmp")[0]), axis=1)
             elif bam:
@@ -76,49 +80,99 @@ def plot_posterior(fastq = False, numt=False, bam=False):
                 ax[1][2].set_xlabel('Coverage depth (X)')
                 ax[1][3].set_xlabel('Coverage depth (X)')
 
+                ax[0][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+
             elif fastq:
-                fig, ax = plt.subplots(6, 4, figsize=(64, 54))
-                ax_dict = {0:ax[0][0], 1:ax[0][1], 2:ax[0][2], 3:ax[0][3], 4:ax[1][0], 5:ax[1][1], 6:ax[1][2],
-                           7:ax[1][3], 8:ax[2][0], 9:ax[2][1], 10:ax[2][2], 11:ax[2][3], 12:ax[3][0],
-                           13:ax[3][1], 14:ax[3][2], 15:ax[3][3], 16:ax[4][0], 17:ax[4][1], 18:ax[4][2], 19:ax[4][3],
-                           20:ax[5][0], 21:ax[5][1], 22:ax[5][2], 23:ax[5][3]}
+                fig, ax = plt.subplots(5, 5, figsize=(64, 54))
+                ax_dict = {0:ax[0][0], 1:ax[0][1], 2:ax[0][2], 3:ax[0][3], 4:ax[0][4], 5:ax[1][0], 6:ax[1][1],
+                           7:ax[1][2], 8:ax[1][3], 9:ax[1][4], 10:ax[2][0], 11:ax[2][1], 12:ax[2][2],
+                           13:ax[2][3], 14:ax[2][4], 15:ax[3][0], 16:ax[3][1], 17:ax[3][2], 18:ax[3][3], 19:ax[3][4],
+                           20:ax[4][0], 21:ax[4][1], 22:ax[4][2], 23:ax[4][3], 24:ax[4][4]}
                 ax[0][0].set_title(merged_dfs[0]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
                 ax[0][1].set_title(merged_dfs[1]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
                 ax[0][2].set_title(merged_dfs[2]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
                 ax[0][3].set_title(merged_dfs[3]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[1][0].set_title(merged_dfs[4]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[1][1].set_title(merged_dfs[5]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[1][2].set_title(merged_dfs[6]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[1][3].set_title(merged_dfs[7]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[2][0].set_title(merged_dfs[8]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[2][1].set_title(merged_dfs[9]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[2][2].set_title(merged_dfs[10]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
-                ax[2][3].set_title(merged_dfs[11]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[0][4].set_title(merged_dfs[4]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][0].set_title(merged_dfs[5]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][1].set_title(merged_dfs[6]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][2].set_title(merged_dfs[7]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][3].set_title(merged_dfs[8]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[1][4].set_title(merged_dfs[9]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][0].set_title(merged_dfs[10]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][1].set_title(merged_dfs[11]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][2].set_title(merged_dfs[12]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][3].set_title(merged_dfs[13]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[2][4].set_title(merged_dfs[14]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[3][0].set_title(merged_dfs[15]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[3][1].set_title(merged_dfs[16]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[3][2].set_title(merged_dfs[17]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[3][3].set_title(merged_dfs[18]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[3][4].set_title(merged_dfs[19]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[4][0].set_title(merged_dfs[20]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[4][1].set_title(merged_dfs[21]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[4][2].set_title(merged_dfs[22]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[4][3].set_title(merged_dfs[23]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
+                ax[4][4].set_title(merged_dfs[24]['ground_truth'].iloc[0] + " posterior confidence estimates (mean over replicates) ")
 
                 ax[0][0].set_xlabel('Coverage Depth (X)')
                 ax[0][1].set_xlabel('Coverage Depth (X)')
                 ax[0][2].set_xlabel('Coverage Depth (X)')
                 ax[0][3].set_xlabel('Coverage Depth (X)')
+                ax[0][4].set_xlabel('Coverage Depth (X)')
                 ax[1][0].set_xlabel('Coverage Depth (X)')
                 ax[1][1].set_xlabel('Coverage Depth (X)')
                 ax[1][2].set_xlabel('Coverage Depth (X)')
                 ax[1][3].set_xlabel('Coverage Depth (X)')
+                ax[1][4].set_xlabel('Coverage Depth (X)')
                 ax[2][0].set_xlabel('Coverage Depth (X)')
                 ax[2][1].set_xlabel('Coverage Depth (X)')
                 ax[2][2].set_xlabel('Coverage Depth (X)')
                 ax[2][3].set_xlabel('Coverage Depth (X)')
+                ax[2][4].set_xlabel('Coverage Depth (X)')
                 ax[3][0].set_xlabel('Coverage Depth (X)')
                 ax[3][1].set_xlabel('Coverage Depth (X)')
                 ax[3][2].set_xlabel('Coverage Depth (X)')
                 ax[3][3].set_xlabel('Coverage Depth (X)')
+                ax[3][4].set_xlabel('Coverage Depth (X)')
                 ax[4][0].set_xlabel('Coverage Depth (X)')
                 ax[4][1].set_xlabel('Coverage Depth (X)')
                 ax[4][2].set_xlabel('Coverage Depth (X)')
                 ax[4][3].set_xlabel('Coverage Depth (X)')
-                ax[5][0].set_xlabel('Coverage Depth (X)')
-                ax[5][1].set_xlabel('Coverage Depth (X)')
-                ax[5][2].set_xlabel('Coverage Depth (X)')
-                ax[5][3].set_xlabel('Coverage Depth (X)')
+                ax[4][4].set_xlabel('Coverage Depth (X)')
+
+                ax[0][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[0][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[1][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[2][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[2][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[2][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[2][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[2][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[3][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[3][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[3][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[3][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[3][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[4][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[4][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[4][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[4][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                ax[4][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+
 
             for i, df in enumerate(merged_dfs):
                 df['tree_depth'] = df['tree_depth'].apply(pd.to_numeric)
@@ -143,5 +197,5 @@ def plot_posterior(fastq = False, numt=False, bam=False):
 
 #plot_posterior(bam=True)
 plot_posterior(fastq=True, numt=False)
-#plot_posterior(fastq=True, numt=True)
+plot_posterior(fastq=True, numt=True)
 

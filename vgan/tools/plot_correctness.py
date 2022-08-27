@@ -4,6 +4,8 @@ import pickle
 import numpy as np
 import matplotlib.patches as mpatches
 
+colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a', '#f781bf']
+
 plt.rcParams.update({'font.size': 7})
 plt.rc('legend', fontsize=10)
 plt.rc('figure', titlesize=12)
@@ -104,15 +106,15 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
 
-    hg_data_prop = [(sum(x) / len(x)) for x in hg_data]
-    hc_data_prop = [(sum(x) / len(x)) for x in hc_data]
+    hg_data_prop = [(sum(x)) for x in hg_data]
+    hc_data_prop = [(sum(x)) for x in hc_data]
 
     hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
     hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
 
-    plt.title("Proportion of Correct Predictions  \n (Simulated FASTQ)")
+    plt.title("Total Number of Correct Predictions  \n (Simulated FASTQ)")
     plt.xlabel("Average depth of coverage (X)")
-    plt.ylabel("Proportion")
+    plt.ylabel("Count")
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
     hg_callrate_pos = [x - 0.5 for x in hg_pos]
@@ -121,8 +123,8 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
 
     hc_callrate_bar = plt.bar(hc_callrate_pos, hc_call_rate, color="red", label="HaploCart call rate", width=0.2)
     hg_callrate_bar = plt.bar(hg_callrate_pos, hg_call_rate, color="green", label="HaploGrep2 call rate", width=0.2)
-    hc_bar = plt.bar(hc_pos, hc_data_prop, color="orange", label="HaploCart proportion correct", width=0.2)
-    hg_bar = plt.bar(hg_pos, hg_data_prop, color="blue", label="Haplogrep2 proportion correct", width=0.2)
+    hc_bar = plt.bar(hc_pos, hc_data_prop, color="orange", label="HaploCart count correct", width=0.2)
+    hg_bar = plt.bar(hg_pos, hg_data_prop, color="blue", label="Haplogrep2 count correct", width=0.2)
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19], \
                ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
@@ -132,8 +134,8 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
     plt.close()
 
 def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile):
-     #print("Size of haplocart dict: ", len(haplocart_dict.keys()))
-     #print("Size of haplogrep dict: ", len(haplogrep_dict.keys()))
+     print("Size of haplocart dict: ", len(haplocart_dict.keys()))
+     print("Size of haplogrep dict: ", len(haplogrep_dict.keys()))
      bamdepth_dict = {}
      with open(depthfile, "r") as f:
          for line in f:
@@ -200,49 +202,48 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile
          elif depth2 > 1.0:
             hc_10_up.append(v2)
 
-     total_per_bin = [578, 915, 978, 921, 946, 897, 842, 783, 636, 370, 133]
+     total_per_bin = [578, 915, 978, 921, 946, 897, 842, 783, 636, 370, 134]
 
      hg_data = [hg_0_01, hg_01_02, hg_02_03, hg_03_04, hg_04_05, hg_05_06, hg_06_07, hg_07_08, hg_08_09, hg_09_10, hg_10_up]
-     hc_data = [hc_0_01, hc_01_02, hc_02_03, hc_03_04, hc_04_05, hc_05_06, hc_06_07, hc_07_08, hc_08_09, hc_09_10,hc_10_up]
+     hc_data = [hc_0_01, hc_01_02, hc_02_03, hc_03_04, hc_04_05, hc_05_06, hc_06_07, hc_07_08, hc_08_09, hc_09_10, hc_10_up]
 
      nans = [float('nan'), float('nan')]
 
-     hg_data_prop = [(sum(_) / len(_)) if len(_) > 0 else nans for _ in hg_data]
-     hc_data_prop = [(sum(__) / len(__)) if len(__) > 0 else nans for __ in hc_data]
+     hg_correct_count = [sum(_) for _ in hg_data]
+     hc_correct_count = [sum(_) for _ in hc_data]
 
      hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
      hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
 
-     #print("hg data lens: ", [len(x) for x in hg_data])
-     #print("hc data lens: ", [len(x) for x in hc_data])
-     #print("hg call rate: ", hg_call_rate)
-     #print("hc call rate: ", hc_call_rate)
+     print("hc call rate: ", hc_call_rate)
 
      hg_pos = [1,3,5,7,9,11,13,15,17,19,21]
-     hg_callrate_pos = [x - 0.5 for x in hg_pos]
+     hg_callrate_pos = [x for x in hg_pos]
      hc_pos = [x-0.25 for x in hg_pos]
-     hc_callrate_pos = [x - 0.75 for x in hg_pos]
+     hc_callrate_pos = [x-0.25 for x in hg_pos]
 
-     plt.figure(figsize=(15, 5))
-     plt.title("Proportion of Correct Predictions  \n (Empirical Paired-end FASTQ)")
-     plt.xlabel("Average depth of coverage (X)")
-     plt.ylabel("Proportion")
+     fig, ax = plt.subplots(2, figsize=(15, 5), sharex=True)
+     fig.suptitle("Total Number of Correct Predictions  \n (Empirical Paired-end FASTQ)")
+     plt.xlabel("Mean depth of coverage (X)")
+     ax[0].set_ylabel("Count")
+     ax[1].set_ylabel("Call rate")
 
-     hg_bar = plt.bar(hg_pos, hg_data_prop, color="blue", label="HaploGrep2", width=0.3)
-     hc_bar = plt.bar(hc_pos, hc_data_prop, color="orange", label="HaploCart", width=0.3)
-     hg_callrate_bar = plt.bar(hg_callrate_pos, hg_call_rate, color="green", label="HaploGrep2 call rate", width=0.3)
-     hc_callrate_bar = plt.bar(hc_callrate_pos, hc_call_rate, color="red", label="HaploCart call rate", width=0.3)
+     hg_bar = ax[0].bar(hg_pos, hg_correct_count, color="blue", label="HaploGrep2", width=0.3)
+     hc_bar = ax[0].bar(hc_pos, hc_correct_count, color="orange", label="HaploCart", width=0.3)
+     hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color="green", label="HaploGrep2 call rate", width=0.3)
+     hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color="red", label="HaploCart call rate", width=0.3)
 
      plt.xticks([1,3,5,7,9,11,13,15,17,19,21], \
                ["0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", \
                 "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0", ">=1.0"], rotation=45)
 
-     hc_patch = mpatches.Patch(color='orange', label='HaploCart proportion correct')
-     hg_patch = mpatches.Patch(color='blue', label='HaploGrep2 proportion correct')
+     hc_patch = mpatches.Patch(color='orange', label='HaploCart count correct')
+     hg_patch = mpatches.Patch(color='blue', label='HaploGrep2 count correct')
      hc_callrate_patch = mpatches.Patch(color='red', label='HaploCart call rate')
      hg_callrate_patch = mpatches.Patch(color='green', label='HaploGrep2 call rate')
 
-     plt.legend(handles=[hc_callrate_patch, hg_callrate_patch, hc_patch, hg_patch], loc="upper left")
+     ax[0].legend(handles=[hc_patch, hg_patch], loc="upper left")
+     ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch], loc="upper left")
      plt.tight_layout()
      plt.savefig(outfile, dpi=300)
      plt.close()
@@ -267,5 +268,5 @@ def plot_single_fastq():
     haplocart_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))
     make_correctness_plot_fq(haplogrep_score_dict, haplocart_score_dict, "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_correctness.png")
 
-#plot_bam()
-plot_single_fastq()
+plot_bam()
+#plot_single_fastq()

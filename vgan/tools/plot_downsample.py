@@ -4,6 +4,8 @@ from matplotlib import pyplot as plt
 import pickle
 import pdb
 
+colorblind_colors = ['#ff7f00', '#377eb8']
+
 def dequote(s):
     """
     If a string has single or double quotes around it, remove them.
@@ -170,6 +172,8 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
     for k2,v2 in haplocart_dict.items():
         v2 = int(v2)
         splitted = dequote(k2).split("_")
+        if "H2a2a1" in splitted:
+            continue
         if numt:
             depth2 = fqdepth_dict["_".join([splitted[0], splitted[1], splitted[2], splitted[4]])]
         else:
@@ -208,13 +212,13 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
     nans = [float('nan'), float('nan')]
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
-    hc_pos = [x-0.25 for x in hg_pos]
+    hc_pos = [x-0.5 for x in hg_pos]
 
     hg_vplot = plt.violinplot([val or nans for val in hg_data], positions=hg_pos, showmeans=True)
     hc_vplot = plt.violinplot([val or nans for val in hc_data], positions=hc_pos, showmeans=True)
 
-    hg_patch = mpatches.Patch(color='blue', label='HaploGrep2 accuracy distribution')
-    hc_patch = mpatches.Patch(color='orange', label='HaploCart accuracy distribution')
+    hg_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart accuracy distribution')
+    hc_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 accuracy distribution')
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19], \
                ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
@@ -266,5 +270,5 @@ def plot_fastq():
                       "../data/fastq_with_numt_sim_depths.txt", "../data/pngs/fastq_with_numt.png", numt=True)
 
 
-plot_bam()
+#plot_bam()
 plot_fastq()

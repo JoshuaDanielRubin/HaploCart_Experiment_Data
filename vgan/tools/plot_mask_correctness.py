@@ -3,6 +3,8 @@ from matplotlib import pyplot as plt
 import pickle
 import matplotlib.patches as mpatches
 
+colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a']
+
 def is_correct(score):
     if str(score) == "0":
         return 1
@@ -21,8 +23,8 @@ haplocart_result_path = "../data/haplocart_results/mask.txt"
 haplogrep_results_path = "../src/simulations/thousand_genomes/haplocheck_results/mask/"
 phymer_mask_path = "../data/phymer_mask/"
 
-#with open("../data/pickles/haplocart_mask.pk", "rb") as f:
-#    haplocart_results = pickle.load(f)
+with open("../data/pickles/haplocart_mask.pk", "rb") as f:
+    haplocart_results = pickle.load(f)
 
 with open("../data/pickles/haplogrep_mask.pk", "rb") as g:
     haplogrep_results = pickle.load(g)
@@ -48,13 +50,9 @@ hc_scores = [hc_0, hc_1000, hc_2000, hc_3000, hc_4000, hc_5000, hc_6000, hc_7000
 pm_scores = [pm_0, pm_1000, pm_2000, pm_3000, pm_4000, pm_5000, pm_6000, pm_7000, pm_8000, pm_9000, pm_10000, pm_11000, pm_12000, \
              pm_13000, pm_14000, pm_15000, pm_16000]
 
-#for sample, score in haplocart_results.items():
-#    N = int(sample.split("mask")[-1].split("_")[0])
-#    hc_scores[int(N/1000)].append(int(score))
-#    if N==0 and int(score) > 0:
-#        print("sample: ", sample)
-#        print("N: ", N)
-#        print("Score: ", score)
+for sample, score in haplocart_results.items():
+    N = int(sample.split("mask")[-1].split("_")[0])
+    hc_scores[int(N/1000)].append(is_correct(int(score)))
 
 for sample, score in haplogrep_results.items():
     id = sample.split("mask")[0].split("_")[0]
@@ -69,26 +67,28 @@ for sample, score in phymer_results.items():
 
 plt.figure(figsize=(10, 8))
 plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
-plt.ylabel("Proportion exactly correct")
+plt.ylabel("Total number exactly correct")
 plt.xlabel("Number of contiguous missing bases")
 
-hg_data_prop = [(sum(_) / len(_)) if len(_) > 0 else nans for _ in hg_scores]
-#hc_data_prop = [(sum(__) / len(__)) if len(__) > 0 else nans for __ in hc_scores]
-pm_data_prop = [(sum(__) / len(__)) if len(__) > 0 else nans for __ in pm_scores]
+hg_correct_count = [(sum(_)) for _ in hg_scores]
+hc_correct_count = [(sum(_)) for _ in hc_scores]
+pm_correct_count = [(sum(_)) for _ in pm_scores]
+
 
 hc_pos = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33]
 hg_pos = [x+0.5 for x in hc_pos]
 pm_pos = [x+1 for x in hc_pos]
 
-#hc_bar = plt.bar(hc_pos, hc_data_prop, color="orange", label="HaploCart call rate", width=0.5)
-hg_bar = plt.bar(hg_pos, hg_data_prop, color="blue", label="HaploGrep2 call rate", width=0.5)
-hg_bar = plt.bar(pm_pos, pm_data_prop, color="green", label="HaploGrep2 call rate", width=0.5)
+hc_bar = plt.bar(hc_pos, hc_correct_count, color=colorblind_colors[0], label="HaploCart call rate", width=0.5)
+hg_bar = plt.bar(hg_pos, hg_correct_count, color=colorblind_colors[1], label="HaploGrep2 call rate", width=0.5)
+hg_bar = plt.bar(pm_pos, pm_correct_count, color=colorblind_colors[2], label="HaploGrep2 call rate", width=0.5)
 
 plt.xticks(hc_pos, [str(x) for x in range(0, 16001, 1000)], rotation=45)
+plt.xlim(2.5, 34.5)
 
-hc_patch = mpatches.Patch(color='orange', label='HaploCart')
-hg_patch = mpatches.Patch(color='blue', label='HaploGrep2')
-pm_patch = mpatches.Patch(color='green', label='Phy-Mer')
+hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart')
+hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2')
+pm_patch = mpatches.Patch(color=colorblind_colors[2], label='Phy-Mer')
 
 plt.legend(handles=[hc_patch, hg_patch, pm_patch], loc="upper left")
 plt.tight_layout()

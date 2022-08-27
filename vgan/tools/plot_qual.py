@@ -142,13 +142,16 @@ def plot_fastq_no_bias():
             hg_data_dict[id][9].append(reported_qual)
 
     for idx, row in hc_fastq_merged.iterrows():
+        if math.isnan(row['tree_depth']):
+            print(row)
+            continue
         if int(row['tree_depth']) > 0:
             continue
+
         depth = float(fqdepth_dict[transform_hc(row['sample'])])
         reported_qual = float(row['posterior'])
 
         if math.isnan(reported_qual):
-            print(row['sample'])
             continue
 
         id = row['sample'].split("_")[0]

@@ -3,12 +3,13 @@ import os
 import csv
 import gzip
 
-missing_hsds = os.listdir("../data/hsds")
+hsds = os.listdir("../data/new_hsds")
 
-for file in missing_hsds:
+for file in hsds:
+    print(file)
     with open("../data/RSRS.fa", "r") as g:
         RSRS = list(SeqIO.parse(g, "fasta"))[0]
-        reader = csv.reader(open("../data/hsds/"+file, "r"), delimiter="\t")
+        reader = csv.reader(open("../data/new_hsds/"+file, "r"), delimiter="\t")
         for row in reader:
             RSRS_map = {i:base for i, base in enumerate(str(RSRS.seq))}
             for var in row[2:]:
@@ -36,6 +37,6 @@ for file in missing_hsds:
 
             rec = SeqRecord.SeqRecord(id=file.split(".")[0], description="", seq=Seq.Seq(rec_seq))
 
-            with gzip.open("../data/synthetic_fastas"+file.split(".")[0]+".fasta", "wb") as h:
+            with open("../data/new_synthetic_fastas/"+file.split(".")[0]+".fasta", "w") as h:
                 SeqIO.write(rec, h, "fasta")
 

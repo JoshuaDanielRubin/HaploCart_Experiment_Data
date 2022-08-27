@@ -22,5 +22,5 @@ def fastq_no_numt():
         print(df["depth"].value_counts(bins=bins))
 
 
-bam()
-#fastq_no_numt()
+#bam()
+fastq_no_numt()

@@ -38,7 +38,6 @@ def dequote(s):
 
 
 def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=False):
-
     depth_dict = {}
     with open(depthfile, "r") as f:
         for line in f:
@@ -51,6 +50,8 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
     = [], [], [], [], [], [], [], [], [], []
     for k1,v1 in haplogrep_dict.items():
         v1 = int(v1)
+        if "H2a2a1" == dequote(k1).split("_mem.bam")[0].split("_")[0]:
+            continue
         depth1 = depth_dict[dequote(k1).split("_mem.bam")[0]]
         if depth1 <= 0.2:
             hg_0_02.append(is_correct(v1))
@@ -77,6 +78,8 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
         v2 = int(v2)
         if dequote(k2).endswith("tmp"):
             splitted = dequote(k2).split("_")
+            if "H2a2a1" == splitted[0]:
+                continue
             depth2 = depth_dict["_".join([splitted[0], "n1000", "l"+splitted[1], "rep"+splitted[2], splitted[3]])]
         else:
             depth2 = depth_dict[dequote(k2)]
@@ -101,7 +104,7 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
         elif depth2 > 1.8 and depth2 <= 2:
             hc_18_20.append(is_correct(v2))
 
-    total_per_bin = [8678, 8530, 4386, 1243, 1151, 652, 560, 36, 534, 618]
+    total_per_bin = [18072, 17775, 9127, 2602, 2399, 1357, 1168, 75, 1111, 1286]
 
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
@@ -117,14 +120,30 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile,
     plt.ylabel("Count")
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
-    hg_callrate_pos = [x - 0.5 for x in hg_pos]
+    hg_callrate_pos = [x for x in hg_pos]
     hc_pos = [x - 0.25 for x in hg_pos]
-    hc_callrate_pos = [x - 0.75 for x in hg_pos]
+    hc_callrate_pos = [x-0.25 for x in hg_pos]
 
-    hc_callrate_bar = plt.bar(hc_callrate_pos, hc_call_rate, color="red", label="HaploCart call rate", width=0.2)
-    hg_callrate_bar = plt.bar(hg_callrate_pos, hg_call_rate, color="green", label="HaploGrep2 call rate", width=0.2)
-    hc_bar = plt.bar(hc_pos, hc_data_prop, color="orange", label="HaploCart count correct", width=0.2)
-    hg_bar = plt.bar(hg_pos, hg_data_prop, color="blue", label="Haplogrep2 count correct", width=0.2)
+    fig, ax = plt.subplots(2, figsize=(15, 5), sharex=True)
+
+    hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color="red", label="HaploCart call rate", width=0.2)
+    hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color="green", label="HaploGrep2 call rate", width=0.2)
+    hc_bar = ax[0].bar(hc_pos, hc_data_prop, color="orange", label="HaploCart count correct", width=0.2)
+    hg_bar = ax[0].bar(hg_pos, hg_data_prop, color="blue", label="Haplogrep2 count correct", width=0.2)
+
+
+    hc_patch = mpatches.Patch(color='orange', label='HaploCart count correct')
+    hg_patch = mpatches.Patch(color='blue', label='HaploGrep2 count correct')
+    hc_callrate_patch = mpatches.Patch(color='red', label='HaploCart call rate')
+    hg_callrate_patch = mpatches.Patch(color='green', label='HaploGrep2 call rate')
+
+    ax[0].legend(handles=[hc_patch, hg_patch], loc="upper left")
+    ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch], loc="upper left")
+
+    ax[0].set_ylabel("Count")
+    ax[1].set_ylabel("Call rate")
+    fig.suptitle("Total Number of Correct Predictions  \n (Simulated Paired-end FASTQ)")
+    plt.xlabel("Mean depth of coverage (X)")
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19], \
                ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
@@ -268,5 +287,5 @@ def plot_single_fastq():
     haplocart_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))
     make_correctness_plot_fq(haplogrep_score_dict, haplocart_score_dict, "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_correctness.png")
 
-plot_bam()
-#plot_single_fastq()
+#plot_bam()
+plot_single_fastq()

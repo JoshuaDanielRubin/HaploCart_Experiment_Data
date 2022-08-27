@@ -1,9 +1,16 @@
+import math
 import subprocess
 from matplotlib import pyplot as plt
 import pickle
 import matplotlib.patches as mpatches
 
 colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a']
+
+def safe_log(score):
+    if score == 0:
+        return 0
+    else:
+        return math.log(score)
 
 def define_box_properties(plot_name, color_code, label):
     for k, v in plot_name.items():
@@ -46,7 +53,7 @@ pm_scores = [pm_0, pm_1000, pm_2000, pm_3000, pm_4000, pm_5000, pm_6000, pm_7000
 
 for sample, score in haplocart_results.items():
     N = int(sample.split("mask")[-1].split("_")[0])
-    hc_scores[int(N/1000)].append(int(score))
+    hc_scores[int(N/1000)].append(safe_log(int(score)))
     if int(N)<=6000 and int(score) > 30:
         print("sample: ", sample)
         print("N: ", N)
@@ -54,15 +61,15 @@ for sample, score in haplocart_results.items():
 
 for sample, score in haplogrep_results.items():
     N = int(sample.split("mask")[-1].split("_")[0])
-    hg_scores[int(N/1000)].append(int(score))
+    hg_scores[int(N/1000)].append(safe_log(int(score)))
 
 for sample, score in phymer_results.items():
     N = int(sample.split("mask")[-1].split("_")[0])
-    pm_scores[int(N/1000)].append(int(score))
+    pm_scores[int(N/1000)].append(safe_log(int(score)))
 
 plt.figure(figsize=(10, 8))
 plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
-plt.ylabel("Levenshtein distance between true and predicted")
+plt.ylabel("Log Levenshtein distance between true and predicted")
 plt.xlabel("Number of contiguous missing bases")
 
 pos = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33]

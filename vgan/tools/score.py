@@ -23,7 +23,7 @@ def get_edit_distance(s1, s2, numt=False):
         return "NAN"
 
     if s2 == "mt-MRCA":
-        s2 = "L0"
+        return "NAN"
 
     with gzip.open("../data/synthetic_fastas/"+s1.split("+")[0]+".fasta.gz", "rt") as f:
         seq1 = next(SeqIO.parse(f, "fasta")).seq
@@ -139,7 +139,7 @@ def score_bam():
 
 def score_fastq():
 
-    haplocheck_score_dict_no_numt = {}
+    #haplocheck_score_dict_no_numt = {}
     #haplocheck_score_dict_no_numt = get_haplocheck_scores(haplocheck_score_dict_no_numt, \
     #                         "../src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups.txt", None)
     #with open("../data/pickles/hc_fastq_no_numt.pk", "wb") as g:
@@ -151,11 +151,11 @@ def score_fastq():
     #with open("../data/pickles/hc_fastq_with_numt.pk", "wb") as h:
     #    pickle.dump(haplocheck_score_dict_with_numt, h)
 
-    #haplocart_score_dict_no_numt = get_haplocart_scores("../data/haplocart_results/fastq_no_numt.txt")
-    #pickle.dump(haplocart_score_dict_no_numt, open("../data/pickles/haplocart_fastq_no_numt.pk", "wb"))
+    haplocart_score_dict_no_numt = get_haplocart_scores("../data/haplocart_results/fastq_no_numt.txt")
+    pickle.dump(haplocart_score_dict_no_numt, open("../data/pickles/haplocart_fastq_no_numt.pk", "wb"))
 
-    #haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
-    #pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
+    haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
+    pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
 
 
 def score_mask():
@@ -166,10 +166,10 @@ def score_mask():
     #with open("../data/pickles/haplogrep_mask.pk", "wb") as g:
     #    pickle.dump(haplocheck_score_dict, g)
 
-    #haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
-    #pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
+    haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
+    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
 
-    phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
+    #phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
     #pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
 
 
@@ -202,14 +202,15 @@ def get_haplogrep_reported_confidence_fastq():
             qual = split[3]
             pred = split[1]
             sample = split[0]
+            print(sample, qual)
             confidence_dict.update({sample:qual})
 
     with open("../data/pickles/haplogrep_reported_quals_fastq.pk", "wb") as f:
         pickle.dump(confidence_dict, f)
 
 
-score_bam()
-#score_fastq()
+#score_bam()
+score_fastq()
 #score_mask()
 #get_haplogrep_reported_confidence_fastq()
 

@@ -146,6 +146,9 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
     = [], [], [], [], [], [], [], [], [], []
 
     for k1,v1 in haplogrep_dict.items():
+        splitted = dequote(k1).split("_")
+        if "H2a2a1" == splitted[0]:
+            continue
         v1 = int(v1)
         depth1 = fqdepth_dict[k1]
         if depth1 <= 0.2:
@@ -169,10 +172,11 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
         elif depth1 > 1.8 and depth1 <= 2:
             hg_18_20.append(v1)
 
+
     for k2,v2 in haplocart_dict.items():
         v2 = int(v2)
         splitted = dequote(k2).split("_")
-        if "H2a2a1" in splitted:
+        if "H2a2a1" == splitted[0]:
             continue
         if numt:
             depth2 = fqdepth_dict["_".join([splitted[0], splitted[1], splitted[2], splitted[4]])]
@@ -201,6 +205,9 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
 
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
+
+    print("numt: ", numt)
+    print([len(x) for x in hg_data])
 
     if numt == False:
         plt.title("Haplogroup Classification Performance \n (Simulated Paired-end FASTQ)")

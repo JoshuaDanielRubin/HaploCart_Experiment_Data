@@ -77,7 +77,7 @@ def plot_bam():
             hc_idxs = [i for i in range(len(hc_labels)) if dequote(hc_labels[i]).startswith(k)]
             ax.scatter([hg_xs[j] for j in hg_idxs], [hg_ys[j] for j in hg_idxs], s=8, alpha=0.2, c='blue', label='HaploGrep2' if i==0 else "")
             ax.scatter([hc_xs[j] for j in hc_idxs], [hc_ys[j] for j in hc_idxs], s=8, alpha=0.2, c='orange', label='HaploCart' if i==0 else "")
-        plt.suptitle("Reported Confidence on \n Thousand Genomes Project Samples")
+        plt.suptitle("Reported Confidence on \n Empirical Paired-end FASTQ")
         ax.set_xlabel("Levenshtein Distance between true and predicted")
         ax.set_ylabel("Reported Confidence")
         plt.legend(handles=[hg_patch, hc_patch], borderpad=0.45, prop={'size': 8})
@@ -225,6 +225,6 @@ def plot_fastq_no_bias():
     plt.savefig("../data/pngs/reported_qual_fastq.png")
     plt.close()
 
-#plot_bam()
-plot_fastq_no_bias()
+plot_bam()
+#plot_fastq_no_bias()
 

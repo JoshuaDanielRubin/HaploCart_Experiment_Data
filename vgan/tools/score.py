@@ -39,7 +39,8 @@ def get_edit_distance(s1, s2, numt=False):
     return Levenshtein.distance(seq1, seq2)
 
 
-thousand_genomes_dict = {"HG00473":"D6a1a","HG01051":"K1a4a1h","HG02666":"L3e4a","HG03112":"L1b1a3","NA18510":"L0a1a3","NA19036":"L3b1a1a","NA19661":"D1h1","NA20518":"J2a1a1e"}
+thousand_genomes_dict = {"HG00473":"D6a1a","HG01051":"K1a4a1h","HG02666":"L3e4a","HG03112":"L1b1a3",\
+                         "NA18510":"L0a1a3","NA19036":"L3b1a1a","NA19661":"D1h1","NA20518":"J2a1a1e"}
 
 def dequote(s):
     """
@@ -102,6 +103,7 @@ def get_phymer_scores(phymer_dir):
                 pred = pm_split[1].split("-")[0].split(",")[0]
                 predscore = score(id, pred)
                 score_dict.update({file:predscore})
+    return score_dict
 
 def get_haplocart_scores(haplocart_pred_file, bam=False, numt=False):
     haplocart_pred_dict = {}
@@ -172,11 +174,11 @@ def score_mask():
     #with open("../data/pickles/haplogrep_mask.pk", "wb") as g:
     #    pickle.dump(haplocheck_score_dict, g)
 
-    #haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
-    #pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
+    haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
+    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask_no_alternate_minimizer.pk", "wb"))
 
-    phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
-    pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
+    #phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
+    #pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
 
 
 def get_haplogrep_reported_confidence_bam():
@@ -216,8 +218,8 @@ def get_haplogrep_reported_confidence_fastq():
 
 
 #score_bam()
-#score_fastq()
-score_mask()
+score_fastq()
+#score_mask()
 #get_haplogrep_reported_confidence_fastq()
 
 

@@ -6,7 +6,7 @@ import pickle
 import matplotlib.patches as mpatches
 import matplotlib.pylab as pylab
 params = {'legend.fontsize': 'x-large',
-         'axes.labelsize': 'x-large',
+         'axes.labelsize': 'xx-large',
          'axes.titlesize':'x-large',
          'xtick.labelsize':'x-large',
          'ytick.labelsize':'x-large'}
@@ -81,11 +81,12 @@ def run(ax, threshold, idx):
         hg_scores[int(N/1000)].append(safe_log(int(score)))
 
     for sample, score in phymer_results.items():
+        if score == 'NAN':
+            continue
         N = int(sample.split("mask")[-1].split("_")[0])
         pm_scores[int(N/1000)].append(safe_log(int(score)))
 
-    if idx in [0, 2]:
-        ax.set_ylabel("Log Levenshtein distance between true and predicted")
+    ax.set_ylabel("Log Levenshtein distance \n between true and predicted")
     ax.set_xlabel("Number of contiguous missing bases")
     ax.set_title("Posterior threshold = "+str(threshold))
 
@@ -112,15 +113,15 @@ def run(ax, threshold, idx):
     return ax
 
 
-fig, ax = plt.subplots(2, 2, figsize=(28, 20), sharey=True, constrained_layout=True)
+fig, ax = plt.subplots(3, 1, figsize=(30, 20), sharey=True, constrained_layout=True)
 plt.subplots_adjust(left=0.1,
                     bottom=0.1,
-                    right=0.95,
-                    top=0.95,
-                    wspace=0.1,
-                    hspace=0.2)
-ax_lst=[ax[0][0], ax[0][1], ax[1][0], ax[1][1]]
-for idx, thresh in enumerate([0.05, 0.1, 0.5, 0.99]):
+                    right=0.92,
+                    top=0.92,
+                    wspace=0.2,
+                    hspace=0.3)
+ax_lst=[ax[0], ax[1], ax[2]]
+for idx, thresh in enumerate([0, 0.3, 0.99]):
     run(ax_lst[idx], thresh, idx)
 
 

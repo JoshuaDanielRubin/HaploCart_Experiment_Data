@@ -2,6 +2,13 @@ import subprocess
 from matplotlib import pyplot as plt
 import pickle
 import matplotlib.patches as mpatches
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize':'xx-large',
+         'xtick.labelsize':'x-large',
+         'ytick.labelsize':'x-large'}
+pylab.rcParams.update(params)
 
 colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a']
 
@@ -62,11 +69,13 @@ for sample, score in haplogrep_results.items():
     hg_scores[int(N/1000)].append(is_correct(int(score)))
 
 for sample, score in phymer_results.items():
+    if score == "NAN":
+        continue
     N = int(sample.split("mask")[-1].split("_")[0])
     pm_scores[int(N/1000)].append(is_correct(int(score)))
 
 plt.figure(figsize=(10, 8))
-plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
+plt.suptitle("Robustness to Missing Bases (Empirical FASTA)", fontsize=14)
 plt.ylabel("Total number exactly correct")
 plt.xlabel("Number of contiguous missing bases")
 
@@ -90,7 +99,7 @@ hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart')
 hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2')
 pm_patch = mpatches.Patch(color=colorblind_colors[2], label='Phy-Mer')
 
-plt.legend(handles=[hc_patch, hg_patch, pm_patch], loc="upper left")
+plt.legend(handles=[hc_patch, hg_patch, pm_patch], loc="upper right")
 plt.tight_layout()
 plt.savefig("../data/pngs/mask_correctness.png", dpi=300)
 plt.close()

@@ -4,6 +4,14 @@ from matplotlib import pyplot as plt
 import pickle
 import matplotlib.patches as mpatches
 
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize':'xx-large',
+         'xtick.labelsize':'x-large',
+         'ytick.labelsize':'x-large'}
+pylab.rcParams.update(params)
+
 colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a']
 
 def safe_log(score):
@@ -64,12 +72,14 @@ for sample, score in haplogrep_results.items():
     hg_scores[int(N/1000)].append(safe_log(int(score)))
 
 for sample, score in phymer_results.items():
+    if score == "NAN":
+        continue
     N = int(sample.split("mask")[-1].split("_")[0])
     pm_scores[int(N/1000)].append(safe_log(int(score)))
 
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(15, 10))
 plt.suptitle("Robustness to Missing Bases (Empirical FASTA)")
-plt.ylabel("Log Levenshtein distance between true and predicted")
+plt.ylabel("Log Levenshtein distance \n between true and predicted")
 plt.xlabel("Number of contiguous missing bases")
 
 pos = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33]

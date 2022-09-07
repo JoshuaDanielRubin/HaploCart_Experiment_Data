@@ -1,3 +1,4 @@
+import math
 import pandas as pd
 import matplotlib.patches as mpatches
 import subprocess
@@ -5,13 +6,19 @@ from matplotlib import pyplot as plt
 import pickle
 import pdb
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'x-large',
-         'axes.labelsize': 'x-large',
+params = {'legend.fontsize': 'xx-large',
+         'axes.labelsize': 'xx-large',
          'xtick.labelsize':'x-large',
          'ytick.labelsize':'x-large'}
 pylab.rcParams.update(params)
 
 colorblind_colors = ['#ff7f00', '#377eb8']
+
+def safe_log(score):
+    if score == 0:
+        return 0
+    else:
+        return math.log(score)
 
 def dequote(s):
     """
@@ -132,27 +139,25 @@ def make_violinplot_fq(ax, haplogrep_dict, haplocart_dict, depthfile, threshold,
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
 
-    print([len(x) for x in hc_data])
+    print([len(x) for x in hg_data])
 
     plt.suptitle("Haplogroup Classification Performance \n (Simulated Paired-end FASTQ)", fontsize=22)
     ax.set_xlabel("Mean depth of coverage (X)")
-    if idx in [0, 2]:
-        ax.set_ylabel("Levenshtein distance between true and predicted")
-    plt.ylim(-5, 115)
+    ax.set_ylabel("Log Levenshtein distance \nbetween true and predicted")
     nans = [float('nan'), float('nan')]
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
     hc_pos = [x-0.5 for x in hg_pos]
 
-    hg_vplot = ax.violinplot([val or nans for val in hg_data], positions=hg_pos, showmeans=True)
-    hc_vplot = ax.violinplot([val or nans for val in hc_data], positions=hc_pos, showmeans=True)
+    hg_vplot = ax.violinplot([[safe_log(x) for x in val] or nans for val in hg_data], positions=hg_pos, showmeans=True)
+    hc_vplot = ax.violinplot([[safe_log(x) for x in val] or nans for val in hc_data], positions=hc_pos, showmeans=True)
 
     hg_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart accuracy distribution')
     hc_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 accuracy distribution')
 
     ax.set_xticklabels(["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
     ax.set_title("Posterior threshold = " + str(threshold))
-    ax.legend(handles=[hc_patch, hg_patch], borderpad=0.45, prop={'size': 8})
+    ax.legend(handles=[hc_patch, hg_patch], borderpad=0.45, prop={'size': 18})
     return ax
 
 def plot_fastq():
@@ -166,9 +171,9 @@ def plot_fastq():
     haplogrep_no_numt_score_dict = pickle.load(open("../data/pickles/hg_fastq_no_numt.pk", "rb"))
     haplocart_no_numt_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))
 
-    fig, ax = plt.subplots(2, 2, figsize=(28, 20))
-    ax_lst = [ax[0][0], ax[0][1], ax[1][0], ax[1][1]]
-    for idx, thresh in enumerate([0.05, 0.1, 0.5, 0.99]):
+    fig, ax = plt.subplots(3, 1, figsize=(30, 20))
+    ax_lst = [ax[0], ax[1], ax[2]]
+    for idx, thresh in enumerate([0, 0.3, 0.99]):
         make_violinplot_fq(ax_lst[idx],  haplogrep_no_numt_score_dict, haplocart_no_numt_score_dict, \
                            "../data/fastq_no_numt_sim_depths.txt", thresh, idx)
 
@@ -179,7 +184,7 @@ def plot_fastq():
                     right=0.92,
                     top=0.92,
                     wspace=0.2,
-                    hspace=0.2)
+                    hspace=0.3)
     #plt.tight_layout()
     plt.savefig("../data/pngs/no_numt_threshold.png", dpi=300)
 

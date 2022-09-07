@@ -1,8 +1,23 @@
+import math
 import matplotlib.patches as mpatches
 import subprocess
 from matplotlib import pyplot as plt
 import pickle
 import pdb
+
+import matplotlib.pylab as pylab
+params = {'legend.fontsize': 'x-large',
+         'axes.labelsize': 'large',
+         'axes.titlesize':'large',
+         'xtick.labelsize':'x-large',
+         'ytick.labelsize':'x-large'}
+pylab.rcParams.update(params)
+
+def safe_log(score):
+    if score == 0:
+        return 0
+    else:
+        return math.log(score)
 
 colorblind_colors = ['#ff7f00', '#377eb8']
 
@@ -95,16 +110,16 @@ def make_violinplot_bam(haplogrep_dict, haplocart_dict, depthfile):
 
     plt.suptitle("Haplogroup Classification Accuracy \n (Empirical Paired-end FASTQ)")
     plt.xlabel("Mean depth of coverage (X)")
-    plt.ylabel("Levenshtein distance between true and predicted")
+    plt.ylabel("Levenshtein distance \n between true and predicted")
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19,21], \
                ["0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", \
                 "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0", ">=1.0"], rotation=45)
 
-    hg_patch = mpatches.Patch(color='blue', label='HaploGrep2')
-    hc_patch = mpatches.Patch(color='orange', label='HaploCart')
+    hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2')
+    hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart')
 
-    plt.legend(handles=[hc_patch, hg_patch], borderpad=0.45, prop={'size': 9})
+    plt.legend(handles=[hc_patch, hg_patch], borderpad=0.5, prop={'size': 12})
     plt.tight_layout()
     plt.subplots_adjust(top=0.88)
     plt.savefig("../data/pngs/bams_downsampled.png", bbox_inches='tight', dpi=300)
@@ -126,6 +141,7 @@ def transform_hct(k, numt):
         return "_".join([splitted[0], splitted[1], splitted[2], splitted[3], splitted[4]])
 
 def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=False):
+    print(len(haplocart_dict.keys()))
     haplogrep_dict = {transform_hg(k, numt):v for k,v in haplogrep_dict.items()}
     haplocart_dict = {transform_hct(k, numt):v for k,v in haplocart_dict.items()}
 
@@ -201,31 +217,30 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
         elif depth2 > 1.6 and depth2 <= 1.8:
             hc_16_18.append(v2)
         elif depth2 > 1.8 and depth2 <= 2:
+            if safe_log(v2) > 3:
+                print(k2)
             hc_18_20.append(v2)
 
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
-
-    print("numt: ", numt)
-    print([len(x) for x in hg_data])
 
     if numt == False:
         plt.title("Haplogroup Classification Performance \n (Simulated Paired-end FASTQ)")
     else:
         plt.title("Haplogroup Classification Performance \n (Simulated Paired-end FASTQ, With NuMTs)")
     plt.xlabel("Mean depth of coverage (X)")
-    plt.ylabel("Levenshtein distance between true and predicted")
-    plt.ylim(-5, 115)
+    plt.ylabel("Log Levenshtein distance \n between true and predicted")
+    #plt.ylim(-5, 115)
     nans = [float('nan'), float('nan')]
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
     hc_pos = [x-0.5 for x in hg_pos]
 
-    hg_vplot = plt.violinplot([val or nans for val in hg_data], positions=hg_pos, showmeans=True)
-    hc_vplot = plt.violinplot([val or nans for val in hc_data], positions=hc_pos, showmeans=True)
+    hg_vplot = plt.violinplot([[safe_log(x) for x in val] or nans for val in hg_data], positions=hg_pos, showmeans=True)
+    hc_vplot = plt.violinplot([[safe_log(x) for x in val] or nans for val in hc_data], positions=hc_pos, showmeans=True)
 
-    hg_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart accuracy distribution')
-    hc_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 accuracy distribution')
+    hg_patch = mpatches.Patch(color="blue", label='HaploCart accuracy distribution')
+    hc_patch = mpatches.Patch(color="orange", label='HaploGrep2 accuracy distribution')
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19], \
                ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
@@ -258,12 +273,6 @@ def plot_bam():
 
 
 def plot_fastq():
-    depth_dict = {}
-    with open("../data/fastq_no_numt_sim_depths.txt", "r") as f:
-        for line in f:
-            split=line.split()
-            file, depth = dequote(split[0].split("/")[-1]), float(split[1])
-            depth_dict.update({file:depth})
 
     haplogrep_no_numt_score_dict = pickle.load(open("../data/pickles/hg_fastq_no_numt.pk", "rb"))
     haplocart_no_numt_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))

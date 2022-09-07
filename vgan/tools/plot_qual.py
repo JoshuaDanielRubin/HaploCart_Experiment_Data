@@ -6,9 +6,9 @@ import matplotlib.lines as mlines
 import pickle
 from matplotlib import pyplot as plt
 import matplotlib.pylab as pylab
-params = {'legend.fontsize': 'small',
-         'axes.labelsize': 'small',
-         'axes.titlesize':'small',
+params = {'legend.fontsize': 'x-large',
+         'axes.labelsize': 'x-large',
+         'axes.titlesize':'x-large',
          'xtick.labelsize':'small',
          'ytick.labelsize':'small'}
 pylab.rcParams.update(params)
@@ -80,7 +80,7 @@ def plot_bam():
         plt.suptitle("Reported Confidence on \n Empirical Paired-end FASTQ")
         ax.set_xlabel("Levenshtein Distance between true and predicted")
         ax.set_ylabel("Reported Confidence")
-        plt.legend(handles=[hg_patch, hc_patch], borderpad=0.45, prop={'size': 8})
+        plt.legend(handles=[hg_patch, hc_patch], borderpad=0.45, prop={'size': 15})
         plt.tight_layout()
         plt.xlim(-5, 110)
         plt.savefig("../data/pngs/reported_qual.png", dpi=300)
@@ -182,7 +182,7 @@ def plot_fastq_no_bias():
         elif (depth >= 0.9 and depth < 2):
             hc_data_dict[id][9].append(reported_qual)
 
-    fig,ax = plt.subplots(2, 2, figsize=(12, 12))
+    fig,ax = plt.subplots(2, 2, figsize=(16, 16))
     ax_lst = [ax[0][0], ax[0][1], ax[1][0], ax[1][1]]
 
     for i, _ in enumerate(ax_lst):
@@ -218,13 +218,13 @@ def plot_fastq_no_bias():
     hg_trend_patch = mlines.Line2D([0], [0], color='green', label='HaploGrep2 polynomial regression', linestyle=':', linewidth=1)
     hc_trend_patch = mlines.Line2D([0], [0], color='red', label='HaploCart polynomial regression', linestyle=':', linewidth=1)
 
-    fig.legend(handles=[hg_patch, hc_patch, hg_trend_patch, hc_trend_patch], borderpad=0.45, prop={'size': 6.5})
+    fig.legend(handles=[hg_patch, hc_patch, hg_trend_patch, hc_trend_patch], borderpad=0.45, prop={'size': 7})
 
     plt.suptitle("Coverage Depth vs. Reported Confidence")
     plt.tight_layout()
     plt.savefig("../data/pngs/reported_qual_fastq.png")
     plt.close()
 
-plot_bam()
-#plot_fastq_no_bias()
+#plot_bam()
+plot_fastq_no_bias()
 

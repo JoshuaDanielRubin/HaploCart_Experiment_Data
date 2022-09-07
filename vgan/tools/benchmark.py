@@ -4,8 +4,7 @@ from subprocess import STDOUT, call, PIPE
 from concurrent.futures import ThreadPoolExecutor
 from multiprocessing import Pool
 
-#IDS =["H2a2a1"]
-IDS = ["L0a1a1", "HV4b", "C1b", "L1c4b", "B2b3a", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1", \
+IDS = ["H2a2a1", "L0a1a1", "HV4b", "C1b", "L1c4b", "B2b3a", "J2a1a1a1", "L2a1a3c", "T2e1a1b1", "L2a1j", "L1c2b", "Q1", \
       "X3a", "E1a1b", "V3", "S1a", "I2b", "F1a1", "U2e1b1", "L3b1", "P", "D1", "A2", "Z1a", "Y1b"]
 THOUSAND_GENOME_IDS = ["NA19661", "HG00473","HG01051","HG02666","HG03112","NA18510","NA19036","NA20518"]
 LENGTHS=["50", "100"]
@@ -42,7 +41,7 @@ def fastq_no_numt(tup):
 
 def fastq_with_numt(tup):
     (id, length, rep, rate) = tup
-    return "/home/ctools/interleave_fastq/interleavefastq.sh " + \
+    return "nice -19 /home/ctools/interleave_fastq/interleavefastq.sh " + \
                                     "/home/projects/mito_haplotype/vgan/src/simulations/"+"numtS_and_"+id+"_n1000_l" + length+"_rep"+rep+"_nr200_s"+rate+".fq.gz " + \
                                     "/home/projects/mito_haplotype/vgan/src/simulations/"+"numtS_and_"+id+"_n1000_l" + length+"_rep"+rep+"_nr200_s"+rate+"_r1.fq.gz " + \
                                     "/home/projects/mito_haplotype/vgan/src/simulations/"+"numtS_and_"+id+"_n1000_l" + length+"_rep"+rep+"_nr200_s"+rate+ \
@@ -67,16 +66,17 @@ def bam(tup):
     (id, target, replicate, file) = tup
     return subprocess.Popen(["samtools sort -@ 30 ../src/simulations/thousand_genomes/"+id+"/" + file + \
             " | samtools bam2fq -@ 20 > ../src/vgan_tmpdir/" + id + "_" + target + "_" + replicate + \
-            "; ./../bin/vgan haplocart -p -pf ../data/haplocart_results/bam_posterior.txt -t 30 -i -fq1 ../src/vgan_tmpdir/"+ id + "_" + target + "_" + replicate + " -s " + \
+            "; ./../bin/vgan haplocart -p -pf ../data/haplocart_results/bam_posterior.txt -t 30 -i -fq1 ../src/vgan_tmpdir/"+ \
+            id + "_" + target + "_" + replicate + " -s " + \
             file.split("/")[-1] + " -o ../data/haplocart_results/bams.txt; rm ../src/vgan_tmpdir/" + id + "_" + target + "_" + replicate + \
             "; rm ../src/vgan_tmpdir/" + file.split("/")[-1] + ".gam; rm ../src/vgan_tmpdir/" + file.split("/")[-1] + "_sorted.gam"] ,shell=True)
 
 def run():
 
     # Consensus FASTA
-    for id in IDS:
-        subprocess.Popen(["./../bin/vgan haplocart -q -t -1 -o ../data/haplocart_results/consensus.txt -s " + \
-                        id + "_consensus " + "-f ../src/simulations/"+id+".fa"], shell=True)
+    #for id in IDS:
+    #    subprocess.Popen(["./../bin/vgan haplocart -q -t -1 -o ../data/haplocart_results/consensus.txt -s " + \
+    #                    id + "_consensus " + "-f ../src/simulations/"+id+".fa"], shell=True)
 
     # No NuMT FASTQ
 
@@ -92,16 +92,16 @@ def run():
 
    # With NuMTs
 
-    #fastq_with_numt_cmds = []
-    #for id in IDS:
-    #    for length in LENGTHS:
-    #        for rep in REPLICATES:
-    #            for rate in FQRATES:
-    #                fastq_with_numt_cmds.append(fastq_with_numt((id, length, rep, rate)))
+    fastq_with_numt_cmds = []
+    for id in IDS:
+        for length in LENGTHS:
+            for rep in REPLICATES:
+                for rate in FQRATES:
+                    fastq_with_numt_cmds.append(fastq_with_numt((id, length, rep, rate)))
 
-    #with open("with_numt_cmds", "wt") as f:
-    #    for cmd in fastq_with_numt_cmds:
-    #        f.write(cmd)
+    with open("with_numt_cmds", "wt") as f:
+        for cmd in fastq_with_numt_cmds:
+            f.write(cmd)
 
    # Thousand Genome BAMS
 
@@ -121,11 +121,12 @@ def run():
     #mask_cmds = []
     #for id in IDS:
     #    for rep in REPLICATES:
-    #        for N in MASKN:
+    #        for N in [16000]:
+            #for N in MASKN:
     #            p = mask((id, rep, N))
     #            mask_cmds.append(p)
 
-    #with open("mask_cmds", "wt") as f:
+    #with open("mask_cmds_16kb", "wt") as f:
     #    for cmd in mask_cmds:
     #        f.write(cmd)
 

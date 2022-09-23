@@ -1,48 +1,50 @@
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-Z1a.fa	Z1a	64	7519	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L2a1a3c.fa	L2a1a3c	64	8009	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-Y1b.fa	Y1b	64	8453	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-C1b.fa	C1b	64	9937	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L1c4b.fa	L1c4b	64	10664	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-HV4b.fa	HV4b	64	11892	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-B2b3a.fa	B2b3a	64	12988	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-U2e1b1.fa	U2e1b1	64	13762	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-A2.fa	A2	64	15837	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-D1.fa	D1	64	20284	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-S1a.fa	S1a	64	21573	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-E1a1b.fa	E1a1b	64	21643	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L2a1j.fa	L2a1j	64	22295	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-I2b.fa	I2b	64	22553	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-X3a.fa	X3a	64	22566	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L1c2b.fa	L1c2b	64	22648	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-T2e1a1b1.fa	T2e1a1b1	64	22817	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-V3.fa	V3	64	22901	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L0a1a1.fa	L0a1a1	64	23044	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-J2a1a1a1.fa	J2a1a1a1	64	23109	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-L3b1.fa	L3b1	64	23091	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-F1a1.fa	F1a1	64	24394	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-Q1.fa	Q1	64	24733	166
-Sample	Predicted haplotype	# threads	time(ms)	# reads
-P.fa	P	64	24859	166
+#sample	predicted haplogroup	reads
+Q1.fa	Q1	1
+#sample	predicted haplogroup	reads
+A2.fa	A2	1
+#sample	predicted haplogroup	reads
+L2a1j.fa	L2a1j	1
+#sample	predicted haplogroup	reads
+D1.fa	D1	1
+#sample	predicted haplogroup	reads
+J2a1a1a1.fa	J2a1a1a1	1
+#sample	predicted haplogroup	reads
+U2e1b1.fa	U2e1b1	1
+#sample	predicted haplogroup	reads
+L1c2b.fa	L1c2	1
+#sample	predicted haplogroup	reads
+L1c4b.fa	L1c4b	1
+#sample	predicted haplogroup	reads
+E1a1b.fa	E1a1b	1
+#sample	predicted haplogroup	reads
+V3.fa	V3	1
+#sample	predicted haplogroup	reads
+L0a1a1.fa	L0a1a1	1
+#sample	predicted haplogroup	reads
+T2e1a1b1.fa	T2e1a1b1	1
+#sample	predicted haplogroup	reads
+HV4b.fa	HV4b	1
+#sample	predicted haplogroup	reads
+L2a1a3c.fa	L2a1a3c	1
+#sample	predicted haplogroup	reads
+B2b3a.fa	B2b3a	1
+#sample	predicted haplogroup	reads
+Y1b.fa	Y1b	1
+#sample	predicted haplogroup	reads
+P.fa	P	1
+#sample	predicted haplogroup	reads
+Z1a.fa	Z1a	1
+#sample	predicted haplogroup	reads
+S1a.fa	S1a	1
+#sample	predicted haplogroup	reads
+I2b.fa	I2b	1
+#sample	predicted haplogroup	reads
+H2a2a1.fa	H2a2a1	1
+#sample	predicted haplogroup	reads
+F1a1.fa	F1a1	1
+#sample	predicted haplogroup	reads
+X3a.fa	X3a	1
+#sample	predicted haplogroup	reads
+L3b1.fa	L3b1	1
+#sample	predicted haplogroup	reads
+C1b.fa	C1b	1

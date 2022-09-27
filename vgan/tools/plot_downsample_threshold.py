@@ -78,7 +78,7 @@ def make_violinplot_fq(ax, haplogrep_dict, haplocart_dict, depthfile, threshold,
 
     for k1,v1 in haplogrep_dict.items():
         splitted = dequote(k1).split("_")
-        if "H2a2a1" == splitted[0]:
+        if "H2a2a1" == splitted[0] or "L1c2b" == splitted[0]:
             continue
         v1 = int(v1)
         depth1 = fqdepth_dict[k1]
@@ -107,7 +107,7 @@ def make_violinplot_fq(ax, haplogrep_dict, haplocart_dict, depthfile, threshold,
     for k2,v2 in haplocart_dict.items():
         v2 = int(v2)
         splitted = dequote(k2).split("_")
-        if "H2a2a1" == splitted[0]:
+        if "H2a2a1" == splitted[0] or "L1c2b" == splitted[0]:
             continue
 
         depth2 = fqdepth_dict["_".join([splitted[0], splitted[1], splitted[2], splitted[3]])]

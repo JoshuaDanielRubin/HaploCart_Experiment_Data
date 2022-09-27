@@ -58,6 +58,28 @@ def dequote(s):
 def score(true, pred, numt=False):
     return get_edit_distance(true, pred, numt=numt)
 
+def get_h2a2a1_wrong_prop(score_dict, result_filepath):
+    with open(score_dict, "rb") as f:
+        hg_score_dict = pickle.load(f)
+    with open(result_filepath, "rb") as g:
+        next(g)
+        total_count = 0
+        total_h2a2a1_wrong_count = 0
+        for line in g:
+            split = [x.decode('utf-8') for x in line.split()]
+            file, pred = split[0], split[1]
+            id = file.split("_")[0]
+            if id in ["L1c2b"]:
+                continue
+            if hg_score_dict[file] > 30:
+                total_count += 1
+                print(pred)
+                if dequote(pred) == "H2a2a1":
+                    total_h2a2a1_wrong_count += 1
+
+        print(total_count, total_h2a2a1_wrong_count)
+
+
 def get_haplocheck_scores(score_dict, result_filepath, true, bam=False, numt=False):
     with open(result_filepath, "rb") as g:
         next(g)
@@ -175,7 +197,7 @@ def score_mask():
     #    pickle.dump(haplocheck_score_dict, g)
 
     haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/mask.txt")
-    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask_no_alternate_minimizer.pk", "wb"))
+    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_mask.pk", "wb"))
 
     #phymer_score_dict = get_phymer_scores("../data/phymer_mask/")
     #pickle.dump(phymer_score_dict, open("../data/pickles/phymer_mask.pk", "wb"))
@@ -218,8 +240,7 @@ def get_haplogrep_reported_confidence_fastq():
 
 
 #score_bam()
-score_fastq()
-#score_mask()
+#score_fastq()
+score_mask()
 #get_haplogrep_reported_confidence_fastq()
-
-
+#get_h2a2a1_wrong_prop("../data/pickles/hg_fastq_no_numt.pk", "../src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups.txt")

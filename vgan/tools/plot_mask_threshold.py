@@ -29,8 +29,9 @@ def define_box_properties(plot_name, color_code, label):
 def run(ax, threshold, idx):
 
     with open("../data/haplocart_results/mask_posterior.txt", "rt") as g:
-        mask_posterior_df = pd.read_csv(g, sep='\t', header=None, names=["Sample", "Pred", "Posterior", "Tree_depth"])
+        mask_posterior_df = pd.read_csv(g, sep='\t', header=None, index_col=False, names=["Sample", "Pred", "Posterior", "Tree_depth"])
 
+    print(mask_posterior_df)
     depth_zero_df = mask_posterior_df.loc[mask_posterior_df['Tree_depth'] == 0]
     passed_df = depth_zero_df.loc[depth_zero_df['Posterior'] > threshold]
     passed_samples = list(passed_df['Sample'].unique())

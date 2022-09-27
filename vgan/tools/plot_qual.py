@@ -1,4 +1,3 @@
-
 import math
 import numpy as np
 import matplotlib.patches as mpatches
@@ -185,10 +184,11 @@ def plot_fastq_no_bias():
     fig,ax = plt.subplots(2, 2, figsize=(16, 16))
     ax_lst = [ax[0][0], ax[0][1], ax[1][0], ax[1][1]]
 
+    acc_lst = ["JX154035", "MK295855", "MN849793", "MN894713"]
     for i, _ in enumerate(ax_lst):
         _.set_ylabel("Reported Confidence")
         _.set_xlabel("Coverage Depth (X)")
-        _.set_title(fastq_ids[i])
+        _.set_title(acc_lst[i] + " (Haplogroup " + fastq_ids[i] + ")")
 
     nans = [float('nan'), float('nan')]
     hc_pos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

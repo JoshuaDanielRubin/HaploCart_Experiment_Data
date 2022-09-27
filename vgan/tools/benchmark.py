@@ -56,7 +56,7 @@ def fastq_with_numt(tup):
 
 def mask(tup):
     (id, rep, N) = tup
-    return "nice -n 19 /home/projects/mito_haplotype/vgan/tools/../bin/vgan haplocart -t 1 -f " + \
+    return "nice -n 19 /home/projects/mito_haplotype/vgan/tools/../bin/vgan haplocart -t -1 -f " + \
            "/home/projects/mito_haplotype/vgan/tools/../src/simulations/mask/" + id + "_mask" + str(N) + "_rep" + str(rep) + \
            ".fa -s " + id + "_mask" + str(N) + "_rep" + str(rep) + " -o /home/projects/mito_haplotype/vgan/tools/../data/haplocart_results/mask_dir/"+ \
            id + "_mask" + str(N) + "_rep" + str(rep)+ " -q -p -pf /home/projects/mito_haplotype/vgan/data/haplocart_results/mask_dir/posterior_"+ id + "_mask" + str(N) + "_rep" + str(rep) + "\n"
@@ -73,10 +73,10 @@ def bam(tup):
 
 def run():
 
-    # Consensus FASTA
-    #for id in IDS:
-    #    subprocess.Popen(["./../bin/vgan haplocart -q -t -1 -o ../data/haplocart_results/consensus.txt -s " + \
-    #                    id + "_consensus " + "-f ../src/simulations/"+id+".fa"], shell=True)
+    #Consensus FASTA
+    for id in IDS:
+        subprocess.Popen(["./../bin/vgan haplocart -q -t -1 -o ../data/haplocart_results/consensus.txt -s " + \
+                        id + "_consensus " + "-f ../src/simulations/"+id+".fa -np"], shell=True)
 
     # No NuMT FASTQ
 
@@ -92,16 +92,16 @@ def run():
 
    # With NuMTs
 
-    fastq_with_numt_cmds = []
-    for id in IDS:
-        for length in LENGTHS:
-            for rep in REPLICATES:
-                for rate in FQRATES:
-                    fastq_with_numt_cmds.append(fastq_with_numt((id, length, rep, rate)))
+    #fastq_with_numt_cmds = []
+    #for id in IDS:
+    #    for length in LENGTHS:
+    #        for rep in REPLICATES:
+    #            for rate in FQRATES:
+    #                fastq_with_numt_cmds.append(fastq_with_numt((id, length, rep, rate)))
 
-    with open("with_numt_cmds", "wt") as f:
-        for cmd in fastq_with_numt_cmds:
-            f.write(cmd)
+    #with open("with_numt_cmds", "wt") as f:
+    #    for cmd in fastq_with_numt_cmds:
+    #        f.write(cmd)
 
    # Thousand Genome BAMS
 
@@ -121,14 +121,13 @@ def run():
     #mask_cmds = []
     #for id in IDS:
     #    for rep in REPLICATES:
-    #        for N in [16000]:
-            #for N in MASKN:
+    #        for N in MASKN:
     #            p = mask((id, rep, N))
-    #            mask_cmds.append(p)
+     #           mask_cmds.append(p)
 
-    #with open("mask_cmds_16kb", "wt") as f:
+    #with open("mask_cmds", "wt") as f:
     #    for cmd in mask_cmds:
-    #        f.write(cmd)
+     #       f.write(cmd)
 
 if __name__ == "__main__":
     run()

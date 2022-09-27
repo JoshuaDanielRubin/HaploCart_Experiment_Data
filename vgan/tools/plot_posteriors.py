@@ -4,10 +4,11 @@ import pickle
 import matplotlib.pyplot as plt
 from matplotlib import cm
 import numpy as np
+from matplotlib.backends.backend_pdf import PdfPages
 
 fasta_dict = {"HV4b":"KP340180", "H2a2a1":"JX154035", "L0a1a1":"MK295855", "L1c4b":"MN894773", "B2b3a":"MW057682",
               "J2a1a1a1":"MZ190830", "L2a1a3c":"KR135866", "T2e1a1b1":"JN828512", "L2a1j":"KR135846",
-              "L1c2b":"MN894780", "Q1":"MN849793", "C1b":"MN894713", "Z1a":"MG660559", "D1":"KP172430",
+              "Q1":"MN849793", "C1b":"MN894713", "Z1a":"MG660559", "D1":"KP172430",
                "A2":"MZ387838", "Y1b":"GU123044", "P":"MN849673", "L3b1":"KT819256",
                "U2e1b1":"KT698031", "F1a1":"MH553920", "I2b":"MN516596", "S1a":"DQ404440", "V3":"MN516629",
                "X3a":"JQ245804", "E1a1b":"EF061151"}
@@ -52,7 +53,7 @@ def plot_posterior(fastq = False, numt=False, bam=False):
             if fastq:
                 result_df.columns=['sample', 'pred', 'n_reads']
             else:
-                result_df.columns=['sample', 'pred', 'n_reads']
+                result_df.columns=['sample', 'pred', 'threads', 'time', 'n_reads']
             posterior_df = pd.read_csv(g, sep='\t', header=None)
             posterior_df.columns=['sample', 'clade', 'posterior', 'tree_depth']
             posterior_df['ground_truth'] = posterior_df.apply (lambda row: row['sample'].split("_")[0], axis=1)
@@ -69,175 +70,53 @@ def plot_posterior(fastq = False, numt=False, bam=False):
             merged_dfs = [v for k, v in merged_df.groupby('ground_truth')]
 
             if bam:
-                fig, ax = plt.subplots(2,4,figsize=(32, 27))
-                ax_dict = {0:ax[0][0], 1:ax[0][1], 2:ax[0][2], 3:ax[0][3],  4:ax[1][0], 5:ax[1][1],
-                           6:ax[1][2], 7:ax[1][3]}
-                ax[0][0].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[0]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[0]['ground_truth'].iloc[0]] + ")")
-                ax[0][1].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[1]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[1]['ground_truth'].iloc[0]] + ")")
-                ax[0][2].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[2]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[2]['ground_truth'].iloc[0]] + ")")
-                ax[0][3].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[3]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[3]['ground_truth'].iloc[0]] + ")")
-                ax[1][0].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[4]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[4]['ground_truth'].iloc[0]] + ")")
-                ax[1][1].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[5]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[5]['ground_truth'].iloc[0]] + ")")
-                ax[1][2].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[6]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[6]['ground_truth'].iloc[0]] + ")")
-                ax[1][3].set_title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[7]['ground_truth'].iloc[0] \
-                                   + " (haplogroup " + thousand_genomes_dict[merged_dfs[7]['ground_truth'].iloc[0]] + ")")
+                for i in range(8):
+                    plt.figure(figsize=(10, 15))
+                    plt.title("Posterior probability of confidence in assignment\n for sample " + merged_dfs[i]['ground_truth'].iloc[0] \
+                                       + " (haplogroup " + thousand_genomes_dict[merged_dfs[i]['ground_truth'].iloc[0]] + ")")
 
-                ax[0][0].set_xlabel('Coverage depth (X)')
-                ax[0][1].set_xlabel('Coverage depth (X)')
-                ax[0][2].set_xlabel('Coverage depth (X)')
-                ax[0][3].set_xlabel('Coverage depth (X)')
-                ax[1][0].set_xlabel('Coverage depth (X)')
-                ax[1][1].set_xlabel('Coverage depth (X)')
-                ax[1][2].set_xlabel('Coverage depth (X)')
-                ax[1][3].set_xlabel('Coverage depth (X)')
-
-                ax[0][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                    plt.xlabel('Coverage depth (X)')
+                    plt.ylabel('Posterior probability of sample \n being subtended by the given clade')
+                    merged_dfs[i]['tree_depth'] = merged_dfs[i]['tree_depth'].apply(pd.to_numeric)
+                    print(i)
+                    merged_dfs[i] = merged_dfs[i].sample(frac=1).reset_index(drop=True)
+                    for label, grp in merged_dfs[i].groupby('tree_depth'):
+                        sns.lineplot(color=color_map(1/(float(label)+1.0001)), x=grp.target_depth, y=grp.posterior, alpha=0.8, linewidth=7, \
+                                     sort=True, orient='x', label=label, estimator=np.mean, errorbar=('ci', 0))
+                    plt.tight_layout()
+                    plt.ylim(0.25, 1.02)
+                    leg = plt.legend(title="Tree depth")
+                    for legobj in leg.legendHandles:
+                        legobj.set_linewidth(2.0)
+                    plt.savefig("../data/pngs/bam_posteriors/bam_posterior_"+str(i)+".png", dpi=300)
+                    plt.clf()
 
             elif fastq:
-                fig, ax = plt.subplots(5, 5, figsize=(64, 54))
-                ax_dict = {0:ax[0][0], 1:ax[0][1], 2:ax[0][2], 3:ax[0][3], 4:ax[0][4], 5:ax[1][0], 6:ax[1][1],
-                           7:ax[1][2], 8:ax[1][3], 9:ax[1][4], 10:ax[2][0], 11:ax[2][1], 12:ax[2][2],
-                           13:ax[2][3], 14:ax[2][4], 15:ax[3][0], 16:ax[3][1], 17:ax[3][2], 18:ax[3][3], 19:ax[3][4],
-                           20:ax[4][0], 21:ax[4][1], 22:ax[4][2], 23:ax[4][3], 24:ax[4][4]}
-                ax[0][0].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[0]['ground_truth'].iloc[0]] \
+                for i in range(24):
+                    plt.figure(figsize=(15, 10))
+                    plt.title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[0]['ground_truth'].iloc[0]] \
                                    + " (haplogroup " + merged_dfs[0]['ground_truth'].iloc[0] + ")")
-                ax[0][1].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[1]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[1]['ground_truth'].iloc[0] + ")")
-                ax[0][2].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[2]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[2]['ground_truth'].iloc[0] + ")")
-                ax[0][3].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[3]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[3]['ground_truth'].iloc[0] + ")")
-                ax[0][4].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[4]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[4]['ground_truth'].iloc[0] + ")")
-                ax[1][0].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[5]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[5]['ground_truth'].iloc[0] + ")")
-                ax[1][1].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[6]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[6]['ground_truth'].iloc[0] + ")")
-                ax[1][2].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[7]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[7]['ground_truth'].iloc[0] + ")")
-                ax[1][3].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[8]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[8]['ground_truth'].iloc[0] + ")")
-                ax[1][4].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[9]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[9]['ground_truth'].iloc[0] + ")")
-                ax[2][0].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[10]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[9]['ground_truth'].iloc[0] + ")")
-                ax[2][1].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[11]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[10]['ground_truth'].iloc[0] + ")")
-                ax[2][2].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[12]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[11]['ground_truth'].iloc[0] + ")")
-                ax[2][3].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[13]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[12]['ground_truth'].iloc[0] + ")")
-                ax[2][4].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[14]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[13]['ground_truth'].iloc[0] + ")")
-                ax[3][0].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[15]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[14]['ground_truth'].iloc[0] + ")")
-                ax[3][1].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[16]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[15]['ground_truth'].iloc[0] + ")")
-                ax[3][2].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[17]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[16]['ground_truth'].iloc[0] + ")")
-                ax[3][3].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[18]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[17]['ground_truth'].iloc[0] + ")")
-                ax[3][4].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[19]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[18]['ground_truth'].iloc[0] + ")")
-                ax[4][0].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[20]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[19]['ground_truth'].iloc[0] + ")")
-                ax[4][1].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[21]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[20]['ground_truth'].iloc[0] + ")")
-                ax[4][2].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[22]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[21]['ground_truth'].iloc[0] + ")")
-                ax[4][3].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[23]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[22]['ground_truth'].iloc[0] + ")")
-                ax[4][4].set_title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[24]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[23]['ground_truth'].iloc[0] + ")")
-                ax[0][0].set_xlabel('Coverage Depth (X)')
-                ax[0][1].set_xlabel('Coverage Depth (X)')
-                ax[0][2].set_xlabel('Coverage Depth (X)')
-                ax[0][3].set_xlabel('Coverage Depth (X)')
-                ax[0][4].set_xlabel('Coverage Depth (X)')
-                ax[1][0].set_xlabel('Coverage Depth (X)')
-                ax[1][1].set_xlabel('Coverage Depth (X)')
-                ax[1][2].set_xlabel('Coverage Depth (X)')
-                ax[1][3].set_xlabel('Coverage Depth (X)')
-                ax[1][4].set_xlabel('Coverage Depth (X)')
-                ax[2][0].set_xlabel('Coverage Depth (X)')
-                ax[2][1].set_xlabel('Coverage Depth (X)')
-                ax[2][2].set_xlabel('Coverage Depth (X)')
-                ax[2][3].set_xlabel('Coverage Depth (X)')
-                ax[2][4].set_xlabel('Coverage Depth (X)')
-                ax[3][0].set_xlabel('Coverage Depth (X)')
-                ax[3][1].set_xlabel('Coverage Depth (X)')
-                ax[3][2].set_xlabel('Coverage Depth (X)')
-                ax[3][3].set_xlabel('Coverage Depth (X)')
-                ax[3][4].set_xlabel('Coverage Depth (X)')
-                ax[4][0].set_xlabel('Coverage Depth (X)')
-                ax[4][1].set_xlabel('Coverage Depth (X)')
-                ax[4][2].set_xlabel('Coverage Depth (X)')
-                ax[4][3].set_xlabel('Coverage Depth (X)')
-                ax[4][4].set_xlabel('Coverage Depth (X)')
 
-                ax[0][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[0][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[1][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[2][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[2][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[2][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[2][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[2][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[3][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[3][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[3][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[3][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[3][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[4][0].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[4][1].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[4][2].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[4][3].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
-                ax[4][4].set_ylabel('Posterior probability of sample \n being subtended by the given clade')
+                    plt.xlabel('Coverage Depth (X)')
+                    plt.ylabel('Posterior probability of sample \n being subtended by the given clade')
+                    merged_dfs[i]['tree_depth'] = merged_dfs[i]['tree_depth'].apply(pd.to_numeric)
+                    print(i)
+                    merged_dfs[i] = merged_dfs[i].sample(frac=1).reset_index(drop=True)
+                    for label, grp in merged_dfs[i].groupby('tree_depth'):
+                        sns.lineplot(color=color_map(1/(float(label)+1.0001)), x=grp.target_depth, y=grp.posterior, alpha=0.8, \
+                        linewidth=7, sort=True, orient='x', errorbar=('ci', 0), label=label, estimator=np.mean)
+                    plt.ylim(0.25, 1.02)
+                    leg = plt.legend(title="Tree depth")
+                    for legobj in leg.legendHandles:
+                        legobj.set_linewidth(2.0)
+                    if numt == False:
+                        plt.savefig("../data/pngs/fastq_posteriors/fastq_posterior_no_numt_"+str(i)+".png")
+                    elif numt:
+                        plt.savefig("../data/pngs/fastq_posteriors/fastq_posterior_with_numt_"+str(i)+".png")
+                    plt.clf()
 
 
-            for i, df in enumerate(merged_dfs):
-                df['tree_depth'] = df['tree_depth'].apply(pd.to_numeric)
-                print(i)
-                df = df.sample(frac=1).reset_index(drop=True)
-                for label, grp in df.groupby('tree_depth'):
-                    if bam:
-                        sns.lineplot(color=color_map(1/(float(label)+1.0001)), x=grp.target_depth, y=grp.posterior, alpha=0.8, linewidth=7, ax=ax_dict[i], \
-                                     sort=True, ci=0, label=label, estimator=np.mean)
-                    elif fastq:
-                        sns.lineplot(color=color_map(1/(float(label)+1.0001)), x=grp.target_depth, y=grp.posterior, alpha=0.8, linewidth=7, ax=ax_dict[i], sort=True, ci=0, label=label, estimator=np.mean)
-
-
-            for ax_ in ax_dict.values():
-                leg = ax_.legend(title="Tree depth")
-                for legobj in leg.legendHandles:
-                    legobj.set_linewidth(2.0)
-                ax_.set_ylim(0.25, 1.02)
-            plt.tight_layout()
-            plt.savefig(outfile, dpi=300)
-
-
-#plot_posterior(bam=True)
-plot_posterior(fastq=True, numt=False)
-plot_posterior(fastq=True, numt=True)
+plot_posterior(bam=True)
+#plot_posterior(fastq=True, numt=False)
+#plot_posterior(fastq=True, numt=True)
 

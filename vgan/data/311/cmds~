@@ -1,0 +1,5 @@
+java  -jar /home/ctools/haplogrep-cmd/haplogrep.jar  classify  --in human311.fasta  --format=fasta --out haplogrep
+
+
+for i in `seq 1 30`; do echo "nice /usr/bin/time -v  -o time_"$i"  /home/projects/mito_haplotype/vgan_for_gabriel/vgan/bin/vgan haplocart -t $i -f human311.fasta -o haplocart"$i".out -pf haplocart"$i".pf"; done
+

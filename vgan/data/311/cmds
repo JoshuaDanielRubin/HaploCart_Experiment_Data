@@ -1,0 +1,10 @@
+#java  -jar /home/ctools/haplogrep-cmd/haplogrep.jar  classify  --in human311.fasta  --format=fasta --out haplogrep
+
+
+#for i in `seq 1 30`; do echo "nice /usr/bin/time -v  -o time_"$i"  /home/projects/mito_haplotype/vgan_for_gabriel/vgan/bin/vgan haplocart -t $i -f human311.fasta -o haplocart"$i".out -q -np"; done
+
+cat haplocart64.out  | tr "_" "\t"  |grep . |grep -vi sample  |awk '{print $(NF-2)"\t"$(NF-1)}' |sort > hc_preds
+
+#cat haplogrep  |cut -f 1,2 |tr "_" "\t" |sed "s/\"//g" |awk '{print $(NF-1)"\t"$(NF)}' |grep -v SampleID |sort  > haplogrep_preds
+
+paste latex   hc_preds haplogrep_preds  |tr -d "\\\\" |tr " " "_"    |sed "s/__//g"  |sed "s/_&_/\t/g"  |sed "s/cite{/\\\\cite{/g"  |awk '{print $1"\t"$2"\t"$5"\t"$7"\t"$3""}'  | /home/people/jdru/311/tab2latex.pl  - > diffs

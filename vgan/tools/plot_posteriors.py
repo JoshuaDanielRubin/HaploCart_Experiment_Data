@@ -94,8 +94,9 @@ def plot_posterior(fastq = False, numt=False, bam=False):
             elif fastq:
                 for i in range(24):
                     plt.figure(figsize=(15, 10))
+                    print("ID: ", merged_dfs[i]['ground_truth'].iloc[0])
                     plt.title("Posterior probability of confidence in assignment\n for sample " + fasta_dict[merged_dfs[0]['ground_truth'].iloc[0]] \
-                                   + " (haplogroup " + merged_dfs[0]['ground_truth'].iloc[0] + ")")
+                                   + " (haplogroup " + merged_dfs[i]['ground_truth'].iloc[0] + ")")
 
                     plt.xlabel('Coverage Depth (X)')
                     plt.ylabel('Posterior probability of sample \n being subtended by the given clade')
@@ -116,7 +117,7 @@ def plot_posterior(fastq = False, numt=False, bam=False):
                     plt.clf()
 
 
-plot_posterior(bam=True)
+#plot_posterior(bam=True)
 #plot_posterior(fastq=True, numt=False)
-#plot_posterior(fastq=True, numt=True)
+plot_posterior(fastq=True, numt=True)
 

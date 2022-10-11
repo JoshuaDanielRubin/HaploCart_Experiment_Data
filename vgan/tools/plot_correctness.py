@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import matplotlib.patches as mpatches
 
-colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4a', '#f781bf']
+colorblind_colors = ['#ff7f00', '#377eb8', '#4daf4b', '#f781bf']
 
 plt.rcParams.update({'font.size': 7})
 plt.rc('legend', fontsize=16)
@@ -48,6 +48,9 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, 
     = [], [], [], [], [], [], [], [], [], []
     hg_data  \
     = [], [], [], [], [], [], [], [], [], []
+    hgrp_data  \
+    = [], [], [], [], [], [], [], [], [], []
+
     for k1,v1 in haplogrep_dict.items():
         v1 = int(v1)
         if "H2a2a1" == dequote(k1).split("_mem.bam")[0].split("_")[0]:
@@ -105,6 +108,34 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, 
         elif depth2 > 1:
             hc_data[9].append(is_correct(v2))
 
+
+    for k3,v3 in haplogrouper_dict.items():
+        v3 = int(v3)
+        splitted = k3.split("_")
+        if "H2a2a1" == splitted[0] or "L1c2b" == splitted[0]:
+            continue
+        depth3 = depth_dict["_".join([splitted[0], splitted[1], splitted[2], splitted[3], splitted[4]])]
+        if depth3 <= 0.1:
+            hgrp_data[0].append(is_correct(v3))
+        elif depth3 > 0.1 and depth3 <= 0.15:
+            hgrp_data[1].append(is_correct(v3))
+        elif depth2 > 0.15 and depth3 <= 0.2:
+            hgrp_data[2].append(is_correct(v3))
+        elif depth3 > 0.2 and depth3 <= 0.25:
+            hgrp_data[3].append(is_correct(v3))
+        elif depth3 > 0.25 and depth3 <= 0.3:
+            hgrp_data[4].append(is_correct(v3))
+        elif depth3 > 0.3 and depth3 <= 0.4:
+            hgrp_data[5].append(is_correct(v3))
+        elif depth3 > 0.4 and depth3 <= 0.5:
+            hgrp_data[6].append(is_correct(v3))
+        elif depth3 > 0.5 and depth3 <= 0.6:
+            hgrp_data[7].append(is_correct(v3))
+        elif depth3 > 0.6 and depth3 <= 1:
+            hgrp_data[8].append(is_correct(v3))
+        elif depth3 > 1:
+            hgrp_data[9].append(is_correct(v3))
+
     total_per_bin = [5219, 6290, 6563, 6296, 5631, 5848, 4253, 4874, 5001, 5025]
 
     hg_data_prop = [(sum(x)) for x in hg_data]
@@ -113,7 +144,7 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, 
 
     hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
     hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
-    hgrp_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hgrp_data)]
+    hgrp_call_rate = [(len(z) / total_per_bin[k]) for k, z in enumerate(hgrp_data)]
 
     plt.title("Total Number of Correct Predictions  \n (Simulated FASTQ)")
     plt.xlabel("Average depth of coverage (X)")
@@ -121,24 +152,32 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, 
 
     hg_pos = [1,2,3,4,5,6,7,8,9,10]
     hg_callrate_pos = [x for x in hg_pos]
-    hc_pos = [x - 0.15 for x in hg_pos]
-    hc_callrate_pos = [x-0.15 for x in hg_pos]
+    hc_pos = [x - 0.2 for x in hg_pos]
+    hc_callrate_pos = [x-0.2 for x in hg_pos]
+    hgrp_pos = [x + 0.2 for x in hg_pos]
+    hgrp_callrate_pos = [x+0.2 for x in hg_pos]
 
     fig, ax = plt.subplots(2, figsize=(15, 10), sharex=True)
 
-    hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color=colorblind_colors[3], label="HaploCart call rate", width=0.2)
-    hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color=colorblind_colors[2], label="HaploGrep2 call rate", width=0.2)
-    hc_bar = ax[0].bar(hc_pos, hc_data_prop, color=colorblind_colors[0], label="HaploCart count correct", width=0.2)
-    hg_bar = ax[0].bar(hg_pos, hg_data_prop, color=colorblind_colors[1], label="Haplogrep2 count correct", width=0.2)
+    hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color=colorblind_colors[0], label="HaploCart call rate", width=0.15)
+    hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color=colorblind_colors[1], label="HaploGrep2 call rate", width=0.15)
+    hgrp_callrate_bar = ax[1].bar(hgrp_callrate_pos, hgrp_call_rate, color=colorblind_colors[2], label="HaploGrouper call rate", width=0.15)
 
+    hc_bar = ax[0].bar(hc_pos, hc_data_prop, color=colorblind_colors[0], label="HaploCart count correct", width=0.15)
+    hg_bar = ax[0].bar(hg_pos, hg_data_prop, color=colorblind_colors[1], label="Haplogrep2 count correct", width=0.15)
+    hgrp_bar = ax[0].bar(hgrp_pos, hgrp_data_prop, color=colorblind_colors[2], label="HaploGrouper count correct", width=0.15)
 
     hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart count correct')
     hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 count correct')
-    hc_callrate_patch = mpatches.Patch(color=colorblind_colors[3], label='HaploCart call rate')
-    hg_callrate_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrep2 call rate')
+    hgrp_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper count correct')
 
-    ax[0].legend(handles=[hc_patch, hg_patch], loc="upper left")
-    ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch], loc="upper left")
+    hc_callrate_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart call rate')
+    hg_callrate_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 call rate')
+    hgrp_callrate_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper call rate')
+
+    #plt.legend(handles=[hc_patch, hg_patch, hgrp_patch], bbox_to_anchor=(1.04, 1), loc="upper left")
+    ax[0].legend(handles=[hc_patch, hg_patch, hgrp_patch], loc="upper left")
+    #ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch, hgrp_callrate_patch], loc="upper left")
 
     ax[0].set_ylabel("Count")
     ax[1].set_ylabel("Call rate")
@@ -267,7 +306,7 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, haplogrouper_dict,
      hgrp_callrate_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper call rate')
 
      ax[0].legend(handles=[hc_patch, hg_patch, hgrp_patch], loc="upper left")
-     ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch, hgrp_callrate_patch], loc="upper left")
+     #ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch, hgrp_callrate_patch], loc="upper left")
      plt.tight_layout()
      plt.savefig(outfile, dpi=300)
      plt.close()
@@ -291,7 +330,8 @@ def plot_bam():
 def plot_single_fastq():
     haplogrep_score_dict = pickle.load(open("../data/pickles/hg_fastq_no_numt.pk", "rb"))
     haplocart_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))
-    make_correctness_plot_fq(haplogrep_score_dict, haplocart_score_dict, "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_correctness.png")
+    haplogrouper_score_dict = pickle.load(open("../data/pickles/haplogrouper_sim_no_numt.pk", "rb"))
+    make_correctness_plot_fq(haplogrep_score_dict, haplocart_score_dict, haplogrouper_score_dict, "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_correctness.png")
 
 plot_bam()
-#plot_single_fastq()
+plot_single_fastq()

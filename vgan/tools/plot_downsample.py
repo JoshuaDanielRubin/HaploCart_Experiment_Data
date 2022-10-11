@@ -7,10 +7,10 @@ import pdb
 
 import matplotlib.pylab as pylab
 params = {'legend.fontsize': 'x-large',
-         'axes.labelsize': 'large',
+         'axes.labelsize': 'medium',
          'axes.titlesize':'large',
-         'xtick.labelsize':'large',
-         'ytick.labelsize':'large'}
+         'xtick.labelsize':'small',
+         'ytick.labelsize':'small'}
 pylab.rcParams.update(params)
 
 def safe_log(score):
@@ -19,7 +19,7 @@ def safe_log(score):
     else:
         return math.log(score)
 
-colorblind_colors = ['#ff7f00', '#377eb8']
+colorblind_colors = ['#ff7f00', '#377eb8', '#009e74']
 
 def dequote(s):
     """
@@ -34,7 +34,7 @@ def dequote(s):
     elif s.startswith(("'", '"')):
         return s[1:]
 
-def make_violinplot_bam(haplogrep_dict, haplocart_dict, depthfile):
+def make_violinplot_bam(haplogrep_dict, haplocart_dict, haplogrouper_dict, depthfile):
     bamdepth_dict = {}
     with open(depthfile, "r") as f:
         for line in f:
@@ -46,6 +46,9 @@ def make_violinplot_bam(haplogrep_dict, haplocart_dict, depthfile):
     = [], [], [], [], [], [], [], [], [], [], []
 
     hc_0_01, hc_01_02, hc_02_03, hc_03_04, hc_04_05, hc_05_06, hc_06_07, hc_07_08, hc_08_09, hc_09_10, hc_10_up \
+    = [], [], [], [], [], [], [], [], [], [], []
+
+    hgrp_0_01, hgrp_01_02, hgrp_02_03, hgrp_03_04, hgrp_04_05, hgrp_05_06, hgrp_06_07, hgrp_07_08, hgrp_08_09, hgrp_09_10, hgrp_10_up \
     = [], [], [], [], [], [], [], [], [], [], []
 
     for k1,v1 in haplogrep_dict.items():
@@ -99,18 +102,46 @@ def make_violinplot_bam(haplogrep_dict, haplocart_dict, depthfile):
         elif depth2 > 1.0:
            hc_10_up.append(v2)
 
+
+    for k3,v3 in haplogrouper_dict.items():
+        depth3 = bamdepth_dict[k3.replace(".hg.out", ".bam")]
+        if depth3 > 0 and depth3 <= 0.1:
+           hgrp_0_01.append(v3)
+        elif depth3 > 0.1 and depth3 <= 0.2:
+           hgrp_01_02.append(v3)
+        elif depth3 > 0.2 and depth3 <= 0.3:
+           hgrp_02_03.append(v3)
+        elif depth3 > 0.3 and depth3 <= 0.4:
+           hgrp_03_04.append(v3)
+        elif depth3 > 0.4 and depth3 <= 0.5:
+           hgrp_04_05.append(v3)
+        elif depth3 > 0.5 and depth3 <= 0.6:
+           hgrp_05_06.append(v3)
+        elif depth3 > 0.6 and depth3 <= 0.7:
+           hgrp_06_07.append(v3)
+        elif depth3 > 0.7 and depth3 <= 0.8:
+           hgrp_07_08.append(v3)
+        elif depth3 > 0.8 and depth3 <= 0.9:
+           hgrp_08_09.append(v3)
+        elif depth3 > 0.9 and depth3 <= 1.0:
+           hgrp_09_10.append(v3)
+        elif depth3 > 1.0:
+           hgrp_10_up.append(v3)
+
     hg_data = [hg_0_01, hg_01_02, hg_02_03, hg_03_04, hg_04_05, hg_05_06, hg_06_07, hg_07_08, hg_08_09, hg_09_10, hg_10_up]
     hc_data = [hc_0_01, hc_01_02, hc_02_03, hc_03_04, hc_04_05, hc_05_06, hc_06_07, hc_07_08, hc_08_09, hc_09_10, hc_10_up]
+    hgrp_data = [hgrp_0_01, hgrp_01_02, hgrp_02_03, hgrp_03_04, hgrp_04_05, hgrp_05_06, hgrp_06_07, hgrp_07_08, hgrp_08_09, hgrp_09_10, hgrp_10_up]
 
     pos = [1,3,5,7,9,11,13,15,17,19,21]
 
     plt.figure(figsize=(15, 5))
-    hg_vplot = plt.violinplot(hg_data, positions = pos, showmeans=True)
+    hg_vplot = plt.violinplot(hg_data, positions = [x for x in pos], showmeans=True)
     hc_vplot = plt.violinplot(hc_data, positions = [x - 0.5 for x in pos], showmeans=True)
+    hgrp_vplot = plt.violinplot(hgrp_data, positions = [x + 0.5 for x in pos], showmeans=True)
 
     plt.suptitle("Haplogroup Classification Accuracy \n (Empirical Paired-end FASTQ)")
-    plt.xlabel("Mean depth of coverage (X)")
-    plt.ylabel("Levenshtein distance \n between true and predicted")
+    plt.xlabel("Mean depth of coverage (X)", fontsize=12)
+    plt.ylabel("Levenshtein distance \n between true and predicted", fontsize=12)
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19,21], \
                ["0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", \
@@ -118,13 +149,20 @@ def make_violinplot_bam(haplogrep_dict, haplocart_dict, depthfile):
 
     hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2')
     hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart')
+    hgrp_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper')
 
-    plt.legend(handles=[hc_patch, hg_patch], borderpad=0.5, prop={'size': 12})
+    plt.legend(handles=[hc_patch, hg_patch, hgrp_patch], borderpad=0.3, prop={'size': 10})
     plt.tight_layout()
     plt.subplots_adjust(top=0.88)
     plt.savefig("../data/pngs/bams_downsampled.png", bbox_inches='tight', dpi=300)
     plt.close()
 
+def transform_hgrp(k, numt):
+    splitted = k.split("_")
+    if numt == False:
+        return "_".join([splitted[0], splitted[2], splitted[3], splitted[4]])
+    else:
+        return "_".join([splitted[2], splitted[4], splitted[5], splitted[7]])
 
 def transform_hg(k, numt):
     splitted = k.split("_")
@@ -140,10 +178,10 @@ def transform_hct(k, numt):
     else:
         return "_".join([splitted[0], splitted[1], splitted[2], splitted[3], splitted[4]])
 
-def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=False):
-    print(len(haplocart_dict.keys()))
+def make_violinplot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, depthfile, outfile, numt=False):
     haplogrep_dict = {transform_hg(k, numt):v for k,v in haplogrep_dict.items()}
     haplocart_dict = {transform_hct(k, numt):v for k,v in haplocart_dict.items()}
+    haplogrouper_dict = {transform_hgrp(k, numt):v for k,v in haplogrouper_dict.items()}
 
     fqdepth_dict = {}
     with open(depthfile, "r") as f:
@@ -159,6 +197,8 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
     hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20 \
     = [], [], [], [], [], [], [], [], [], []
     hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20 \
+    = [], [], [], [], [], [], [], [], [], []
+    hgrp_0_02, hgrp_02_04, hgrp_04_06, hgrp_06_08, hgrp_08_10, hgrp_10_12, hgrp_12_14, hgrp_14_16, hgrp_16_18, hgrp_18_20 \
     = [], [], [], [], [], [], [], [], [], []
 
     for k1,v1 in haplogrep_dict.items():
@@ -217,12 +257,41 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
         elif depth2 > 1.6 and depth2 <= 1.8:
             hc_16_18.append(v2)
         elif depth2 > 1.8 and depth2 <= 2:
-            if safe_log(v2) > 3:
-                print(k2)
             hc_18_20.append(v2)
+
+    for k3,v3 in haplogrouper_dict.items():
+        v3 = int(v3)
+        splitted = k3.split("_")
+        if "H2a2a1" == splitted[0] or "L1c2b" == splitted[0]:
+            continue
+        depth3 = fqdepth_dict["_".join([splitted[0], splitted[1], splitted[2], splitted[3]])]
+        if depth3 <= 0.2:
+            hgrp_0_02.append(v3)
+        elif depth3 > 0.2 and depth3 <= 0.4:
+            hgrp_02_04.append(v3)
+        elif depth3 > 0.4 and depth3 <= 0.6:
+            hgrp_04_06.append(v3)
+        elif depth3 > 0.6 and depth3 <= 0.8:
+            hgrp_06_08.append(v3)
+        elif depth3 > 0.8 and depth3 <= 1.0:
+            hgrp_08_10.append(v3)
+        elif depth3 > 1.0 and depth3 <= 1.2:
+            hgrp_10_12.append(v3)
+        elif depth3 > 1.2 and depth3 <= 1.4:
+            hgrp_12_14.append(v3)
+        elif depth3 > 1.4 and depth3 <= 1.6:
+            hgrp_14_16.append(v3)
+        elif depth3 > 1.6 and depth3 <= 1.8:
+            hgrp_16_18.append(v3)
+        elif depth3 > 1.8 and depth3 <= 2:
+            if safe_log(v3) > 3:
+                print(k3)
+            hgrp_18_20.append(v3)
+
 
     hc_data = [hc_0_02, hc_02_04, hc_04_06, hc_06_08, hc_08_10, hc_10_12, hc_12_14, hc_14_16, hc_16_18, hc_18_20]
     hg_data = [hg_0_02, hg_02_04, hg_04_06, hg_06_08, hg_08_10, hg_10_12, hg_12_14, hg_14_16, hg_16_18, hg_18_20]
+    hgrp_data = [hgrp_0_02, hgrp_02_04, hgrp_04_06, hgrp_06_08, hgrp_08_10, hgrp_10_12, hgrp_12_14, hgrp_14_16, hgrp_16_18, hgrp_18_20]
 
     if numt == False:
         plt.title("Haplogroup Classification Performance \n (Simulated Paired-end FASTQ)")
@@ -235,24 +304,20 @@ def make_violinplot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile, numt=
 
     hg_pos = [1,3,5,7,9,11,13,15,17,19]
     hc_pos = [x-0.5 for x in hg_pos]
+    hgrp_pos=[x+0.5 for x in hg_pos]
 
     hg_vplot = plt.violinplot([[safe_log(x) for x in val] or nans for val in hg_data], positions=hg_pos, showmeans=True)
     hc_vplot = plt.violinplot([[safe_log(x) for x in val] or nans for val in hc_data], positions=hc_pos, showmeans=True)
+    hgrp_vplot = plt.violinplot([[safe_log(x) for x in val] or nans for val in hgrp_data], positions=hgrp_pos, showmeans=True)
 
     hg_patch = mpatches.Patch(color="blue", label='HaploCart accuracy distribution')
     hc_patch = mpatches.Patch(color="orange", label='HaploGrep2 accuracy distribution')
+    hgrp_patch = mpatches.Patch(color="#009e74", label='HaploGrouper accuracy distribution')
 
     plt.xticks([1,3,5,7,9,11,13,15,17,19], \
-               ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45)
+               ["0-0.2", "0.2-0.4", "0.4-0.6", "0.6-0.8", "0.8-1.0", "1.0-1.2", "1.2-1.4", "1.4-1.6", "1.6-1.8", "1.8-2.0"], rotation=45, fontsize=9)
 
-    #for idx, i in enumerate([0,2,4,6,8,10,12,14,16,18]):
-    #    plt.text(i, 100, "N="+str(len(hc_data[idx])), rotation=45, fontsize=6, c="orange")
-    #    plt.text(i+0.6, 100, "N="+str(len(hg_data[idx])), rotation=45, fontsize=6, c="blue")
-    #for idx2, j in enumerate([20,22,24,26,28,30]):
-    #    plt.text(j, 60, "N="+str(len(hc_data[idx2+10])), rotation=45, fontsize=6, c="orange")
-    #    plt.text(j+0.6, 60, "N="+str(len(hg_data[idx2+10])), rotation=45, fontsize=6, c="blue")
-
-    plt.legend(handles=[hc_patch, hg_patch], borderpad=0.45, prop={'size': 8})
+    plt.legend(handles=[hc_patch, hg_patch, hgrp_patch], borderpad=0.45, prop={'size': 8})
     plt.tight_layout()
     plt.savefig(outfile, dpi=300)
     plt.close()
@@ -268,8 +333,9 @@ def plot_bam():
 
     haplogrep_score_dict = pickle.load(open("../data/pickles/haplogrep_bam.pk", "rb"))
     haplocart_score_dict = pickle.load(open("../data/pickles/haplocart_bams.pk", "rb"))
+    haplogrouper_score_dict = pickle.load(open("../data/pickles/haplogrouper_empirical.pk", "rb"))
 
-    make_violinplot_bam(haplogrep_score_dict, haplocart_score_dict, "../data/1kdepths.txt")
+    make_violinplot_bam(haplogrep_score_dict, haplocart_score_dict, haplogrouper_score_dict, "../data/1kdepths.txt")
 
 
 def plot_fastq():
@@ -278,13 +344,15 @@ def plot_fastq():
     haplocart_no_numt_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_no_numt.pk", "rb"))
     haplogrep_with_numt_score_dict = pickle.load(open("../data/pickles/hg_fastq_with_numt.pk", "rb"))
     haplocart_with_numt_score_dict = pickle.load(open("../data/pickles/haplocart_fastq_with_numt.pk", "rb"))
+    haplogrouper_score_dict_no_numt = pickle.load(open("../data/pickles/haplogrouper_sim_no_numt.pk", "rb"))
+    haplogrouper_score_dict_with_numt = pickle.load(open("../data/pickles/haplogrouper_sim_with_numt.pk", "rb"))
 
-    make_violinplot_fq(haplogrep_no_numt_score_dict, haplocart_no_numt_score_dict, \
+    make_violinplot_fq(haplogrep_no_numt_score_dict, haplocart_no_numt_score_dict, haplogrouper_score_dict_no_numt, \
                        "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_no_numt.png", numt=False)
 
-    make_violinplot_fq(haplogrep_with_numt_score_dict, haplocart_with_numt_score_dict, \
+    make_violinplot_fq(haplogrep_with_numt_score_dict, haplocart_with_numt_score_dict, haplogrouper_score_dict_with_numt, \
                       "../data/fastq_with_numt_sim_depths.txt", "../data/pngs/fastq_with_numt.png", numt=True)
 
 
-#plot_bam()
-plot_fastq()
+plot_bam()
+#plot_fastq()

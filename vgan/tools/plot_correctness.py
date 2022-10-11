@@ -37,7 +37,7 @@ def dequote(s):
         return s[1:]
 
 
-def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile):
+def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, haplogrouper_dict, depthfile, outfile):
     depth_dict = {}
     with open(depthfile, "r") as f:
         for line in f:
@@ -109,9 +109,11 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile)
 
     hg_data_prop = [(sum(x)) for x in hg_data]
     hc_data_prop = [(sum(x)) for x in hc_data]
+    hgrp_data_prop = [(sum(x)) for x in hgrp_data]
 
     hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
     hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
+    hgrp_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hgrp_data)]
 
     plt.title("Total Number of Correct Predictions  \n (Simulated FASTQ)")
     plt.xlabel("Average depth of coverage (X)")
@@ -152,9 +154,9 @@ def make_correctness_plot_fq(haplogrep_dict, haplocart_dict, depthfile, outfile)
     plt.savefig(outfile, dpi=300, bbox_inches='tight')
     plt.close()
 
-def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile):
-     print("Size of haplocart dict: ", len(haplocart_dict.keys()))
-     print("Size of haplogrep dict: ", len(haplogrep_dict.keys()))
+def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, haplogrouper_dict, depthfile, outfile):
+     #print("Size of haplocart dict: ", len(haplocart_dict.keys()))
+     #print("Size of haplogrep dict: ", len(haplogrep_dict.keys()))
      bamdepth_dict = {}
      with open(depthfile, "r") as f:
          for line in f:
@@ -166,6 +168,9 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile
      = [], [], [], [], [], []
 
      hc_data \
+     = [], [], [], [], [], []
+
+     hgrp_data \
      = [], [], [], [], [], []
 
      for k1,v1 in haplogrep_dict.items():
@@ -200,15 +205,33 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile
          elif depth2 > 0.75:
             hc_data[5].append(v2)
 
+     for k3,v3 in haplogrouper_dict.items():
+        v3 = is_correct(v3)
+        depth3 = bamdepth_dict[k3.replace(".hg.out", ".bam")]
+        if depth3 > 0 and depth3 <= 0.15:
+           hgrp_data[0].append(v3)
+        elif depth3 > 0.1 and depth3 <= 0.3:
+           hgrp_data[1].append(v3)
+        elif depth3 > 0.2 and depth3 <= 0.45:
+           hgrp_data[2].append(v3)
+        elif depth3 > 0.3 and depth3 <= 0.6:
+           hgrp_data[3].append(v3)
+        elif depth3 > 0.4 and depth3 <= 0.75:
+           hgrp_data[4].append(v3)
+        elif depth3 > 0.75:
+           hgrp_data[5].append(v3)
+
      total_per_bin = [1056, 1415, 1376, 1388, 1235, 1530]
 
      nans = [float('nan'), float('nan')]
 
      hg_correct_count = [sum(_) for _ in hg_data]
      hc_correct_count = [sum(_) for _ in hc_data]
+     hgrp_correct_count = [sum(_) for _ in hgrp_data]
 
      hg_call_rate = [(len(x) / total_per_bin[i]) for i, x in enumerate(hg_data)]
      hc_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hc_data)]
+     hgrp_call_rate = [(len(y) / total_per_bin[j]) for j, y in enumerate(hgrp_data)]
 
      print("hc call rate: ", hc_call_rate)
 
@@ -216,6 +239,8 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile
      hg_callrate_pos = [x for x in hg_pos]
      hc_pos = [x-0.25 for x in hg_pos]
      hc_callrate_pos = [x-0.25 for x in hg_pos]
+     hgrp_pos = [x+0.25 for x in hg_pos]
+     hgrp_callrate_pos = [x+0.25 for x in hg_pos]
 
      fig, ax = plt.subplots(2, figsize=(15, 10), sharex=True)
      fig.suptitle("Total Number of Correct Predictions  \n (Empirical Paired-end FASTQ)")
@@ -223,21 +248,26 @@ def make_correctness_plot_bam(haplogrep_dict, haplocart_dict, depthfile, outfile
      ax[0].set_ylabel("Count")
      ax[1].set_ylabel("Call rate")
 
-     hg_bar = ax[0].bar(hg_pos, hg_correct_count, color=colorblind_colors[1], label="HaploGrep2", width=0.3)
-     hc_bar = ax[0].bar(hc_pos, hc_correct_count, color=colorblind_colors[0], label="HaploCart", width=0.3)
-     hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color=colorblind_colors[2], label="HaploGrep2 call rate", width=0.3)
-     hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color=colorblind_colors[3], label="HaploCart call rate", width=0.3)
+     hg_bar = ax[0].bar(hg_pos, hg_correct_count, color=colorblind_colors[1], label="HaploGrep2", width=0.25)
+     hc_bar = ax[0].bar(hc_pos, hc_correct_count, color=colorblind_colors[0], label="HaploCart", width=0.25)
+     hgrp_bar = ax[0].bar(hgrp_pos, hgrp_correct_count, color=colorblind_colors[2], label="HaploGrouper", width=0.25)
+     hg_callrate_bar = ax[1].bar(hg_callrate_pos, hg_call_rate, color=colorblind_colors[1], label="HaploGrep2 call rate", width=0.25)
+     hc_callrate_bar = ax[1].bar(hc_callrate_pos, hc_call_rate, color=colorblind_colors[0], label="HaploCart call rate", width=0.25)
+     hgrp_callrate_bar = ax[1].bar(hgrp_callrate_pos, hgrp_call_rate, color=colorblind_colors[2], label="HaploGrouper call rate", width=0.25)
 
      plt.xticks([1,2,3,4,5,6], \
                ["0-0.15", "0.15-0.3", "0.3-0.45", "0.45-0.6", "0.6-0.75", ">0.75"], rotation=45)
 
      hc_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart count correct')
      hg_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 count correct')
-     hc_callrate_patch = mpatches.Patch(color=colorblind_colors[3], label='HaploCart call rate')
-     hg_callrate_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrep2 call rate')
+     hgrp_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper count correct')
 
-     ax[0].legend(handles=[hc_patch, hg_patch], loc="upper left")
-     ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch], loc="upper left")
+     hc_callrate_patch = mpatches.Patch(color=colorblind_colors[0], label='HaploCart call rate')
+     hg_callrate_patch = mpatches.Patch(color=colorblind_colors[1], label='HaploGrep2 call rate')
+     hgrp_callrate_patch = mpatches.Patch(color=colorblind_colors[2], label='HaploGrouper call rate')
+
+     ax[0].legend(handles=[hc_patch, hg_patch, hgrp_patch], loc="upper left")
+     ax[1].legend(handles=[hc_callrate_patch, hg_callrate_patch, hgrp_callrate_patch], loc="upper left")
      plt.tight_layout()
      plt.savefig(outfile, dpi=300)
      plt.close()
@@ -253,8 +283,9 @@ def plot_bam():
 
     haplogrep_score_dict = pickle.load(open("../data/pickles/haplogrep_bam.pk", "rb"))
     haplocart_score_dict = pickle.load(open("../data/pickles/haplocart_bams.pk", "rb"))
+    haplogrouper_score_dict = pickle.load(open("../data/pickles/haplogrouper_empirical.pk", "rb"))
 
-    make_correctness_plot_bam(haplogrep_score_dict, haplocart_score_dict, "../data/1kdepths.txt", "../data/pngs/bam_correctness.png")
+    make_correctness_plot_bam(haplogrep_score_dict, haplocart_score_dict, haplogrouper_score_dict, "../data/1kdepths.txt", "../data/pngs/bam_correctness.png")
 
 
 def plot_single_fastq():
@@ -263,4 +294,4 @@ def plot_single_fastq():
     make_correctness_plot_fq(haplogrep_score_dict, haplocart_score_dict, "../data/fastq_no_numt_sim_depths.txt", "../data/pngs/fastq_correctness.png")
 
 plot_bam()
-plot_single_fastq()
+#plot_single_fastq()

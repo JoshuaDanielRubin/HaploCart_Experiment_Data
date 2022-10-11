@@ -16,6 +16,9 @@ def merge_two_dicts(x, y):
 def get_edit_distance(s1, s2, numt=False):
     # Compute edit (Levenshtein) distance between true and predicted haplotypes
 
+    s2=s2.split("+")[0]
+
+    # Phymer preds from outdated Phylotree version 16
     if s2 == "U5a2b1":
         return "NAN"
 
@@ -31,9 +34,10 @@ def get_edit_distance(s1, s2, numt=False):
     if s2=="B":
         return "NAN"
 
-    with gzip.open("../data/synthetic_fastas/"+s1.split("+")[0]+".fasta.gz", "rt") as f:
+    with gzip.open("../data/synthetic_fastas/"+s1+".fasta.gz", "rt") as f:
         seq1 = next(SeqIO.parse(f, "fasta")).seq
-    with gzip.open("../data/synthetic_fastas/"+s2.split("+")[0]+".fasta.gz", "rt") as f:
+
+    with gzip.open("../data/synthetic_fastas/"+s2+".fasta.gz", "rt") as f:
         seq2 = next(SeqIO.parse(f, "fasta")).seq
 
     return Levenshtein.distance(seq1, seq2)
@@ -99,6 +103,44 @@ def get_haplocheck_scores(score_dict, result_filepath, true, bam=False, numt=Fal
                 score_dict.update({file:predscore})
         return score_dict
 
+def get_haplogrouper_scores_empirical(score_dict, result_dir):
+    for file in os.listdir(result_dir):
+        if (not file.endswith(".out")):
+            continue
+        with open(result_dir+file, "r") as f:
+            next(f)
+            pred = f.readline().split("\t")[1]
+            true = thousand_genomes_dict[file.split("_")[0]]
+            predscore = score(true, pred)
+            print(file, true, pred, predscore)
+            score_dict.update({file:predscore})
+    return score_dict
+
+def get_haplogrouper_scores_simulated_no_numt(score_dict, result_dir, numt=False):
+    for file in os.listdir(result_dir):
+        if (not file.endswith(".out")) or file.startswith("numtS"):
+            continue
+        with open(result_dir+file, "r") as f:
+            next(f)
+            pred = f.readline().split("\t")[1]
+            true = file.split("_")[0]
+            predscore = score(true, pred)
+            print(file, true, pred, predscore)
+            score_dict.update({file:predscore})
+    return score_dict
+
+def get_haplogrouper_scores_simulated_with_numt(score_dict, result_dir, numt=False):
+    for file in os.listdir(result_dir):
+        if (not file.startswith("numtS")) or (not file.endswith(".out")):
+            continue
+        with open(result_dir+file, "r") as f:
+            next(f)
+            pred = f.readline().split("\t")[1]
+            true = file.split("_")[2]
+            print(true, pred)
+            predscore = score(true, pred)
+            score_dict.update({file:predscore})
+    return score_dict
 
 def get_haplogrep_mask_scores(score_dict, result_dirpath):
     for file in os.listdir(result_dirpath):
@@ -157,17 +199,33 @@ def get_haplocart_scores(haplocart_pred_file, bam=False, numt=False):
 
 def score_bam():
 
-    #haplocheck_score_dict = {}
-    #for id in thousand_genome_dict.keys():
-    #    haplocheck_score_dict = get_haplocheck_scores(haplocheck_score_dict, "../src/simulations/thousand_genomes/haplocheck_results/"+id+"/"+"haplogroups/haplogroups.txt", thousand_genome_dict[id], bam=True)
+    #haplogrouper_score_dict={}
+    #haplogrouper_score_dict=get_haplogrouper_scores_empirical(haplogrouper_score_dict,"/home/projects/gabriel/HaploGrouper/empirical/")
+    #with open("../data/pickles/haplogrouper_empirical.pk", "wb") as f:
+    #    pickle.dump(haplogrouper_score_dict, f)
+
+    haplocheck_score_dict = {}
+    for id in thousand_genomes_dict.keys():
+        haplocheck_score_dict = get_haplocheck_scores(haplocheck_score_dict, \
+                                "../src/simulations/thousand_genomes/haplocheck_results/"+id+"/"+"haplogroups/haplogroups.txt", thousand_genomes_dict[id], bam=True)
 
     #pickle.dump(haplocheck_score_dict, open("../data/pickles/haplocheck_bam.pk", "wb"))
 
-    haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/bams.txt", bam=True)
-    pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_bams.pk", "wb"))
-
+    #haplocart_score_dict = get_haplocart_scores("../data/haplocart_results/bams.txt", bam=True)
+    #pickle.dump(haplocart_score_dict, open("../data/pickles/haplocart_bams.pk", "wb"))
 
 def score_fastq():
+
+    pass
+    #haplogrouper_score_dict = {}
+    #haplogrouper_score_dict = get_haplogrouper_scores_simulated_no_numt(haplogrouper_score_dict, "/home/projects/gabriel/HaploGrouper/")
+    #with open("../data/pickles/haplogrouper_sim_no_numt.pk", "wb") as f:
+    #    pickle.dump(haplogrouper_score_dict, f)
+
+    #haplogrouper_score_dict = {}
+    #haplogrouper_score_dict = get_haplogrouper_scores_simulated_with_numt(haplogrouper_score_dict, "/home/projects/gabriel/HaploGrouper/")
+    #with open("../data/pickles/haplogrouper_sim_with_numt.pk", "wb") as g:
+    #    pickle.dump(haplogrouper_score_dict, g)
 
     #haplocheck_score_dict_no_numt = {}
     #haplocheck_score_dict_no_numt = get_haplocheck_scores(haplocheck_score_dict_no_numt, \
@@ -181,11 +239,11 @@ def score_fastq():
     #with open("../data/pickles/hc_fastq_with_numt.pk", "wb") as h:
     #    pickle.dump(haplocheck_score_dict_with_numt, h)
 
-    haplocart_score_dict_no_numt = get_haplocart_scores("../data/haplocart_results/fastq_no_numt.txt")
-    pickle.dump(haplocart_score_dict_no_numt, open("../data/pickles/haplocart_fastq_no_numt.pk", "wb"))
+    #haplocart_score_dict_no_numt = get_haplocart_scores("../data/haplocart_results/fastq_no_numt.txt")
+    #pickle.dump(haplocart_score_dict_no_numt, open("../data/pickles/haplocart_fastq_no_numt.pk", "wb"))
 
-    haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
-    pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
+    #haplocart_score_dict_with_numt = get_haplocart_scores("../data/haplocart_results/fastq_with_numt.txt", numt=True)
+    #pickle.dump(haplocart_score_dict_with_numt, open("../data/pickles/haplocart_fastq_with_numt.pk", "wb"))
 
 
 def score_mask():
@@ -239,8 +297,8 @@ def get_haplogrep_reported_confidence_fastq():
         pickle.dump(confidence_dict, f)
 
 
-#score_bam()
+score_bam()
 #score_fastq()
-score_mask()
+#score_mask()
 #get_haplogrep_reported_confidence_fastq()
 #get_h2a2a1_wrong_prop("../data/pickles/hg_fastq_no_numt.pk", "../src/simulations/thousand_genomes/haplocheck_results/sims/haplogroups/haplogroups.txt")

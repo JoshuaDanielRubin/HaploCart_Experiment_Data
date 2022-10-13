@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_56.0.6.bam	H76a	35	43	8	G[H76]G8572A:T[H]T7028C:T[HV]T14766C:G[R0]G73A	4	A	H76a[43-8]:K1a[47-12]:K[45-10]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_41.0.6.bam	M80'D	34	37	3	T[M]T489C:T[M]T14783C	1	A	D[38-4]:M80'D[37-3]

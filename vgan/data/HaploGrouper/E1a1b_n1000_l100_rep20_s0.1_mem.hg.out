@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep20_s0.1_mem.bam	N	36	38	2	A[N]A15301G	1	A	H2[42-6]:H2a2[43-7]:N10[40-4]:N[38-2]:R0[40-4]:R31[40-4]:R[39-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_70.0.7.bam	H2	38	43	5	T[HV]T14766C:G[N]G8701A:G[N]G10398A	2		H2[43-5]

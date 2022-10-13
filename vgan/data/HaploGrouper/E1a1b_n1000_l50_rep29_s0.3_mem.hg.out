@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l50_rep29_s0.3_mem.bam	E	36	41	5	G[E]G3705A:G[E]G7598A:T[M9]T16362C:T[M]T489C	1		E[41-5]

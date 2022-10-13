@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/P_n1000_l100_rep50_s0.1_mem.bam	H	41	44	3	G[R0]G73A	2	A	H2a[45-4]:H3_A73G[45-4]:H40a[45-4]:H55_A153G[45-4]:H56d[45-4]:H77[45-4]:H[44-3]

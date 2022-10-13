@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_65.0.5.bam	H	37	42	5	G[R0]G73A:T[R]T16223C:G[N]G8701A	2	AM	H1[43-5]:H1a[44-6]:H1c15[44-6]:H2[43-5]:H2a2a[45-7]

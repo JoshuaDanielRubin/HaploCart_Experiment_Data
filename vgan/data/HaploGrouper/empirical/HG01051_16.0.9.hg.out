@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_16.0.9.bam	K1a4a1e	39	52	13	C[K1a4a1]C11840T:T[K1a]T16093C:A[K1]A10398G:A[K]A10550G:T[K]T14798C:T[K]T16224C:T[U8]T9698C:A[U2'3'4'7'8'9]A1811G:A[U]A12308G	4		K1a4a1e[52-13]

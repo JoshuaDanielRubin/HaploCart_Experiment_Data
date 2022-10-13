@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1j_n1000_l50_rep39_nr200_s0.3_mem.bam	L2a	21	30	9	T[L2a'b'c'd]T195C:T[L2]T2416C:A[L2]A9221G:T[L2]T10115C:C[L1'2'3'4'5'6]C182T:A[L1'2'3'4'5'6]A11914G	3	A	L2a1_G143A[36-15]:L2a[30-9]

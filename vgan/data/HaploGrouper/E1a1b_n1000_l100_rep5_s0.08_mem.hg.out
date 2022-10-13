@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep5_s0.08_mem.bam	M	35	37	2	C[M]C10400T	1	A	H2a2a1[44-9]:H40a[42-7]:H77[42-7]:H[41-6]:M[37-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l50_rep29_s0.3_mem.bam	H1a	40	45	5	G[H1]G3010A:A[R0]A11719G	3		H1a[45-5]

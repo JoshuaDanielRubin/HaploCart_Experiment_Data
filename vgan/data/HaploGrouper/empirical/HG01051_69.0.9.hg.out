@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_69.0.9.bam	U8b'c	42	45	3	G[U]G12372A	2	A	K1a4[51-9]:U8b[46-4]:U8b'c[45-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_54.0.7.bam	H2a	39	44	5	T[HV]T14766C:C[L2'3'4'6]C195T:C[L2'3'4'5'6]C152T	2	A	H2a2a1[46-7]:H2a[44-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep61_s0.07_mem.bam	HV_A73G	34	40	6	G[N]G8701A:C[N]C9540T:C[N]C10873T	3	A	H1[41-7]:H1a[42-8]:H1c15[42-8]:HV_A73G[40-6]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_48.0.7.bam	HV_A73G	36	41	5	G[N]G8701A:G[N]G10398A	3		HV_A73G[41-5]

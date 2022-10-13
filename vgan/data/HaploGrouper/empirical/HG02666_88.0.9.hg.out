@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_88.0.9.bam	HV_A73G	40	43	3	A[N]A15301G	2		HV_A73G[43-3]

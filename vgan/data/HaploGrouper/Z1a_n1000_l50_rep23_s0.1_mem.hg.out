@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l50_rep23_s0.1_mem.bam	HV	37	41	4	G[N]G8701A:C[N]C9540T	2	A	H2a2a1[45-8]:H40a[43-6]:H77[43-6]:H[42-5]:HV0[42-5]:HV[41-4]

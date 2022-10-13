@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l100_rep82_s0.07_mem.bam	H_G16129A	38	43	5	G[R0]G73A:G[N]G10398A	3		H_G16129A[43-5]

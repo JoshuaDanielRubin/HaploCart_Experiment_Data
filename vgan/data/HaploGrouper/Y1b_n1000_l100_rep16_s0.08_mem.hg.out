@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l100_rep16_s0.08_mem.bam	N	34	37	3	G[N]G10398A	2	M	H104[43-5]:Y[43-5]

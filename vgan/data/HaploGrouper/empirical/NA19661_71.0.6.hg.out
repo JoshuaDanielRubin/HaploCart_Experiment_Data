@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_71.0.6.bam	H2a	39	44	5	G[H]G2706A:C[N]C9540T:G[N]G10398A	2	A	H2a2a1[46-7]:H2a[44-5]

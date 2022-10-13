@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep43_s0.09_mem.bam	H	41	44	3	A[R0]A11719G	2	AM	H2[45-3]:H2a2[46-4]:H2a2a[47-5]:H2a5[46-4]:H65[45-3]:H_G13708A[45-3]

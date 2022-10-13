@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c4b_n1000_l100_rep60_nr200_s0.3_mem.bam	L1c4	34	41	7	A[L1c4]A9545G:T[L1c4]T13879C:G[L1c]G316A:G[L1]G3666A:T[L1]T14178C	2	A	L1c4[41-7]:L1c4b[42-8]

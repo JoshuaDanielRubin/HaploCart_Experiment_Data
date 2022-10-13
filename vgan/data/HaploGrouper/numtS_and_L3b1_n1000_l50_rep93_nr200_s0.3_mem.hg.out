@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l50_rep93_nr200_s0.3_mem.bam	L3b1	34	41	7	A[L3b]A13105G:A[L3b]A15311G:C[L3b]C16278T:T[L3b]T16362C:G[L2'3'4'6]G15301A:C[L2'3'4'5'6]C152T	1	A	L3b1[41-7]:L3b1a_T152C[42-8]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l100_rep3_s0.08_mem.bam	R	38	40	2		2	A	H2a2a[45-7]:R[40-2]

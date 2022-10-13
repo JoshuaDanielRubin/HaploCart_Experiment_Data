@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Z1a_n1000_l50_rep23_nr200_s0.3_mem.bam	M8	36	40	4	A[M8]A15487T:T[M]T489C:G[M]G15043A	1		M8[40-4]

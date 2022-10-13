@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1j_n1000_l100_rep72_nr200_s0.06_mem.bam	H_T195C	24	36	12	T[HV]T14766C:G[R0]G73A:T[R]T16223C:G[N]G8701A:G[N]G10398A:T[L3'4]T3594C:T[L3'4]T7256C:A[L3'4'6]A7521G:C[L2'3'4'6]C16189T	3	A	H2a2[37-13]:H2a2a1g[39-15]:H2a2a[38-14]:H_T195C[36-12]

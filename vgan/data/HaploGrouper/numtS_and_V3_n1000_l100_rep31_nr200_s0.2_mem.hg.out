@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_V3_n1000_l100_rep31_nr200_s0.2_mem.bam	HV0_T195C	40	44	4	T[HV0]T72C	3	A	H2a2[45-5]:H2a2a[46-6]:HV0_T195C[44-4]:HV0f[45-5]:V3[45-5]:V_C72T[45-5]

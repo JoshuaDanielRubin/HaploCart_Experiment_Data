@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1a3c_n1000_l100_rep99_nr200_s0.08_mem.bam	HV	27	36	9	A[R0]A11719G:T[R]T16223C:A[N]A15301G:T[L3'4]T7256C:T[L3'4]T13650C:T[L3'4]T16278C:G[L3'4'6]G4104A:A[L1'2'3'4'5'6]A11914G	1	A	H1_C16278T[38-11]:H2a[38-11]:H3ao[38-11]:H13c[38-11]:H40a[38-11]:H77[38-11]:H[37-10]:HV[36-9]

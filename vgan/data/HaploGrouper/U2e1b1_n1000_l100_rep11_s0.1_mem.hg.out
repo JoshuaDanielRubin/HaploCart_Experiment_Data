@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep11_s0.1_mem.bam	H9	38	43	5	G[R0]G73A:C[L2'3'4'6]C16189T	3		H9[43-5]

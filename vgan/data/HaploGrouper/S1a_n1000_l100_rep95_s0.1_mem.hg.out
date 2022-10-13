@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/S1a_n1000_l100_rep95_s0.1_mem.bam	H_T195C_T146C	39	44	5	T[R]T16223C	4		H_T195C_T146C[44-5]

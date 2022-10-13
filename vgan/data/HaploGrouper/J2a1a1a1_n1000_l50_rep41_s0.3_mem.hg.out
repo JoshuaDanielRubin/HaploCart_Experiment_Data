@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l50_rep41_s0.3_mem.bam	R	36	39	3	C[L2'3'4'6]C195T	2	A	HV_A73G[41-5]:R0[40-4]:R[39-3]

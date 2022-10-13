@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l100_rep88_s0.3_mem.bam	Y1b	39	46	7	C[Y1]C16266T:T[Y]T16126C:G[N9]G5417A	4		Y1b[46-7]

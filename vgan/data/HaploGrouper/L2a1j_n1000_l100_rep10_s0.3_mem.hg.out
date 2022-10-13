@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep10_s0.3_mem.bam	L2a1j	31	43	12	T[L2a1]T15784C:A[L2a1'2'3'4]A14566G:T[L2]T2416C:A[L2]A9221G:T[L2]T10115C	7		L2a1j[43-12]

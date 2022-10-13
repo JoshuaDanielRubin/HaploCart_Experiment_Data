@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_61.1.0.bam	L3e3'4	37	39	2	C[L3e'i'k'x]C150T	1	A	H2a2a1[45-8]:H2a2a1c[46-9]:L3e3'4[39-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_15.1.0.bam	H	33	40	7	T[HV]T14766C:T[R]T16223C:C[N]C9540T:C[N]C10873T:A[N]A15301G:C[L2'3'4'6]C16189T	1	A	H1_T16189C[41-8]:H2a3[42-9]:H2a[41-8]:H3_T16189C[41-8]:H3b[41-8]:H40a[41-8]:H77[41-8]:H[40-7]

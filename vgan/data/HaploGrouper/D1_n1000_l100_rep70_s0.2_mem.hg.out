@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep70_s0.2_mem.bam	M	35	37	2	G[M]G15043A	1		M[37-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l100_rep24_nr200_s0.07_mem.bam	H_T152C	39	43	4	G[R0]G73A	3	A	H2a2[44-5]:H2a2a2[46-7]:H2a2a[45-6]:H32[44-5]:H_T152C[43-4]

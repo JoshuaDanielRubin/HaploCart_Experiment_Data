@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep50_s0.04_mem.bam	HV	35	40	5	G[R0]G73A:T[R]T16223C:A[N]A15301G:G[L2'3'4'6]G13105A	1	AM	H2[42-6]:H2a2[43-7]:H2a2a1a[45-9]:HV5[41-5]:HV_A73G[41-5]

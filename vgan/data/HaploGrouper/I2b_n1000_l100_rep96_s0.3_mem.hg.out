@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l100_rep96_s0.3_mem.bam	I2b	46	54	8	T[I2b]T6515C:A[N1a]A13780G:G[N1'5]G1719A	5		I2b[54-8]

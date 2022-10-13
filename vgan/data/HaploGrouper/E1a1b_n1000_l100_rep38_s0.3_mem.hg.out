@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep38_s0.3_mem.bam	E	42	44	2	G[E]G7598A	1	A	E1[45-3]:E1a1b[47-5]:E1a[46-4]:E[44-2]

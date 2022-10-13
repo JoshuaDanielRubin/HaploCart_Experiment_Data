@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_27.1.0.bam	L3b1a_C16124T	32	41	9	G[L3b1]G10373A:C[L3b]C3450T:T[L3b]T6221C:C[L3b]C9449T:A[L3b]A10086G	4		L3b1a_C16124T[41-9]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_30.0.5.bam	H2a2a1	33	43	10	G[H2a2a]G15326A:T[R]T12705C:G[N]G8701A:C[N]C9540T:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A:T[L2'3'4'5'6]T8468C:G[L1'2'3'4'5'6]G16230A	2		H2a2a1[43-10]

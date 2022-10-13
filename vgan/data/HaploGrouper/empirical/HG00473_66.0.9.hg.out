@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_66.0.9.bam	L3	29	32	3	G[L2'3'4'6]G15301A:C[L2'3'4'6]C16189T	1	A	D_T16189C[36-7]:L3[32-3]

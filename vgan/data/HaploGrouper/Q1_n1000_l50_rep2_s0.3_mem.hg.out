@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l50_rep2_s0.3_mem.bam	M	29	34	5	C[M]C10400T:C[L3]C16311T:G[L2'3'4'6]G15301A:A[L2'3'4'6]A16129G	1	AM	M32[36-6]:M32'56[35-5]:M42'74[35-5]

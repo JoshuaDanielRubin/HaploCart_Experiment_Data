@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l50_rep38_nr200_s0.2_mem.bam	R	38	40	2		2		R[40-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l50_rep24_s0.3_mem.bam	M8	34	39	5	T[M8]T16298C:T[M]T489C:T[M]T14783C:G[M]G15043A	1		M8[39-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_52.1.0.bam	HV_A73G	38	42	4	C[N]C9540T	3	A	H2a2a[45-7]:HV_A73G[42-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_F1a1_n1000_l100_rep57_nr200_s0.2_mem.bam	F	40	44	4	A[F]A249:T[R9]T16304C	2		F[44-4]

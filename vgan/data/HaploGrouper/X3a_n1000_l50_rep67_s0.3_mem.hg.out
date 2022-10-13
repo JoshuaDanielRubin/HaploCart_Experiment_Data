@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l50_rep67_s0.3_mem.bam	N	36	38	2		2	A	H2[42-6]:H2a2[43-7]:H2a2a[44-8]:HV_A73G[41-5]:N[38-2]:R0[40-4]:R[39-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l50_rep56_nr200_s0.3_mem.bam	R	36	39	3	G[N]G10398A	2	A	HV_A73G[41-5]:J[44-8]:R0[40-4]:R[39-3]

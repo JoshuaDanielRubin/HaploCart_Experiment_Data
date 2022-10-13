@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_90.0.4.bam	H2a2a1	41	47	6	G[R0]G73A:G[N]G8701A:C[N]C9540T:G[N]G10398A	2		H2a2a1[47-6]

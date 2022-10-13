@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l50_rep26_s0.3_mem.bam	HV2	40	44	4		4		HV2[44-4]

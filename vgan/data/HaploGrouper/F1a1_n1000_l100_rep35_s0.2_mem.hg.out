@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l100_rep35_s0.2_mem.bam	F1	46	49	3	A[F]A249	2		F1[49-3]

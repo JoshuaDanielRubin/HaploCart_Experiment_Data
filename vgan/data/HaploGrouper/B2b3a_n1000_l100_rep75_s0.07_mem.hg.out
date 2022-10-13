@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep75_s0.07_mem.bam	H_T152C	38	43	5	T[HV]T14766C:G[R0]G73A	3	A	H32[44-6]:H_T152C[43-5]

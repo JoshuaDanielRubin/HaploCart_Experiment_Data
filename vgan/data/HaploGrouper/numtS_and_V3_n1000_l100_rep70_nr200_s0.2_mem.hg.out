@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_V3_n1000_l100_rep70_nr200_s0.2_mem.bam	V	43	46	3	T[HV0]T16298C	2	M	V3[47-3]:V_C16298T[47-3]

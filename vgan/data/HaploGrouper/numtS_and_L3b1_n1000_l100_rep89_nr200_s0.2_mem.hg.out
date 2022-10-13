@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep89_nr200_s0.2_mem.bam	L3c'd	27	32	5	T[L3'4]T16278C:G[L2'3'4'6]G15301A	3	A	L3b1[38-11]:L3b1a_C16124T[39-12]:L3b1a_T152C[39-12]:L3c'd[32-5]

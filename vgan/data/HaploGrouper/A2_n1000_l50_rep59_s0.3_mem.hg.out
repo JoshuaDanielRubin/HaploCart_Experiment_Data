@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l50_rep59_s0.3_mem.bam	R7	37	41	4	A[R7]A13105G:T[R]T16223C	2		R7[41-4]

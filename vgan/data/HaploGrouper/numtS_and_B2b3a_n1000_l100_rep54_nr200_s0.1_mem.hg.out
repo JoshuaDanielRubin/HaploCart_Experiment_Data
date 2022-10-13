@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_B2b3a_n1000_l100_rep54_nr200_s0.1_mem.bam	B2	40	47	7	C[B2]C6473T:C[B2]C11177T:A[B4b'd'e'j]A827G:C[B4b'd'e'j]C15535T	3		B2[47-7]

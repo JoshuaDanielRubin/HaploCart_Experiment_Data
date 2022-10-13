@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_51.1.0.bam	H2_T152C__T16311C	40	45	5	G[H]G2706A	4	A	H2_T152C__T16311C[45-5]:H2a2a2[47-7]:H2a2a[46-6]

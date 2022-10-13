@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l100_rep11_s0.08_mem.bam	H_G16129A	38	43	5	T[HV]T14766C:A[R0]A11719G:A[N]A15301G	2	A	H2a2[44-6]:H2a2a[45-7]:H27[44-6]:H_G16129A[43-5]

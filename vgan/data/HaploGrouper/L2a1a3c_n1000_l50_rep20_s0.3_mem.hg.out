@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l50_rep20_s0.3_mem.bam	L2a1a	20	37	17	T[L2a1]T15784C:A[L2a1]A16309G:C[L2a1'2'3'4]C2789T:A[L2a1'2'3'4]A13803G:A[L2a1'2'3'4]A14566G:C[L2a1'2'3'4]C16294T:T[L2a]T7175C:G[L2]G8206A:A[L2]A9221G:G[L2]G16390A:G[L2'3'4'6]G15301A	6	A	L2a1a3[38-18]:L2a1a3c[39-19]:L2a1a[37-17]

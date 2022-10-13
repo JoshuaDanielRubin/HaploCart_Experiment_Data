@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep67_s0.07_mem.bam	U	40	42	2		2	A	H3au[44-4]:H27[44-4]:H40a[44-4]:H77[44-4]:H[43-3]:U2[43-3]:U[42-2]

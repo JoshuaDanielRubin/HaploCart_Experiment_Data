@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep29_s0.3_mem.bam	U2e1'2'3	45	53	8	A[U2e]A508G:C[U2e]C6045T:A[U2e]A15907G:T[U2e]T16362C	4		U2e1'2'3[53-8]

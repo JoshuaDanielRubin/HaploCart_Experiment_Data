@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l100_rep56_nr200_s0.07_mem.bam	H84	44	46	2		2	A	H2a2a[48-4]:H84[46-2]

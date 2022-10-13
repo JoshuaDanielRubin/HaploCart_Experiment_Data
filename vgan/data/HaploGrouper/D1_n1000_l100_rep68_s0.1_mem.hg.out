@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep68_s0.1_mem.bam	N	34	37	3	G[N]G8701A:A[N]A15301G	1	A	HV_A73G[40-6]:N[37-3]:R[38-4]

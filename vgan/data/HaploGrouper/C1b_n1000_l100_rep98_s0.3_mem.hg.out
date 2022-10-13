@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l100_rep98_s0.3_mem.bam	M8	38	41	3	A[M8]A4715G:T[M]T14783C	1	A	C5b[46-8]:M8[41-3]

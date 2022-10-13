@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep40_s0.2_mem.bam	L2a1j	25	40	15	A[L2a1]A16309G:C[L2a1'2'3'4]C7274T:A[L2a1'2'3'4]A7771G:A[L2a1'2'3'4]A13803G:T[L2a]T7175C:T[L2]T2416C:G[L2]G13590A:G[L2]G16390A	7		L2a1j[40-15]

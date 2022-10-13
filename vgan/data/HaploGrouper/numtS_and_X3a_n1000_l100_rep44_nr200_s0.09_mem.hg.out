@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_X3a_n1000_l100_rep44_nr200_s0.09_mem.bam	R_T16189C	35	39	4	T[L3'4]T16278C	3	A	H1_C16278T[42-7]:H1_T16189C[42-7]:H3_A73G[42-7]:H3_T16189C[42-7]:H40a[42-7]:H77[42-7]:H[41-6]:R_T16189C[39-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l100_rep50_s0.02_mem.bam	H2a2a1	47	50	3	T[L3'4]T3594C	2		H2a2a1[50-3]

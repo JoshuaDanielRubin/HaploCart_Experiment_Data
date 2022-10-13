@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1j_n1000_l100_rep55_nr200_s0.3_mem.bam	L2a1j	37	46	9	A[L2a1]A12693G:A[L2a1]A16309G	7		L2a1j[46-9]

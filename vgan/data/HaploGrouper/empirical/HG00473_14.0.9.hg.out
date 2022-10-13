@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_14.0.9.bam	N	32	36	4	G[N]G8701A:C[N]C9540T	2	A	D[37-5]:N[36-4]

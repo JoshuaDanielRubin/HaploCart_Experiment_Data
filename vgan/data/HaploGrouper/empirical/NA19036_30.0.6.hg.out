@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_30.0.6.bam	H2	40	44	4	T[HV]T14766C:T[R]T16223C:A[N]A15301G	1		H2[44-4]

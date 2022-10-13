@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_3.1.0.bam	D	32	37	5	C[M]C10400T:T[M]T14783C:G[M]G15043A:G[L2'3'4'6]G15301A	1		D[37-5]

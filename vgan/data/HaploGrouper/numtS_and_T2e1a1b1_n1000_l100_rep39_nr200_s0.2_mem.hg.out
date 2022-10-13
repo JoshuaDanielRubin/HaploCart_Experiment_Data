@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_T2e1a1b1_n1000_l100_rep39_nr200_s0.2_mem.bam	T	44	50	6	G[T]G709A:G[T]G1888A:G[T]G14905A:C[T]C16294T	2	A	T2_C150T[52-8]:T2e1[53-9]:T[50-6]

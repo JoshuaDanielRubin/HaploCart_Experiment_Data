@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l100_rep6_nr200_s0.09_mem.bam	L2'3'4'6	11	18	7	A[L2'3'4'6]A10688G:G[L2'3'4'6]G13105A:G[L2'3'4'6]G15301A:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A:C[L1'2'3'4'5'6]C182T	0		L2'3'4'6[18-7]

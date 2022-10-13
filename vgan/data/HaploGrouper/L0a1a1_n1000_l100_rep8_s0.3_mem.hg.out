@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep8_s0.3_mem.bam	L0a1	26	33	7	G[L0a]G5460A:A[L0a'b'g]A95C:A[L0a'b'g]A8566G:A[L0a'b'f'g]A11641G:T[L0]T5442C:A[L0]A9347G	1		L0a1[33-7]

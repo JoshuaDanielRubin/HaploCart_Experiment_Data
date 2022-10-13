@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_25.0.6.bam	L3	31	33	2	T[L3'4]T16278C	1	A	H2a2a1[42-11]:H2a[40-9]:L3[33-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_46.1.0.bam	D6a1a	33	44	11	G[D6a1]G13194A:G[D6]G709A:G[D6]G1719A:A[D6]A12654G:C[M80'D]C4883T:C[M]C10400T:G[M]G15043A:G[L2'3'4'6]G15301A	3		D6a1a[44-11]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_58.1.0.bam	H2a2a1g	38	46	8	G[H2a2]G750A:T[H]T7028C:T[HV]T14766C:G[R0]G73A:G[N]G10398A	3		H2a2a1g[46-8]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep96_s0.1_mem.bam	N9	33	37	4	G[N]G10398A:A[N]A15301G:T[L3'4]T16278C	1	A	L3b1[41-8]:L3b1a_C16124T[42-9]:N9[37-4]

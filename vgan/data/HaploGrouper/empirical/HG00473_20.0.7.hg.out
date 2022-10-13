@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_20.0.7.bam	R	36	39	3	G[N]G8701A	2	A	R31[40-4]:R[39-3]

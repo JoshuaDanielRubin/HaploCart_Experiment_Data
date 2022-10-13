@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l100_rep37_nr200_s0.2_mem.bam	HV_A73G	40	43	3		3	A	H2[44-4]:H84[44-4]:HV_A73G[43-3]

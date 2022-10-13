@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_B2b3a_n1000_l50_rep28_nr200_s0.03_mem.bam	H2a2	44	47	3	T[H]T7028C	2		H2a2[47-3]

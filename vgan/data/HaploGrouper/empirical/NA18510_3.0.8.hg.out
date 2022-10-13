@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_3.0.8.bam	H	23	35	12	T[H]T7028C:T[R]T16223C:C[N]C10873T:T[L3'4]T7256C:T[L3'4]T13650C:C[L2'3'4'6]C10810T:C[L2'3'4'5'6]C152T:G[L2'3'4'5'6]G7146A:T[L1'2'3'4'5'6]T4312C:G[L1'2'3'4'5'6]G16230A	2	AM	H2[36-12]:H2_T152C__T16311C[37-13]:H2a2a1f[39-15]:H29[37-13]:H_T152C[36-12]

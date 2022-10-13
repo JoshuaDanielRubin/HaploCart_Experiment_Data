@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l100_rep0_nr200_s0.3_mem.bam	L0a	24	31	7	G[L0a]G5231A:G[L0a'g]G11176A:A[L0a'b'g]A93G:A[L0a'b'g]A95C:C[L0a'b'g]C16148T:T[L0a'b'f'g'k]T16172C	1		L0a[31-7]

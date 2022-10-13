@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_F1a1_n1000_l100_rep99_nr200_s0.07_mem.bam	HV	39	42	3	A[R0]A11719G	2		HV[42-3]

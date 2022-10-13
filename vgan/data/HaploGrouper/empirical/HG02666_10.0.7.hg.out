@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_10.0.7.bam	HV	39	42	3	A[R0]A11719G:A[N]A15301G	1		HV[42-3]

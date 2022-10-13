@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l50_rep88_s0.3_mem.bam	X	34	40	6	T[X]T6221C:A[X]A13966G	4	A	H2a2a1g[44-10]:H2a2a[43-9]:X[40-6]

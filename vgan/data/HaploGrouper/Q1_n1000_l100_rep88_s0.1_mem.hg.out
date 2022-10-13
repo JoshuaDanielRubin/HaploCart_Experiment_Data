@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l100_rep88_s0.1_mem.bam	N	30	35	5	G[N]G8701A:C[N]C10873T:A[L2'3'4'6]A16129G	2		N[35-5]

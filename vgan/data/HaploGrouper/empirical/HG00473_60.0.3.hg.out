@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_60.0.3.bam	H	43	45	2	A[N]A15301G	1	A	H40a[46-3]:H77[46-3]:H[45-2]

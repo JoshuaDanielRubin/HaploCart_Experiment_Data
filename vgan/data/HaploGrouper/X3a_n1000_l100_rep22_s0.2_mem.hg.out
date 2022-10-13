@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l100_rep22_s0.2_mem.bam	X3	37	45	8	G[X3]G3531A:G[X3]G14560A:A[X]A13966G:C[X]C16278T	4		X3[45-8]

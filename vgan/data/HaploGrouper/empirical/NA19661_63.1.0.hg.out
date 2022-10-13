@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_63.1.0.bam	R	36	39	3	C[N]C9540T	2	A	H1[42-6]:H1a[43-7]:H1c15[43-7]:H2a2a[44-8]:HV_A73G[41-5]:R[39-3]

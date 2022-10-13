@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_19.0.3.bam	H2a2a1d	44	49	5	G[H2a2a]G15326A:A[L2'3'4'6]A16129G:A[L1'2'3'4'5'6]A11914G	2		H2a2a1d[49-5]

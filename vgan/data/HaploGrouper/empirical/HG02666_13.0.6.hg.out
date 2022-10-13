@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_13.0.6.bam	N	34	37	3	G[N]G8701A:A[N]A15301G	1		N[37-3]

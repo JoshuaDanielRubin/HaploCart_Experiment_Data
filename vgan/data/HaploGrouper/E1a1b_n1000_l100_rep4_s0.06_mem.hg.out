@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep4_s0.06_mem.bam	R0	36	40	4	G[N]G8701A:C[N]C10873T:A[N]A15301G	1		R0[40-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l100_rep71_s0.1_mem.bam	H2_T152C__T16311C	18	34	16	T[H]T7028C:G[N]G10398A:C[N]C10873T:A[L3]A769G:T[L3'4]T13650C:A[L3'4'6]A7521G:A[L2'3'4'6]A247G:A[L2'3'4'6]A10688G:G[L2'3'4'6]G13105A:T[L2'3'4'6]T13506C:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A	4		H2_T152C__T16311C[34-16]

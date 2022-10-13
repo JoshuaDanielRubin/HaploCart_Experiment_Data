@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l100_rep76_s0.08_mem.bam	H_G16129A	36	42	6	T[R]T12705C:T[R]T16223C:C[N]C10873T:A[N]A15301G	2		H_G16129A[42-6]

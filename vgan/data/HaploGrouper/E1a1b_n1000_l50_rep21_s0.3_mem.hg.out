@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l50_rep21_s0.3_mem.bam	M9	35	38	3	T[M]T489C:G[M]G15043A	1		M9[38-3]

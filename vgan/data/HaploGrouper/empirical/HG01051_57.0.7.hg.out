@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_57.0.7.bam	U8b'c	36	42	6	A[U]A12308G:G[U]G12372A:C[L3]C16311T:C[L2'3'4'5'6]C152T	2	A	H2_T152C__T16311C[43-7]:U8b[43-7]:U8b'c[42-6]

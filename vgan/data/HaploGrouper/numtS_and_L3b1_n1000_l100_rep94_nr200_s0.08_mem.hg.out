@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep94_nr200_s0.08_mem.bam	N9	29	35	6	C[N]C10873T:T[L3'4]T16278C:G[L2'3'4'6]G13105A:C[L2'3'4'5'6]C152T	2		N9[35-6]

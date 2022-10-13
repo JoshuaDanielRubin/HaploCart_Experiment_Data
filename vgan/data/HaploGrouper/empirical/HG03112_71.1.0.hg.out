@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_71.1.0.bam	H2a2a1g	18	36	18	G[H2a2]G750A:T[H]T7028C:A[R0]A11719G:T[R]T16223C:G[N]G8701A:C[N]C9540T:C[N]C10873T:A[L3]A769G:A[L3]A1018G:T[L3'4]T13650C:A[L3'4'6]A7521G:A[L2'3'4'6]A825T:T[L2'3'4'6]T8655C:G[L2'3'4'6]G13105A:T[L2'3'4'6]T16187C	3		H2a2a1g[36-18]

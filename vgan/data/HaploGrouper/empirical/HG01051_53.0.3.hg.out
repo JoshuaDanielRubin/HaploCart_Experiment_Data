@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_53.0.3.bam	H2a2a1	47	50	3	G[H2a]G4769A	2		H2a2a1[50-3]

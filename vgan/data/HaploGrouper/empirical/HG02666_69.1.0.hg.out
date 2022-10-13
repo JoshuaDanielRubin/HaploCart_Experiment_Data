@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_69.1.0.bam	L3e4a	37	42	5	A[L3e4]A5584G:C[L3e4]C11257T:T[L3e]T2352C:A[L3e'i'k'x]A10819G	1		L3e4a[42-5]

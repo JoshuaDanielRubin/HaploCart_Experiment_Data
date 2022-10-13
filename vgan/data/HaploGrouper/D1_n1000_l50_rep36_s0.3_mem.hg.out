@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l50_rep36_s0.3_mem.bam	R	32	37	5	G[N]G8701A:G[N]G10398A:C[N]C10873T	2	A	H1[40-8]:H1c15[41-9]:R0[38-6]:R31[38-6]:R[37-5]

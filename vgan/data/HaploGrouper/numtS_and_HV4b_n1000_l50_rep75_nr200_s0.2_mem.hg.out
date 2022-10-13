@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_HV4b_n1000_l50_rep75_nr200_s0.2_mem.bam	HV	41	43	2		2		HV[43-2]

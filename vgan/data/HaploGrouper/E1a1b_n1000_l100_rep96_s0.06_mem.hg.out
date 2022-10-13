@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep96_s0.06_mem.bam	H2	40	44	4	T[HV]T14766C:G[N]G10398A:A[N]A15301G	1	A	H2[44-4]:H2a2a[46-6]

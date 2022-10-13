@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep60_s0.08_mem.bam	N	30	35	5	G[N]G10398A:G[L2'3'4'6]G13105A:C[L2'3'4'5'6]C152T	2	A	N10[37-7]:N[35-5]:S_T152C[36-6]

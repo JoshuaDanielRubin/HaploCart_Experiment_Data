@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l50_rep46_s0.09_mem.bam	HV_A73G	40	43	3	A[N]A15301G	2	A	H2a2[45-5]:H2a2a[46-6]:HV_A73G[43-3]

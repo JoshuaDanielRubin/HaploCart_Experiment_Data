@@ -1,0 +1,11 @@
+
+find /home/projects/benchmarkmito/simulations/gen_0.fa /home/projects/mito_haplotype/vgan/src/simulations/alignments/ |grep  bam$ > listbams
+cat listbams  |tr "/" "\t"|awk '{print substr($NF,0,length($NF)-4)".vcf.gz"}'  > listvcf
+cat listbams  |tr "/" "\t"|awk '{print substr($NF,0,length($NF)-4)".hg.out"}'  > listhgout
+
+paste listbams  listvcf  |awk '{print "/usr/bin/bcftools  mpileup  -f /home/projects/benchmarkmito/simulations/gen_0.fa "$1"  | /usr/bin/bcftools call  --ploidy 1 -c -v -Oz -o /dev/stdout > /home/projects/gabriel/HaploGrouper/"$2}' > listcmdsvcf
+paste   listvcf listhgout |awk '{print "/usr/bin/python2.7 /home/ctools/haploGrouper/hGrpr2.py -v /home/projects/gabriel/HaploGrouper/"$1" -t /home/ctools/haploGrouper/data/mt_phyloTree_b17_Tree2.txt -l /home/ctools/haploGrouper/data/mt_phyloTree_b17_Mutation.txt   -f /home/projects/benchmarkmito/simulations/gen_0.fa  -o /home/projects/gabriel/HaploGrouper/"$2 }' > listcmdshg
+
+cat listcmdsvcf | parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+cat listcmdshg  | parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+

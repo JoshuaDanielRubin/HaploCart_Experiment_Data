@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l50_rep27_s0.3_mem.bam	D4	37	41	4	C[M80'D]C4883T:T[M]T489C:C[M]C10400T	1	A	D1[42-5]:D4[41-4]

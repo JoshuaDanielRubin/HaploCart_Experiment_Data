@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_10.0.2.bam	H2a2a1h	44	49	5	T[H]T7028C:T[R]T12705C:C[L3]C16311T	2		H2a2a1h[49-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_5.1.0.bam	R0	34	39	5	T[R]T16223C:G[N]G8701A:C[L2'3'4'6]C16189T	2	A	H2a2a1g[44-10]:R0[39-5]

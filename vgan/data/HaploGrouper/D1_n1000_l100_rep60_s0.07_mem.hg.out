@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep60_s0.07_mem.bam	R	36	39	3	C[N]C9540T	2	A	H1[42-6]:H1a[43-7]:H1c15[43-7]:HV_A73G[41-5]:R31[40-4]:R[39-3]

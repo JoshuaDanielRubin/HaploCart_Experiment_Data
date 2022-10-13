@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l100_rep7_s0.1_mem.bam	H2a2a	42	47	5	G[H]G2706A:T[HV]T14766C:A[R0]A11719G	2	A	H2a2a1d[48-6]:H2a2a[47-5]

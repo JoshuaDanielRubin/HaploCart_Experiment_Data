@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/S1a_n1000_l100_rep21_s0.1_mem.bam	N	34	37	3	C[L3]C16311T	2	A	H2a2a1d[44-10]:N10[39-5]:N[37-3]:R1[39-5]:R[38-4]

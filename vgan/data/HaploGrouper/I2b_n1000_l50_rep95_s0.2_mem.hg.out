@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l50_rep95_s0.2_mem.bam	N1	35	39	4	G[N1'5]G1719A:G[N]G10398A	2		N1[39-4]

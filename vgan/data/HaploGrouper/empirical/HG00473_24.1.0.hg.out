@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_24.1.0.bam	L3	31	33	2	G[L2'3'4'6]G15301A	1	AM	HV_A73G[39-7]:M80'D[36-4]:N[36-4]:R[37-5]

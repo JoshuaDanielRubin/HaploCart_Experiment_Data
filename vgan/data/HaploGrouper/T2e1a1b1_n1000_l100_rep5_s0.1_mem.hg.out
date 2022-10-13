@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/T2e1a1b1_n1000_l100_rep5_s0.1_mem.bam	HV_A73G	36	41	5	A[L2'3'4'6]A247G:C[L2'3'4'6]C16189T	3		HV_A73G[41-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep96_nr200_s0.09_mem.bam	N9	35	38	3	A[N]A15301G:T[L3'4]T16278C	1		N9[38-3]

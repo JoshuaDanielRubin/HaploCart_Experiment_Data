@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l100_rep67_s0.3_mem.bam	A2	42	49	7	G[A2]G8027A:C[A2]C16111T:A[A]A663G	4	A	A2[49-7]:A2_C64T_T16111C[50-8]:A2a[50-8]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l50_rep22_s0.3_mem.bam	L2a	19	29	10	T[L2a'b'c'd]T11944C:T[L2]T2416C:T[L2]T10115C:G[L2]G16390A:G[L2'3'4'6]G15301A:C[L1'2'3'4'5'6]C182T	4		L2a[29-10]

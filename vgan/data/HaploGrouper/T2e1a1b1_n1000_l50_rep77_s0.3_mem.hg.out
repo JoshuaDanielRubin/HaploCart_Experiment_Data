@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/T2e1a1b1_n1000_l50_rep77_s0.3_mem.bam	T	44	50	6	A[T]A4917G:G[T]G8697A:A[JT]A11251G:T[R2'JT]T4216C	2	A	T2e1a1[54-10]:T[50-6]

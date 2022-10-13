@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l50_rep84_s0.1_mem.bam	H2a2a1	45	49	4	T[H]T7028C:T[R]T12705C	2		H2a2a1[49-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l50_rep3_s0.3_mem.bam	I2b	43	52	9	T[I]T10034C:G[I]G16129A:T[N1a1b]T250C:A[N1a1b]A4529T:A[N1a1b]A15924G	4		I2b[52-9]

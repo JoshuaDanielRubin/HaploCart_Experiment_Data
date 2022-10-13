@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_99.0.8.bam	H2a2a1	43	48	5	G[H2a2]G750A:T[H]T7028C:G[N]G10398A	2		H2a2a1[48-5]

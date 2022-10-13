@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l100_rep59_s0.1_mem.bam	R0	38	41	3	T[R]T12705C	2		R0[41-3]

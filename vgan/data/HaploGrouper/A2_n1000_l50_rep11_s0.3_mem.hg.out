@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l50_rep11_s0.3_mem.bam	R7	35	40	5	A[R7]A13105G:T[R]T12705C:C[L1'2'3'4'5'6]C146T	2		R7[40-5]

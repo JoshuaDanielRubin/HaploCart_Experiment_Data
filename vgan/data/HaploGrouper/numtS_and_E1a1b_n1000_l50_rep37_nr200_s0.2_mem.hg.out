@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_E1a1b_n1000_l50_rep37_nr200_s0.2_mem.bam	E	36	41	5	G[E]G3705A:G[E]G7598A:G[M]G15043A:G[L2'3'4'6]G15301A	1		E[41-5]

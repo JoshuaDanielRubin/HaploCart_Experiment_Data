@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_T2e1a1b1_n1000_l100_rep9_nr200_s0.1_mem.bam	H	39	43	4	G[R0]G73A:A[L2'3'4'6]A247G	2	A	H3_A73G[44-5]:H40a[44-5]:H77[44-5]:H[43-4]

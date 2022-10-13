@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_14.1.0.bam	HV_A73G	34	40	6	T[R]T16223C:G[N]G8701A:G[N]G10398A	3	A	H2[41-7]:HV_A73G[40-6]

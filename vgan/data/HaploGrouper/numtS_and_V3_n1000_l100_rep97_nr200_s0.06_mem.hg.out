@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_V3_n1000_l100_rep97_nr200_s0.06_mem.bam	H_T195C	42	45	3		3		H_T195C[45-3]

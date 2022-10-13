@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l100_rep54_nr200_s0.1_mem.bam	P	39	41	2		2	A	H1ak[44-5]:H2a2a1[46-7]:H40a[44-5]:H77[44-5]:H[43-4]:P[41-2]

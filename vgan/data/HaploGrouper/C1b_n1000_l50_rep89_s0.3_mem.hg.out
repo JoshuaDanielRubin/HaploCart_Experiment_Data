@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l50_rep89_s0.3_mem.bam	H2	34	41	7	G[R0]G73A:A[R0]A11719G:C[N]C9540T:C[N]C10873T:A[N]A15301G:A[L1'2'3'4'5'6]A11914G	1	A	C5b[44-10]:H2[41-7]:H2a2[42-8]

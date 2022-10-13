@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep47_s0.3_mem.bam	E1a1b3	45	49	4	T[E1]T13254C:G[E]G16390A:T[M9]T16362C	1		E1a1b3[49-4]

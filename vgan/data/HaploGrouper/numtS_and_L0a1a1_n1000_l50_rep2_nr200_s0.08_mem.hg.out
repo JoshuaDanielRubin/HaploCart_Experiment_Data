@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l50_rep2_nr200_s0.08_mem.bam	H	31	39	8	C[N]C9540T:A[L3]A1018G:T[L3'4]T3594C:A[L2'3'4'6]A825T:C[L2'3'4'6]C10810T:G[L2'3'4'6]G13105A	2	A	H2a2a1[42-11]:H2a3[41-10]:H2a[40-9]:H3aq[40-9]:H40a[40-9]:H77[40-9]:H[39-8]

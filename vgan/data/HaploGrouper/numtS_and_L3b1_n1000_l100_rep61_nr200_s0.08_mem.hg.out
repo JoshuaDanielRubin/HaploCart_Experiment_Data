@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep61_nr200_s0.08_mem.bam	HV	31	38	7	G[R0]G73A:T[R]T16223C:A[N]A15301G:T[L3'4]T16278C:G[L2'3'4'6]G13105A:C[L2'3'4'5'6]C152T	1	AM	H32[41-9]:HV2[40-8]:HV5[39-7]:HV_A73G[39-7]:H_T152C[40-8]

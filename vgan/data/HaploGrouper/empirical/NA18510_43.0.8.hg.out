@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_43.0.8.bam	HV5	24	35	11	A[R0]A11719G:T[R]T12705C:A[L3]A769G:T[L3'4]T7256C:A[L3'4'6]A7521G:T[L2'3'4'6]T13506C:A[L2'3'4'6]A16129G:C[L2'3'4'5'6]C2885T	3	A	H2[36-12]:H27[37-13]:H44[36-12]:HV5[35-11]:H_G16129A[36-12]

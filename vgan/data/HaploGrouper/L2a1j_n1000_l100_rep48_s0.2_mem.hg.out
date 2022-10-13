@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep48_s0.2_mem.bam	L2a1_G143A_T16189C__C16192T	33	43	10	A[L2a1'2'3'4]A14566G:G[L2]G8206A:G[L2]G16390A	7	A	L2a1_G143A_T16189C__C16192T[43-10]:L2a1j[44-11]

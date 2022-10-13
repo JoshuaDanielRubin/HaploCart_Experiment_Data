@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Z1a_n1000_l50_rep92_nr200_s0.3_mem.bam	N	32	36	4	G[N]G8701A:C[N]C9540T	2	A	M8[38-6]:N[36-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_84.0.9.bam	K	35	45	10	T[K]T16224C:C[U8b]C14167T:A[U8b'c]A3480G:A[U]A12308G:G[U]G12372A:G[N]G10398A:C[L2'3'4'5'6]C152T	3	A	K1[46-11]:K1a4a1[49-14]:K1a4a1e[50-15]:K1a4a[48-13]:K1a[47-12]:K1c[47-12]:K[45-10]

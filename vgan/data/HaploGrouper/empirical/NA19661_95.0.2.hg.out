@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_95.0.2.bam	H2a2a1	47	50	3	T[R]T12705C	2		H2a2a1[50-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l50_rep68_s0.3_mem.bam	M	35	37	2	T[M]T14783C	1	A	HV0[41-6]:HV[40-5]:M[37-2]

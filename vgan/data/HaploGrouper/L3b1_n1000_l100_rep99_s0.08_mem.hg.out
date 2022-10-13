@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep99_s0.08_mem.bam	L3	33	34	1		1	A	H2a2a1[43-10]:H40a[41-8]:H77[41-8]:H[40-7]:L3[34-1]

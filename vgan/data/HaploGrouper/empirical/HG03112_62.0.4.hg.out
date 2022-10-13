@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_62.0.4.bam	H2a2a1	31	42	11	A[R0]A11719G:T[R]T12705C:T[R]T16223C:C[N]C10873T:A[L3]A1018G:C[L3]C16311T:T[L3'4]T16278C:C[L2'3'4'6]C10810T:T[L2'3'4'6]T16187C	2		H2a2a1[42-11]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l50_rep52_nr200_s0.2_mem.bam	HV	41	43	2		2	A	H40a[45-4]:H77[45-4]:H[44-3]:HV[43-2]

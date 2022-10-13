@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l50_rep21_nr200_s0.09_mem.bam	H2a2a1	47	50	3	G[H2]G1438A	2		H2a2a1[50-3]

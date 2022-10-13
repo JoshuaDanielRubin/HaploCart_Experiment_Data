@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l100_rep71_s0.3_mem.bam	L2a1a3c	42	50	8	T[L2a1a]T15629C:T[L2a1]T15784C	6		L2a1a3c[50-8]

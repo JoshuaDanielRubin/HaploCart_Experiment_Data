@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_86.1.0.bam	N	34	37	3	A[N]A15301G:T[L3'4]T16278C	1		N[37-3]

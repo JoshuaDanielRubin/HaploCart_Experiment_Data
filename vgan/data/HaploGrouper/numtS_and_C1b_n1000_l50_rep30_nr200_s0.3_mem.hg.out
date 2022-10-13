@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_C1b_n1000_l50_rep30_nr200_s0.3_mem.bam	C5b	38	46	8	T[C5]T16288C:A[C]A9545G:C[C]C16327T:A[CZ]A249:C[M8]C7196A:G[M8]G8584A	2		C5b[46-8]

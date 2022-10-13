@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l100_rep36_s0.08_mem.bam	H_G13708A	44	46	2		2	A	H2a2[47-3]:H2a5[47-3]:H_G13708A[46-2]

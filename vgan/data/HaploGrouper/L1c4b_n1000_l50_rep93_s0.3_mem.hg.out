@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l50_rep93_s0.3_mem.bam	L1'2'3'4'5'6	8	8	0		0	AM	H2a2[31-19]:H2a2a[32-20]:L1c4b[31-19]

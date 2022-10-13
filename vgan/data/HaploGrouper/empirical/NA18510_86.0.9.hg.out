@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_86.0.9.bam	H2_T152C__T16311C	20	35	15	A[R0]A11719G:G[N]G10398A:A[L3]A1018G:G[L3'4'6]G4104A:A[L2'3'4'6]A247G:A[L2'3'4'6]A10688G:G[L2'3'4'6]G13105A:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:C[L1'2'3'4'5'6]C10915T:A[L1'2'3'4'5'6]A11914G	4	A	H2_T152C__T16311C[35-15]:H2a2a1h[37-17]:H2a2a2[37-17]:H2a2a[36-16]

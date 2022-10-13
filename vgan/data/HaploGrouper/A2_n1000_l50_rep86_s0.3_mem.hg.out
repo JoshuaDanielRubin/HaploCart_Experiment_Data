@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l50_rep86_s0.3_mem.bam	A2	36	46	10	G[A2]G8027A:T[A_T152C_T16362C]T16362C:A[A]A235G:A[A]A1736G:T[A]T4248C:C[A]C16290T	4	A	A2[46-10]:A2a[47-11]

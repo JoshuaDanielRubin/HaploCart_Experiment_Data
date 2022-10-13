@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_83.0.9.bam	R	32	37	5	G[N]G10398A:C[L3]C16311T:C[L2'3'4'5'6]C152T	2	AM	H2_T152C__T16311C[44-6]:K1a4[49-11]:U8b[44-6]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l50_rep28_s0.3_mem.bam	H66	24	36	12	T[R]T12705C:G[N]G10398A:C[N]C10873T:A[L3]A769G:T[L3'4]T7256C:A[L3'4'6]A7521G:T[L2'3'4'6]T8655C:A[L2'3'4'6]A10688G:T[L2'3'4'6]T13506C:T[L2'3'4'5'6]T8468C	2		H66[36-12]

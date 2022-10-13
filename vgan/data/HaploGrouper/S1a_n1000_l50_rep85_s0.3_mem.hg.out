@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/S1a_n1000_l50_rep85_s0.3_mem.bam	N	36	38	2		2	A	H2a2a1d[45-9]:HV_A73G[41-5]:N10[40-4]:N[38-2]:R[39-3]

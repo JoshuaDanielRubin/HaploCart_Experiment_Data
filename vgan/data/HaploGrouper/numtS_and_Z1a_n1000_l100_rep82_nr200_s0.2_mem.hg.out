@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Z1a_n1000_l100_rep82_nr200_s0.2_mem.bam	M	31	35	4	C[M]C10400T:A[L2'3'4'6]A16129G:C[L2'3'4'5'6]C152T	1	A	M5[36-5]:M13'46'61[36-5]:M37_T152C_C151T[37-6]:M[35-4]

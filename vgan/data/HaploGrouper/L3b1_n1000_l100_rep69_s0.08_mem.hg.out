@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep69_s0.08_mem.bam	HV	31	38	7	G[R0]G73A:G[N]G8701A:G[N]G10398A:C[N]C10873T:A[N]A15301G:G[L2'3'4'6]G13105A	1	AM	H2a2a1a[43-11]:HV5[39-7]:HV_A73G[39-7]:L3b1[40-8]:L3b1a_C16124T[41-9]

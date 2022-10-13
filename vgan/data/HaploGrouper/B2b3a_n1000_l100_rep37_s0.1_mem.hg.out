@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep37_s0.1_mem.bam	B2b_T152C	42	49	7	C[B2]C6473T:A[B4b'd'e'j]A827G:T[B4]T16217C:T[R_T16189C]T16189C	3		B2b_T152C[49-7]

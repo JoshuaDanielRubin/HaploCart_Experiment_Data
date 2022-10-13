@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l50_rep61_s0.3_mem.bam	H	29	38	9	T[H]T7028C:A[R0]A11719G:C[N]C10873T:A[N]A15301G:A[L3]A769G:T[L3'4]T13650C:A[L3'4'6]A7521G:C[L2'3'4'5'6]C152T	1	M	H65[39-9]:H_T152C[39-9]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l50_rep1_nr200_s0.3_mem.bam	R_T16189C	15	29	14	G[N]G10398A:C[N]C10873T:A[L3]A769G:A[L3]A1018G:A[L3'4'6]A7521G:A[L2'3'4'6]A10688G:T[L2'3'4'6]T13506C:A[L2'3'4'6]A16129G:T[L2'3'4'6]T16187C:C[L2'3'4'5'6]C152T:A[L2'3'4'5'6]A2758G	3		R_T16189C[29-14]

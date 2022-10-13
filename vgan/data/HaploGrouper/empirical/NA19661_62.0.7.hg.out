@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_62.0.7.bam	H2	42	45	3	C[N]C10873T	2	A	H2[45-3]:H2a2a[47-5]

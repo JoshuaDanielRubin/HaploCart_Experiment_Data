@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l100_rep2_s0.05_mem.bam	HV	37	41	4	G[N]G10398A:C[N]C10873T	2		HV[41-4]

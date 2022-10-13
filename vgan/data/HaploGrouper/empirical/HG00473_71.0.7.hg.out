@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_71.0.7.bam	N1'5	35	38	3	A[N]A15301G:G[L2'3'4'6]G13105A	1		N1'5[38-3]

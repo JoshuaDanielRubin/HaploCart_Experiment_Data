@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_36.0.5.bam	U	39	42	3	G[N]G10398A	2	A	H2a2a1[46-7]:U[42-3]

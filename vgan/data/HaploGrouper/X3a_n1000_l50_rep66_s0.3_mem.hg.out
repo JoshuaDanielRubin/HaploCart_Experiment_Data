@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l50_rep66_s0.3_mem.bam	H	41	44	3	T[R]T12705C	2	A	H40a[45-4]:H77[45-4]:H[44-3]

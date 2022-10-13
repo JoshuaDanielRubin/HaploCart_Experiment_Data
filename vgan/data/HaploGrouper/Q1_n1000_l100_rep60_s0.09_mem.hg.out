@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l100_rep60_s0.09_mem.bam	H	35	41	6	T[HV]T14766C:A[R0]A11719G:G[N]G10398A:A[N]A15301G:C[L3]C16311T	1	A	H1_T16311C[42-7]:H1e[42-7]:H3_T16311C[42-7]:H40a[42-7]:H76[42-7]:H77[42-7]:H80[42-7]:H[41-6]

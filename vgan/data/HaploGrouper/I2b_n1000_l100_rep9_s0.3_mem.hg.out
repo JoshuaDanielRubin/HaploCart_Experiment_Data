@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l100_rep9_s0.3_mem.bam	I2	43	51	8	G[I]G16129A:G[N1a1b]G8251A:G[N1a1b]G16391A:G[N1'5]G1719A	4		I2[51-8]

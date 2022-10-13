@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l100_rep28_s0.08_mem.bam	Y	38	43	5	T[Y]T14178C:T[Y]T16126C	3		Y[43-5]

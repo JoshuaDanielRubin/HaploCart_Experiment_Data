@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_24.1.0.bam	J2a	37	48	11	A[J2a]A10499G:C[J2]C7476T:G[J2]G15257A:A[J]A12612G:G[J]G13708A:C[J]C16069T	5		J2a[48-11]

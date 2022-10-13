@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_72.0.9.bam	U2'3'4'7'8'9	36	41	5	A[U]A11467G:G[N]G10398A:C[L3]C16311T	2	A	K1a4a1h[50-14]:U2'3'4'7'8'9[41-5]

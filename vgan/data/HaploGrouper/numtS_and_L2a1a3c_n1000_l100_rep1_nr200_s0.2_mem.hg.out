@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1a3c_n1000_l100_rep1_nr200_s0.2_mem.bam	HV	25	35	10	A[R0]A11719G:G[N]G10398A:C[N]C10873T:A[N]A15301G:A[L3]A769G:T[L3'4]T13650C:G[L3'4'6]G4104A:A[L3'4'6]A7521G:A[L1'2'3'4'5'6]A11914G	1		HV[35-10]

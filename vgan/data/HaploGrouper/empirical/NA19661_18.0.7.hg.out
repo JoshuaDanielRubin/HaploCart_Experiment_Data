@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_18.0.7.bam	R0	38	41	3	C[N]C9540T:A[N]A15301G	1	A	H2a2[44-6]:R0[41-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_12.0.8.bam	L1b1a_A189G	16	30	14	T[L1b]T1738C:A[L1b]A2768G:T[L1b]T3308C:T[L1b]T6827C:A[L1b]A6989G:A[L1b]A8248G:A[L1b]A14769G:T[L1b]T16126C:C[L1b]C16264T:C[L1b]C16270T:A[L1b]A16293G:A[L1]A7055G:T[L1]T13789C:G[L1]G14560A	0		L1b1a_A189G[30-14]

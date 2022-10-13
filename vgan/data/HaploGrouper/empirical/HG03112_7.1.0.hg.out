@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_7.1.0.bam	N	18	29	11	C[N]C9540T:C[N]C10873T:C[L2'3'4'6]C195T:A[L2'3'4'6]A247G:A[L2'3'4'6]A10688G:C[L2'3'4'6]C10810T:G[L2'3'4'6]G13105A:T[L2'3'4'6]T13506C:T[L2'3'4'5'6]T8468C	2	A	H2[33-15]:H2a2[34-16]:H2a2a[35-17]:HV5[32-14]:H_T195C[33-15]:N[29-11]:R0[31-13]:R[30-12]

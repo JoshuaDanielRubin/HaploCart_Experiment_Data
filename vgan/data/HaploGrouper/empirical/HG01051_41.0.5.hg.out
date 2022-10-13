@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_41.0.5.bam	H	41	44	3	C[L3]C16311T	2	A	H1_T16311C[45-4]:H3_T16311C[45-4]:H40a[45-4]:H76[45-4]:H77[45-4]:H80[45-4]:H[44-3]

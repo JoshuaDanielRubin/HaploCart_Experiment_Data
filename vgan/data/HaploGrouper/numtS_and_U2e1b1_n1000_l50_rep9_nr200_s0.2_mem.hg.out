@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l50_rep9_nr200_s0.2_mem.bam	U2'3'4'7'8'9	40	43	3	A[U]A12308G	2		U2'3'4'7'8'9[43-3]

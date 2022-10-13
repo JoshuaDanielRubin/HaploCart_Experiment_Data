@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l100_rep18_s0.1_mem.bam	X	36	41	5	A[X]A13966G	4	A	X3a[45-9]:X[41-5]

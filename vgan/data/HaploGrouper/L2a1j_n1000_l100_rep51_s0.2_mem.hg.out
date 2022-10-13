@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep51_s0.2_mem.bam	L2a1_G143A_T16189C__C16192T_G16309A	20	37	17	C[L2a1'2'3'4]C7274T:A[L2a1'2'3'4]A7771G:A[L2a1'2'3'4]A13803G:A[L2a1'2'3'4]A14566G:C[L2a1'2'3'4]C16294T:T[L2a]T7175C:T[L2]T2416C:G[L2]G8206A:G[L2]G16390A	8		L2a1_G143A_T16189C__C16192T_G16309A[37-17]

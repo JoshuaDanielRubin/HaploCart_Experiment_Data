@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/V3_n1000_l50_rep0_s0.2_mem.bam	HV	41	43	2		2	AM	H2[45-3]:HV0a[45-3]:V_C72T[46-4]

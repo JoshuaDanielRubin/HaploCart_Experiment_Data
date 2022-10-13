@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l100_rep60_nr200_s0.08_mem.bam	H	25	36	11	T[HV]T14766C:A[L3]A769G:A[L3]A1018G:T[L3'4]T3594C:A[L3'4'6]A7521G:A[L2'3'4'6]A247G:C[L2'3'4'5'6]C152T:G[L2'3'4'5'6]G7146A:T[L2'3'4'5'6]T8468C	2	AM	H2[37-11]:H2_T152C__T16311C[38-12]:H2a2a2[40-14]:H2a2a[39-13]:H_T152C[37-11]

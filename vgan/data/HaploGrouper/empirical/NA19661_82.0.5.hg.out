@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_82.0.5.bam	N	34	37	3	C[N]C10873T	2	A	H1[41-7]:H1c15[42-8]:N[37-3]:R0[39-5]

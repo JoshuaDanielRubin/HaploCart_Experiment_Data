@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_A2_n1000_l100_rep75_nr200_s0.2_mem.bam	A	38	43	5	A[A]A663G:A[A]A1736G:G[A]G16319A	2		A[43-5]

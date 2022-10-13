@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Q1_n1000_l100_rep8_nr200_s0.04_mem.bam	H2a2a1	45	49	4	C[N]C9540T:A[L2'3'4'6]A16129G	2		H2a2a1[49-4]

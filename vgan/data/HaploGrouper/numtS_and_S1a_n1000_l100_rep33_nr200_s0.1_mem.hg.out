@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_S1a_n1000_l100_rep33_nr200_s0.1_mem.bam	N	30	35	5	C[L3]C16311T:C[L2'3'4'6]C195T:C[L1'2'3'4'5'6]C146T	2	AM	H2a2a1d[46-8]:H2a2a[45-7]:S1a[45-7]

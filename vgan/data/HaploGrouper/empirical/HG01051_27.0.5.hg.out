@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_27.0.5.bam	HV_A73G	38	42	4	G[N]G10398A	3	A	H2[43-5]:HV_A73G[42-4]

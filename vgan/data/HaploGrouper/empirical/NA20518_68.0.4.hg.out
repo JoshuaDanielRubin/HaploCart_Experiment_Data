@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_68.0.4.bam	H	43	45	2		2	A	H1aj[46-3]:H1bm[46-3]:H10a[46-3]:H22[46-3]:H40a[46-3]:H77[46-3]:H[45-2]

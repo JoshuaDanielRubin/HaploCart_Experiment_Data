@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_T2e1a1b1_n1000_l100_rep54_nr200_s0.3_mem.bam	T2_T16189C	38	49	11	C[T2]C16296T:G[T]G709A:A[T]A4917G:G[T]G8697A:G[T]G15928A:A[JT]A11251G:C[JT]C15452A:A[L2'3'4'6]A247G	3	A	T2_T16189C[49-11]:T2e1[50-12]

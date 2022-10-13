@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_47.0.8.bam	H_T195C	40	44	4	A[R0]A11719G	3	A	H2a2a[46-6]:H_T195C[44-4]

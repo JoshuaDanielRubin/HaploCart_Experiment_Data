@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_87.1.0.bam	HV	35	40	5	G[N]G8701A:G[N]G10398A:C[N]C10873T	2		HV[40-5]

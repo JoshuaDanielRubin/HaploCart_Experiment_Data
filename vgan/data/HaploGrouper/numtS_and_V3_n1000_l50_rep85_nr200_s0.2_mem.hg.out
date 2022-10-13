@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_V3_n1000_l50_rep85_nr200_s0.2_mem.bam	H2	44	46	2		2	A	H2[46-2]:V_C72T[47-3]

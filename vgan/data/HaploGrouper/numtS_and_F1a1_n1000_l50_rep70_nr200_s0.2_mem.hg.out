@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_F1a1_n1000_l50_rep70_nr200_s0.2_mem.bam	R	38	40	2		2	AM	F1a2[50-9]:F1a[49-8]:F1a'c'f[48-7]:H3q[45-4]:H5[45-4]:H40a[45-4]:H77[45-4]:H[44-3]:HV[43-2]:R9[43-2]

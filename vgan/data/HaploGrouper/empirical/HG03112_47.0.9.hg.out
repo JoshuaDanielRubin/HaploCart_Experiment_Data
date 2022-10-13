@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_47.0.9.bam	L1b1	20	31	11	C[L1b1]C13880A:A[L1b]A357G:T[L1b]T3308C:C[L1b]C7867T:A[L1b]A8248G:T[L1b]T15115C:C[L1b]C16264T:A[L1]A7055G:T[L1]T7389C:T[L1]T13789C:C[L1'2'3'4'5'6]C182T	0	A	L1b1[31-11]:L1b1a_A189G[32-12]

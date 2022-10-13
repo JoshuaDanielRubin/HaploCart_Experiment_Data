@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l100_rep41_s0.2_mem.bam	F1a'c'f	45	50	5	G[F1a'c'f]G16129A:G[F1]G6962A:T[F]T6392C	2		F1a'c'f[50-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l100_rep89_nr200_s0.1_mem.bam	L1c	12	21	9	G[L1c]G316A:A[L1c]A2395:A[L1c]A5951G:G[L1c]G8027A:A[L1c]A9072G:T[L1c]T14000A:A[L1]A7055G:T[L1]T13789C:G[L1]G14560A	0	A	H2_T152C__T16311C[31-19]:L1c[21-9]

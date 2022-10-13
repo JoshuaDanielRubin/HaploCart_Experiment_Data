@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep44_s0.09_mem.bam	L2'3'4'6	15	20	5	C[L2'3'4'6]C195T:C[L2'3'4'6]C16189T:C[L2'3'4'5'6]C152T:C[L1'2'3'4'5'6]C146T:C[L1'2'3'4'5'6]C182T	0	A	H2a[32-17]:H_T195C_T146C[32-17]:L2'3'4'6[20-5]:L3[25-10]:L3c'd[26-11]

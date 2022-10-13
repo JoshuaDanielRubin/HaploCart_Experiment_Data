@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l100_rep89_nr200_s0.2_mem.bam	J2a1a1a	50	60	10	G[J2a1a]G513A:C[J2]C7476T:C[J]C295T:T[J]T489C:A[J]A10398G:C[JT]C15452A	4	A	J2a1a1a1[62-12]:J2a1a1a[60-10]

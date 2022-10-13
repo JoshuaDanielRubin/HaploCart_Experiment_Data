@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c4b_n1000_l100_rep74_nr200_s0.2_mem.bam	L3c'd	13	25	12	C[L3]C16311T:T[L3'4]T3594C:T[L3'4]T7256C:A[L3'4'6]A7521G:T[L2'3'4'6]T13506C:G[L2'3'4'6]G15301A:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A:C[L1'2'3'4'5'6]C146T	3		L3c'd[25-12]

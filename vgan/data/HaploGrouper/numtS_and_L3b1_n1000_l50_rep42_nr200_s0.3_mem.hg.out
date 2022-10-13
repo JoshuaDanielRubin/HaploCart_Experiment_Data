@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l50_rep42_nr200_s0.3_mem.bam	R7	33	39	6	G[R7]G16319A:C[N]C9540T:C[L2'3'4'5'6]C152T	3		R7[39-6]

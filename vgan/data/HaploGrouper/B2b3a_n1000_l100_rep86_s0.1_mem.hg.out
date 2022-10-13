@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep86_s0.1_mem.bam	B2b3a	43	53	10	G[B2b3a]G3918A:T[B2b3a]T15784C:C[B2]C6473T:T[B2]T9950C:G[B4b]G4820A:A[B4b'd'e'j]A827G:T[R_T16189C]T16189C	3		B2b3a[53-10]

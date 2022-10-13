@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l100_rep99_nr200_s0.3_mem.bam	L0a1a_A200G	29	36	7	C[L0a1a]C64T:A[L0a'b'g]A95C:A[L0a'b'g]A8566G:A[L0a'b'f'g]A11641G:C[L0a'b'f'g'k]C9818T:C[L0]C1048T	1		L0a1a_A200G[36-7]

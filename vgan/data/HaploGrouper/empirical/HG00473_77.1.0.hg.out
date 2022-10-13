@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_77.1.0.bam	H	35	41	6	G[R0]G73A:G[N]G8701A:G[N]G10398A:C[N]C10873T:A[N]A15301G	1	A	H1aq[42-7]:H3_A73G[42-7]:H7a[42-7]:H24b[42-7]:H40a[42-7]:H77[42-7]:H[41-6]

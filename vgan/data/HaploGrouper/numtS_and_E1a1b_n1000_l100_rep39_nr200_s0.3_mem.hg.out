@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_E1a1b_n1000_l100_rep39_nr200_s0.3_mem.bam	E	38	42	4	T[E]T3027C:T[M]T489C:G[M]G15043A	1	A	E1[43-5]:E1a1b[45-7]:E1a[44-6]:E[42-4]

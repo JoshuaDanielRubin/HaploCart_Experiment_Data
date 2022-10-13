@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/T2e1a1b1_n1000_l100_rep99_s0.3_mem.bam	T2e1a1b1	37	53	16	G[T2e1a1b1]G4924A:C[T2e1a1]C15499T:A[T2]A14233G:C[T2]C16296T:G[T]G709A:A[T]A4917G:T[T]T10463C:G[T]G13368A:G[T]G15928A:C[T]C16294T:C[JT]C15452A:T[R2'JT]T4216C	4		T2e1a1b1[53-16]

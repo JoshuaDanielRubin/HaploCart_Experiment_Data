@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l50_rep42_s0.2_mem.bam	U2_T152C	38	43	5	A[U]A12308G:G[U]G12372A	3		U2_T152C[43-5]

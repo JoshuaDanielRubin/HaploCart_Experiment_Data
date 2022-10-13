@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep33_s0.3_mem.bam	E1a	40	45	5	T[E1]T13254C:C[E]C13626T:G[E]G16390A:G[M]G15043A	1	A	E1a1b[46-6]:E1a[45-5]

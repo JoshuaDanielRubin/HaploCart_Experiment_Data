@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l100_rep5_nr200_s0.07_mem.bam	H1	38	43	5	T[HV]T14766C:G[N]G8701A:C[N]C9540T:A[N]A15301G	1	A	H1[43-5]:H1c15[44-6]:H2a2a[45-7]

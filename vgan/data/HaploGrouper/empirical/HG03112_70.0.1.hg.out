@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_70.0.1.bam	H2a2a1	43	48	5	A[L3]A1018G:T[L3'4]T13650C:A[L2'3'4'6]A825T	2		H2a2a1[48-5]

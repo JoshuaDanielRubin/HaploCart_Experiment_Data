@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_83.1.0.bam	U8b	38	44	6	A[U2'3'4'7'8'9]A1811G:G[N]G10398A:C[L3]C16311T:C[L2'3'4'5'6]C152T	2	A	K1a4[49-11]:U8b[44-6]

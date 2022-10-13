@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l50_rep55_s0.3_mem.bam	HV_T16311C	38	42	4	A[R0]A11719G	3	A	H2a2[44-6]:H2a2a[45-7]:HV_T16311C[42-4]

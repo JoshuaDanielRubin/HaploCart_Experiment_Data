@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l100_rep7_nr200_s0.3_mem.bam	L1c2'4	24	30	6	C[L1c1'2'4'6]C198T:T[L1c1'2'4'6]T10321C:G[L1c]G316A:T[L1c]T6071C:C[L1c]C16294T:C[L1c]C16360T	0		L1c2'4[30-6]

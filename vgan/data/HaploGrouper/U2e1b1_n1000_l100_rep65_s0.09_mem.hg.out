@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep65_s0.09_mem.bam	U2	39	43	4	A[U]A11467G:G[U]G12372A	2	A	H2a2a1[46-7]:H2a2a1c[47-8]:U2[43-4]

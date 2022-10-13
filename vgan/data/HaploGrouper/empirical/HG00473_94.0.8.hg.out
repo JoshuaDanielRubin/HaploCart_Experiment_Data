@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_94.0.8.bam	M	35	37	2	G[L2'3'4'6]G15301A	1	A	M9[38-3]:M33_T16362C[38-3]:M[37-2]

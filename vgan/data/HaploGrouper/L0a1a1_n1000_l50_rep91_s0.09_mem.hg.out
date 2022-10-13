@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l50_rep91_s0.09_mem.bam	H	29	38	9	C[N]C10873T:T[L2'3'4'6]T8655C:A[L2'3'4'6]A16129G:A[L2'3'4'5'6]A2758G:T[L1'2'3'4'5'6]T4312C:C[L1'2'3'4'5'6]C10915T:A[L1'2'3'4'5'6]A11914G	2	AM	H1e_G16129A[40-10]:H2[39-9]:H_G16129A[39-9]

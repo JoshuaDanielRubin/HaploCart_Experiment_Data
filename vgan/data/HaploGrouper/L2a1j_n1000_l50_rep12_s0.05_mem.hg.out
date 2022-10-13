@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l50_rep12_s0.05_mem.bam	H2a2	42	46	4	G[H]G2706A:A[N]A15301G:C[L2'3'4'6]C195T	1		H2a2[46-4]

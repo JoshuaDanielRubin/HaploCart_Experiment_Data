@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_48.0.4.bam	H2	40	44	4	A[L3]A769G:A[L3]A1018G	2	A	H1ak1[45-5]:H2[44-4]

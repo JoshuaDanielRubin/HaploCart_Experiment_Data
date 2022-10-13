@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_1.1.0.bam	R	32	37	5	G[N]G10398A:C[L3]C16311T:C[L2'3'4'5'6]C152T	2	A	H2_T152C__T16311C[41-9]:H32[41-9]:HV2[40-8]:HV9_T152C[40-8]:HV_A73G[39-7]:HV_T16311C[39-7]:H_T152C[40-8]:R0[38-6]:R1[38-6]:R[37-5]

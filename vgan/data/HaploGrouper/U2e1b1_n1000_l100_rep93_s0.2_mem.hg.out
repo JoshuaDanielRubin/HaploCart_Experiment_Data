@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep93_s0.2_mem.bam	U2e1b1	39	53	14	C[U2e1]C340T:T[U2e1'2'3]T217C:A[U2e]A3720G:C[U2e]C6045T:T[U2e]T13020C:T[U2e]T13734C:A[U2'3'4'7'8'9]A1811G:A[U]A12308G:G[U]G12372A	5		U2e1b1[53-14]

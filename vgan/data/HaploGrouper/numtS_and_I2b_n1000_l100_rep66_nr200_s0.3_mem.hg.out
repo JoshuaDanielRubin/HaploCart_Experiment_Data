@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_I2b_n1000_l100_rep66_nr200_s0.3_mem.bam	I2b	50	56	6	A[N1a1]A10398G:A[N1a]A13780G	4		I2b[56-6]

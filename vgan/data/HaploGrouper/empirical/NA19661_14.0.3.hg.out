@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_14.0.3.bam	H2a	43	46	3	T[R]T16223C	2	A	H2a2a1[48-5]:H2a3[47-4]:H2a[46-3]

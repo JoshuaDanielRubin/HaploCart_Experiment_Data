@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_54.1.0.bam	M	35	37	2	G[M]G15043A	1	A	G3[40-5]:M9[38-3]:M33_T16362C[38-3]:M[37-2]

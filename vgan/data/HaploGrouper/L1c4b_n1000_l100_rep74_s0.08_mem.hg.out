@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l100_rep74_s0.08_mem.bam	R	30	36	6	T[L3'4]T3594C:A[L3'4'6]A7521G:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A	2		R[36-6]

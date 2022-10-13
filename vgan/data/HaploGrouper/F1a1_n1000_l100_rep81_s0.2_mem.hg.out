@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l100_rep81_s0.2_mem.bam	F1a	49	53	4	C[F1]C12882T	3	A	F1a1[54-5]:F1a[53-4]

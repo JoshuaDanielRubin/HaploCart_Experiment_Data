@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l50_rep99_nr200_s0.3_mem.bam	M80'D	34	37	3	G[M]G15043A:G[L2'3'4'6]G15301A	1	A	D[38-4]:M80'D[37-3]

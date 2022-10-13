@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l100_rep20_s0.2_mem.bam	C1	36	44	8	T[C]T14318C:A[CZ]A249:A[M8]A4715G:T[M]T489C:C[M]C10400T:T[M]T14783C	2	A	C1[44-8]:C5b[45-9]

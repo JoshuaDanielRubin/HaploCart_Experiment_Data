@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/T2e1a1b1_n1000_l100_rep15_s0.2_mem.bam	R_T16189C	35	39	4	A[L2'3'4'6]A247G	3		R_T16189C[39-4]

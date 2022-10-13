@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l100_rep18_nr200_s0.1_mem.bam	D4	35	40	5	C[D4]C14668T:T[D]T16362C:T[M]T489C:G[L2'3'4'6]G15301A	1	A	D1[41-6]:D4[40-5]

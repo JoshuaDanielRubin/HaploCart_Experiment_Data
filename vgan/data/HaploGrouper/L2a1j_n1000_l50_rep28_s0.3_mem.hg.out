@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l50_rep28_s0.3_mem.bam	R	28	35	7	G[N]G10398A:C[N]C10873T:T[L3'4]T3594C:T[L3'4]T16278C:C[L2'3'4'5'6]C152T	2	A	HV2[38-10]:HV_A73G[37-9]:R[35-7]

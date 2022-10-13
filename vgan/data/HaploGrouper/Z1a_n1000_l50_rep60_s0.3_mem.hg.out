@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l50_rep60_s0.3_mem.bam	N	32	36	4	C[N]C9540T:G[N]G10398A	2	A	N[36-4]:R0[38-6]:R[37-5]:Z1[42-10]:Z[41-9]

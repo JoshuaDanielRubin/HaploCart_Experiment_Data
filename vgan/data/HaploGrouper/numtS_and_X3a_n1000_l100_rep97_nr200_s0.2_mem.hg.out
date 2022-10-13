@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_X3a_n1000_l100_rep97_nr200_s0.2_mem.bam	X3a	40	47	7	A[X]A13966G:T[X]T14470C	5		X3a[47-7]

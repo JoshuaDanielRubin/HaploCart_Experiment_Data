@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l50_rep7_s0.1_mem.bam	H	41	44	3	T[HV]T14766C	2	A	H2a[45-4]:H40a[45-4]:H77[45-4]:H[44-3]

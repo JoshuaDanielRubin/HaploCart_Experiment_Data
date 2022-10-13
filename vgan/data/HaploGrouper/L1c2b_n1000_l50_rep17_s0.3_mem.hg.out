@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l50_rep17_s0.3_mem.bam	L1	8	11	3	G[L1]G3666A:T[L1]T13789C:C[L1'2'3'4'5'6]C182T	0	A	H2_T152C__T16311C[29-21]:H32[29-21]:H66[28-20]:H66a1[29-21]:H_T152C[28-20]:L1[11-3]

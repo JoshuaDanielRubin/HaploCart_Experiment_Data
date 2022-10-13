@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_I2b_n1000_l100_rep59_nr200_s0.09_mem.bam	H27e	35	43	8	A[H27]A16316G:G[H]G2706A:T[R]T16223C:G[N]G10398A	4		H27e[43-8]

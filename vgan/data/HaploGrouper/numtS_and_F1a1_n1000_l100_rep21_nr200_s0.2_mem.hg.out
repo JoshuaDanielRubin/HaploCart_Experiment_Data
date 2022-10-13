@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_F1a1_n1000_l100_rep21_nr200_s0.2_mem.bam	F1a1	45	52	7	G[F1a'c'f]G9053A:G[F1a'c'f]G13759A:C[F1]C12882T:G[F]G10310A	3		F1a1[52-7]

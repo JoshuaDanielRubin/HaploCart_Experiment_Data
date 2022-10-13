@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_22.1.0.bam	H2a2	20	35	15	T[HV]T14766C:T[R]T16223C:G[N]G10398A:G[L3'4'6]G4104A:A[L2'3'4'6]A247G:A[L2'3'4'6]A825T:T[L2'3'4'6]T8655C:C[L2'3'4'6]C10810T:T[L2'3'4'6]T13506C:A[L2'3'4'6]A16129G:A[L2'3'4'5'6]A2758G:G[L1'2'3'4'5'6]G13276A:G[L1'2'3'4'5'6]G16230A	2		H2a2[35-15]

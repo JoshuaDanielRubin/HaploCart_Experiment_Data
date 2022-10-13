@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l50_rep6_s0.3_mem.bam	J	38	45	7	A[J]A12612G:C[J]C16069T:C[JT]C15452A:C[L2'3'4'6]C195T	3	A	J2a1a1a1[56-18]:J2a1a1a[54-16]:J[45-7]

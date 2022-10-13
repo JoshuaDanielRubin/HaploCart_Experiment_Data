@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l100_rep6_nr200_s0.05_mem.bam	H	27	37	10	A[L3]A769G:A[L3]A1018G:C[L3]C16311T:T[L3'4]T13650C:G[L3'4'6]G4104A:A[L3'4'6]A7521G:G[L2'3'4'6]G13105A:G[L2'3'4'5'6]G7146A	2	A	H1_T16311C[38-11]:H2a2a1[40-13]:H2a[38-11]:H3_T16311C[38-11]:H3aq[38-11]:H40a[38-11]:H76[38-11]:H77[38-11]:H80[38-11]:H[37-10]

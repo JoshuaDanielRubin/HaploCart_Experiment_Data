@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep39_s0.07_mem.bam	R0	38	41	3	C[N]C9540T:A[N]A15301G	1	A	H2a2a1a[46-8]:R0[41-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep4_s0.06_mem.bam	B4b'd'e'j	38	42	4	C[L2'3'4'5'6]C152T	3	A	B2[46-8]:B2b_T152C[47-9]:B4b'd'e'j[42-4]:H2a2a1g[46-8]

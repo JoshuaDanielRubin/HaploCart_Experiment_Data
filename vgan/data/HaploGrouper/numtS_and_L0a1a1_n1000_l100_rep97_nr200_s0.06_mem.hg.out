@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l100_rep97_nr200_s0.06_mem.bam	HV	23	34	11	C[N]C9540T:C[L3]C16311T:A[L2'3'4'6]A247G:A[L2'3'4'6]A10688G:G[L2'3'4'6]G13105A:T[L2'3'4'6]T13506C:C[L2'3'4'5'6]C152T:T[L1'2'3'4'5'6]T10664C:A[L1'2'3'4'5'6]A11914G	2	AM	H2_T152C__T16311C[37-13]:HV5[35-11]:HV9_T152C[36-12]:HV_T16311C[35-11]:H_T152C[36-12]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1a3c_n1000_l50_rep21_nr200_s0.3_mem.bam	L2a1a3	22	39	17	G[L2a1a]G3918A:T[L2a1]T15784C:A[L2a1]A16309G:C[L2a1'2'3'4]C2789T:G[L2a1'2'3'4]G11914A:A[L2a1'2'3'4]A13803G:A[L2a1'2'3'4]A14566G:C[L2a1'2'3'4]C16294T:T[L2a'b'c'd]T11944C:G[L2]G8206A:T[L2]T10115C:G[L2]G16390A	5		L2a1a3[39-17]

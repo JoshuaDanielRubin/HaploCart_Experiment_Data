@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l100_rep72_nr200_s0.09_mem.bam	R	35	38	3	C[L2'3'4'5'6]C152T	2	A	HV2[41-6]:HV_A73G[40-5]:R[38-3]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep88_s0.1_mem.bam	HV5	16	31	15	T[R]T16223C:G[N]G8701A:G[N]G10398A:A[L3]A1018G:T[L3'4]T3594C:T[L3'4]T7256C:T[L3'4]T13650C:A[L3'4'6]A7521G:A[L2'3'4'6]A247G:G[L2'3'4'5'6]G7146A:T[L2'3'4'5'6]T8468C:G[L1'2'3'4'5'6]G16230A	3	A	H2[32-16]:H2a2[33-17]:H2a2a1f[35-19]:H2a2a[34-18]:H29[33-17]:HV5[31-15]

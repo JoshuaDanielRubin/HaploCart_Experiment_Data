@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l100_rep92_s0.09_mem.bam	H9	38	43	5	G[R0]G73A:A[R0]A11719G	3		H9[43-5]

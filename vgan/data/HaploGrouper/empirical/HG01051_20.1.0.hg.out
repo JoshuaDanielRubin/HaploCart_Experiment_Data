@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_20.1.0.bam	H_T152C	38	43	5	A[R0]A11719G:G[N]G10398A	3		H_T152C[43-5]

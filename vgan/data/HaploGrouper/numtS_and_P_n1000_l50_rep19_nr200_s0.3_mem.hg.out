@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l50_rep19_nr200_s0.3_mem.bam	P	39	41	2		2	A	HV[42-3]:P[41-2]

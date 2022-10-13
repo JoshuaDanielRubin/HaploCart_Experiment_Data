@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_13.0.6.bam	HV5	16	31	15	A[R0]A11719G:T[R]T12705C:G[N]G10398A:A[L3]A769G:A[L3]A1018G:T[L3'4]T182C:T[L3'4]T3594C:T[L3'4]T7256C:G[L3'4'6]G4104A:C[L2'3'4'6]C195T:A[L2'3'4'6]A825T:A[L2'3'4'6]A10688G:C[L2'3'4'5'6]C152T	2	A	H2[32-16]:H2_T152C__T16311C[33-17]:HV5[31-15]:H_T152C[32-16]:H_T195C[32-16]

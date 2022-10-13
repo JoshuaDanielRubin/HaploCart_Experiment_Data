@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_C1b_n1000_l100_rep44_nr200_s0.05_mem.bam	H2	40	44	4	T[H]T7028C:A[N]A15301G:A[L1'2'3'4'5'6]A11914G	1	A	H2[44-4]:H2a2[45-5]

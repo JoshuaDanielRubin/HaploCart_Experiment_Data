@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/V3_n1000_l100_rep50_s0.3_mem.bam	HV0	39	43	4	T[HV0]T16298C:C[L2'3'4'6]C195T	2	AM	HV0_T195C[44-4]:HV0a[44-4]:V_C16298T[45-5]

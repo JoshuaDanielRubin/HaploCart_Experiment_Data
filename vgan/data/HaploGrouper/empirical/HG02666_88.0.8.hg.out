@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_88.0.8.bam	HV	41	43	2	A[N]A15301G	1	A	H2a2a1[47-6]:HV[43-2]

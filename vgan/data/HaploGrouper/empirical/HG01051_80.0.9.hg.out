@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_80.0.9.bam	H2	36	42	6	T[H]T7028C:G[N]G10398A:C[L3]C16311T:C[L2'3'4'5'6]C152T	2	AM	H2_T152C__T16311C[44-6]:H2a2[44-6]:H2a2a2[46-8]:H2a2a[45-7]

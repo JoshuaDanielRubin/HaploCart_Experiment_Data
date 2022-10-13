@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_T2e1a1b1_n1000_l50_rep8_nr200_s0.2_mem.bam	R0	40	42	2		2	A	H2a2[45-5]:H84[44-4]:R0[42-2]

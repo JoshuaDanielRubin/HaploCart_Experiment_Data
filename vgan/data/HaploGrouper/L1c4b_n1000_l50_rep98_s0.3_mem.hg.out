@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l50_rep98_s0.3_mem.bam	L1	10	12	2	G[L1]G14560A:C[L1'2'3'4'5'6]C182T	0	A	HV5[28-18]:HV_A73G[28-18]:L1[12-2]:L1c4b[30-20]:R0[27-17]:R[26-16]

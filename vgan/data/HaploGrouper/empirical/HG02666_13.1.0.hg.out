@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_13.1.0.bam	L3	33	34	1		1	A	L3[34-1]:L3e3'4[37-4]:L3e4a[40-7]

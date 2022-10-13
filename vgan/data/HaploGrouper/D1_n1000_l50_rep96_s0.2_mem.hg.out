@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l50_rep96_s0.2_mem.bam	N	32	36	4	G[N]G10398A:C[N]C10873T	2	A	N[36-4]:R[37-5]

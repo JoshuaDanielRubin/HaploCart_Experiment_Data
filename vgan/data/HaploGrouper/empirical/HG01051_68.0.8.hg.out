@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_68.0.8.bam	K1a4a	41	51	10	A[K1]A10398G:A[K]A10550G:G[U8b]G9055A:A[U2'3'4'7'8'9]A1811G:A[U]A12308G:G[U]G12372A:C[L2'3'4'5'6]C152T	3		K1a4a[51-10]

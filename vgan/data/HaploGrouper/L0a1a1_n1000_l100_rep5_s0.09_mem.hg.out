@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep5_s0.09_mem.bam	L5b	8	16	8	A[L5b]A16254G:T[L5]T3423C:A[L5]A7972G:C[L5]C12432T:A[L5]A12950G:T[L1'2'3'4'5'6]T4312C:T[L1'2'3'4'5'6]T10664C	1	A	H1e_G16129A[29-21]:H2[28-20]:H2a2a1d[31-23]:H2a2a[30-22]:H27[29-21]:H44[28-20]:H_G16129A[28-20]:L5b[16-8]

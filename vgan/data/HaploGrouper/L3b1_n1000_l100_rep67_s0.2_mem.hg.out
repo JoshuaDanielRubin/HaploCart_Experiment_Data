@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep67_s0.2_mem.bam	L3c'd	29	33	4	T[L3'4]T16278C	3	A	L3b[38-9]:L3c'd[33-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_72.0.6.bam	HV5	24	35	11	A[R0]A11719G:T[R]T12705C:G[N]G10398A:A[L3'4'6]A7521G:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A:T[L2'3'4'5'6]T8468C	3	A	H2[36-12]:HV5[35-11]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_77.0.7.bam	H2a2	38	44	6	G[H2]G1438A:G[R0]G73A:G[N]G8701A:G[N]G10398A:A[N]A15301G	1	A	H2a2[44-6]:H2a2a[45-7]

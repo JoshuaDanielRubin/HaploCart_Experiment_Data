@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_19.1.0.bam	H2	34	41	7	A[R0]A11719G:T[R]T16223C:G[N]G8701A:C[N]C9540T:C[N]C10873T	2		H2[41-7]

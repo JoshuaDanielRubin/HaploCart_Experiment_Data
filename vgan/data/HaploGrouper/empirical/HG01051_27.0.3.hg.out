@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_27.0.3.bam	H2	40	44	4	T[H]T7028C:G[N]G10398A	2		H2[44-4]

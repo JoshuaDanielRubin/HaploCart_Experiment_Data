@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_HV4b_n1000_l50_rep80_nr200_s0.3_mem.bam	HV4	42	44	2		2	A	H2a2a[47-5]:HV4[44-2]:HV4b[45-3]

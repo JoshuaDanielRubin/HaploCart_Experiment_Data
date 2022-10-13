@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l50_rep7_s0.3_mem.bam	L1c	16	23	7	C[L1c]C151T:G[L1c]G316A:A[L1c]A2395:A[L1c]A5951G:T[L1c]T14000A:C[L1c]C16360T:G[L1]G14560A	0		L1c[23-7]

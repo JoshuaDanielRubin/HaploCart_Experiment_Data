@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l100_rep44_nr200_s0.1_mem.bam	HV_T16311C	22	34	12	C[N]C9540T:G[N]G10398A:C[N]C10873T:T[L3'4]T16278C:A[L3'4'6]A7521G:A[L2'3'4'6]A825T:T[L2'3'4'6]T13506C:A[L2'3'4'5'6]A2758G:G[L2'3'4'5'6]G7146A	3		HV_T16311C[34-12]

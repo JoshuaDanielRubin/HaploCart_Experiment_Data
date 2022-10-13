@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l100_rep36_s0.07_mem.bam	L1'2'3'4'5'6	8	8	0		0		L1'2'3'4'5'6[8-0]

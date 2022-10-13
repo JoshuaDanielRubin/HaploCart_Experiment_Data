@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep75_nr200_s0.04_mem.bam	H	41	44	3	T[R]T16223C	2	A	H2a2a1[47-6]:H40a[45-4]:H77[45-4]:H[44-3]

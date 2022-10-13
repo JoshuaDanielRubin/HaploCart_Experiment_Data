@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/E1a1b_n1000_l100_rep37_s0.08_mem.bam	R0	38	41	3	T[R]T12705C	2	A	H2[43-5]:H2a2a[45-7]:R0[41-3]

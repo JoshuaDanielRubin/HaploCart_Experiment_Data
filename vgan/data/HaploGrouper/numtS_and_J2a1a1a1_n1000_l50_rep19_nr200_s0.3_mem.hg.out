@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l50_rep19_nr200_s0.3_mem.bam	R0	40	42	2		2	A	H2[44-4]:H2a2[45-5]:H2a5[45-5]:H_G13708A[44-4]:J2[48-8]:J2a1a1[54-14]:J2a1a1a[55-15]:J[46-6]:JT[43-3]:R0[42-2]

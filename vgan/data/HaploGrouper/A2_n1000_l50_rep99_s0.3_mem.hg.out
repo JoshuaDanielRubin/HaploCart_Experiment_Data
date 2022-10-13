@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/A2_n1000_l50_rep99_s0.3_mem.bam	N	36	38	2		2	A	A[42-6]:H2[42-6]:N[38-2]:R0[40-4]:R[39-3]

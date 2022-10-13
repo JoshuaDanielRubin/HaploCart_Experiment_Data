@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep22_s0.07_mem.bam	H_G13708A	42	45	3	T[H]T7028C	2	A	H2a5[46-4]:H_G13708A[45-3]

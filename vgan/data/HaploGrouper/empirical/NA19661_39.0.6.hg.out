@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_39.0.6.bam	M	35	37	2	T[M]T14783C	1	AM	D[39-3]:M32'56[38-2]:M80'D[38-2]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep13_s0.2_mem.bam	M	37	38	1		1	A	M9[39-2]:M33_T16362C[39-2]:M[38-1]

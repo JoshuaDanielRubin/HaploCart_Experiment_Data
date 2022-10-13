@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l50_rep11_s0.3_mem.bam	R	38	40	2		2	A	F1a1'4[48-10]:F[43-5]:R[40-2]

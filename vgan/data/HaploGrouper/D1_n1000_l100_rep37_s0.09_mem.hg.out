@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep37_s0.09_mem.bam	M32'56	34	37	3	T[M]T14783C:G[M]G15043A	1		M32'56[37-3]

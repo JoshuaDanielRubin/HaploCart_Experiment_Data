@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG02666_57.0.5.bam	H2a2a1	39	46	7	G[R0]G73A:A[R0]A11719G:T[R]T12705C:G[N]G10398A:C[N]C10873T	2		H2a2a1[46-7]

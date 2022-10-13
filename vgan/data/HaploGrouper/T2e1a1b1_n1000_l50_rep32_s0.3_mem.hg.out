@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/T2e1a1b1_n1000_l50_rep32_s0.3_mem.bam	R	38	40	2		2	AM	H2a2a1[46-7]:P[41-2]:R2'JT[41-2]

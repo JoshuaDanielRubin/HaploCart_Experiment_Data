@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_37.1.0.bam	H	35	41	6	T[HV]T14766C:G[R0]G73A:C[L2'3'4'6]C195T:C[L2'3'4'5'6]C152T	2	AM	H2a2a2[45-9]:H2a2a[44-8]:H32[43-7]:H107[43-7]:H_T152C[42-6]:H_T195C[42-6]

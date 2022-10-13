@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l100_rep34_s0.3_mem.bam	L2a1a3	34	45	11	A[L2a1a]A5285G:A[L2a1]A12693G:A[L2a1'2'3'4]A7771G:T[L2a]T7175C:T[L2]T2416C	6	A	L2a1a3[45-11]:L2a1a3c[46-12]

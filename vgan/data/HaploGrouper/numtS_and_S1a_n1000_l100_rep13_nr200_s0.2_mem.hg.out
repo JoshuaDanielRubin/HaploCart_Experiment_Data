@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_S1a_n1000_l100_rep13_nr200_s0.2_mem.bam	S1a	36	44	8	C[S1a]C150G:A[S1a]A189G:A[S1a]A215G:G[S1a]G8251A:T[S]T8404C	3		S1a[44-8]

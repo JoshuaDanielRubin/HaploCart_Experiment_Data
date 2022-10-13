@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l50_rep72_s0.3_mem.bam	N	34	37	3	T[L3'4]T16278C	2	A	H2[41-7]:HV_A73G[40-6]:N[37-3]

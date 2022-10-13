@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l100_rep38_s0.2_mem.bam	Z1a	42	49	7	A[Z]A6752G:A[CZ]A249:C[M8]C7196A:G[M8]G8584A	3		Z1a[49-7]

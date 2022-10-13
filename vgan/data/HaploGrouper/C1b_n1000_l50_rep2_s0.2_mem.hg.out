@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l50_rep2_s0.2_mem.bam	H2	38	43	5	T[H]T7028C:A[R0]A11719G:C[N]C10873T	2	A	H2[43-5]:H2a2[44-6]:H2a2a[45-7]

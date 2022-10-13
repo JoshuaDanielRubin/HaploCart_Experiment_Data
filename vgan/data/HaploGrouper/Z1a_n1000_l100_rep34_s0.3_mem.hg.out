@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l100_rep34_s0.3_mem.bam	Z1a	38	47	9	T[Z1a]T16224C:T[Z]T9090C:A[CZ]A249:A[M8]A4715G:G[M8]G8584A:C[M]C10400T	3		Z1a[47-9]

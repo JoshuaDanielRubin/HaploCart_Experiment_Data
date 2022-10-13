@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_26.1.0.bam	N1'5	35	38	3	C[N]C10873T:A[N]A15301G	1	A	HV[40-5]:N1'5[38-3]

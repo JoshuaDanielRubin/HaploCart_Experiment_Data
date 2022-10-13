@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_X3a_n1000_l50_rep33_nr200_s0.3_mem.bam	H2a	39	44	5	A[R0]A11719G:T[R]T12705C:T[R]T16223C	2		H2a[44-5]

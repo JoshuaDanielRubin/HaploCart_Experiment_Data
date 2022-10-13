@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_11.0.9.bam	M32'56	34	37	3	G[M]G15043A:G[L2'3'4'6]G15301A	1	A	D[38-4]:M32'56[37-3]

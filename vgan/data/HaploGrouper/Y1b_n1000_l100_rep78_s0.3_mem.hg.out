@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l100_rep78_s0.3_mem.bam	Y	40	44	4	A[Y]A10398G:T[Y]T16126C	2		Y[44-4]

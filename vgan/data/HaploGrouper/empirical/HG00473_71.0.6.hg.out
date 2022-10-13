@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_71.0.6.bam	HV	37	41	4	G[R0]G73A:A[N]A15301G:G[L2'3'4'6]G13105A	1	AM	H2[43-5]:H2a2[44-6]:HV5[42-4]:HV_A73G[42-4]

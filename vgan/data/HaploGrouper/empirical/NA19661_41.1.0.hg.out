@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_41.1.0.bam	D4	37	41	4	C[D4]C8414T:T[M]T489C:T[M]T14783C	1	A	D1[42-5]:D1h[43-6]:D4[41-4]

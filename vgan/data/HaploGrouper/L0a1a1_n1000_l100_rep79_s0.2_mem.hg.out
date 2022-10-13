@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep79_s0.2_mem.bam	L0a1'4	17	28	11	G[L0a]G5231A:G[L0a'g]G11176A:A[L0a'b'g]A95C:G[L0a'b'g]G9755A:A[L0a'b'f'g]A11641G:G[L0a'b'f'g]G15431A:T[L0a'b'f'g'k]T4586C:C[L0a'b'f'g'k]C9818T:C[L0]C1048T:G[L0]G12007A	1	A	L0a1'4[28-11]:L0a1a_A200G[30-13]

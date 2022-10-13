@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l100_rep4_s0.2_mem.bam	J2a1a1a1	60	67	7	A[J2a1]A14133G:C[JT]C15452A	5		J2a1a1a1[67-7]

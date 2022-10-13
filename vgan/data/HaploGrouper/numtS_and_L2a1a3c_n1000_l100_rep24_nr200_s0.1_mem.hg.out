@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1a3c_n1000_l100_rep24_nr200_s0.1_mem.bam	N	22	31	9	G[N]G10398A:T[L3'4]T7256C:T[L3'4]T16278C:C[L2'3'4'6]C195T:C[L2'3'4'5'6]C152T:C[L1'2'3'4'5'6]C146T:A[L1'2'3'4'5'6]A11914G	2	A	H2a2[36-14]:H2a2a2[38-16]:H2a2a[37-15]:L2a1a3[39-17]:L2a1a3c[40-18]:L2a1a[38-16]:N[31-9]:R0[33-11]:R[32-10]:S_T152C[32-10]

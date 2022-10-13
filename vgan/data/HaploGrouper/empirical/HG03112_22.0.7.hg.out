@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG03112_22.0.7.bam	H	33	40	7	T[L3'4]T182C:C[L2'3'4'6]C195T:A[L2'3'4'6]A825T:A[L2'3'4'6]A10688G:C[L2'3'4'5'6]C152T:C[L2'3'4'5'6]C2885T	1	AM	H1ak1[42-8]:H2[41-7]:H2_T152C__T16311C[42-8]:H_T152C[41-7]:H_T195C[41-7]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l50_rep89_nr200_s0.3_mem.bam	U2e1	40	51	11	A[U2e]A3720G:A[U2e]A5390G:T[U2e]T6152C:T[U2e]T16362C:T[U2_T152C]T152C:A[U]A11467G:A[U]A12308G:G[U]G12372A	3	A	U2e1[51-11]:U2e1b[52-12]:U2e1h[52-12]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_I2b_n1000_l100_rep0_nr200_s0.1_mem.bam	I2b	40	51	11	T[I2b]T6515C:A[N1a1b]A4529T:G[N1a1b]G16391A:A[N1a1]A10398G:A[N1a]A13780G:T[N1]T10238C:G[N1'5]G1719A	4		I2b[51-11]

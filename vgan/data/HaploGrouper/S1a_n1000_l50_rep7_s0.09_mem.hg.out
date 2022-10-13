@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/S1a_n1000_l50_rep7_s0.09_mem.bam	R0	38	41	3	C[L3]C16311T	2	A	HV_T16311C[42-4]:R0[41-3]

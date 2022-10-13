@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_C1b_n1000_l100_rep17_nr200_s0.3_mem.bam	C1b	45	49	4	A[CZ]A249:T[M]T14783C	2		C1b[49-4]

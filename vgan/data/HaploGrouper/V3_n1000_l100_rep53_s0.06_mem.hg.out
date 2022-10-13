@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/V3_n1000_l100_rep53_s0.06_mem.bam	HV	41	43	2		2	A	H2a2a1[47-6]:H2a2a1c[48-7]:HV0[44-3]:HV[43-2]

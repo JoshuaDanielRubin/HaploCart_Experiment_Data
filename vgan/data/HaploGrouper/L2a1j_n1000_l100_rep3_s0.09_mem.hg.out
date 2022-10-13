@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep3_s0.09_mem.bam	H	29	38	9	T[R]T12705C:G[N]G8701A:C[N]C9540T:G[N]G10398A:A[N]A15301G:A[L3]A769G:T[L3'4]T7256C:G[L3'4'6]G4104A	1	A	H2a[39-10]:H13c[39-10]:H40a[39-10]:H77[39-10]:H[38-9]

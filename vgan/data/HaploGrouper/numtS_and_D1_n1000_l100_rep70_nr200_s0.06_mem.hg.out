@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l100_rep70_nr200_s0.06_mem.bam	M	33	36	3	G[M]G15043A:G[L2'3'4'6]G15301A	1		M[36-3]

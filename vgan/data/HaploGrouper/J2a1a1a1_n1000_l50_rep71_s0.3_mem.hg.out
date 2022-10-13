@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l50_rep71_s0.3_mem.bam	R0	36	40	4	G[N]G10398A:C[L2'3'4'6]C195T	2	A	J2a1a1[52-16]:J2a1a1a1[55-19]:J2a1a1a[53-17]:J[44-8]:R0[40-4]

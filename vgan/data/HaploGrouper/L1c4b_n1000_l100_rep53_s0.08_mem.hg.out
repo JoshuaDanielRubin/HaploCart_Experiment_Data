@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l100_rep53_s0.08_mem.bam	N	22	31	9	C[N]C9540T:T[L3'4]T3594C:T[L3'4]T7256C:C[L2'3'4'6]C10810T:A[L2'3'4'6]A16129G:T[L2'3'4'6]T16187C:C[L2'3'4'6]C16189T	2		N[31-9]

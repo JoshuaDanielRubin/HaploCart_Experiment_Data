@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l100_rep81_s0.07_mem.bam	H55b	38	44	6	G[H55]G10646A:T[R]T16223C:T[L3'4]T16278C	3		H55b[44-6]

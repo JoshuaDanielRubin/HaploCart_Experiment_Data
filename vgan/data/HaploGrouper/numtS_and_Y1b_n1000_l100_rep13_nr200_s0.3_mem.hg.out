@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Y1b_n1000_l100_rep13_nr200_s0.3_mem.bam	Y	38	43	5	T[Y]T16126C:C[L1'2'3'4'5'6]C146T	3		Y[43-5]

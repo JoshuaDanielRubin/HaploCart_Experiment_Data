@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l100_rep78_s0.3_mem.bam	L1c2	18	33	15	A[L1c2]A16265C:C[L1c2]C16286G:C[L1c2]C16527T:C[L1c2'4]C12049T:C[L1c1'2'4'6]C198T:T[L1c1'2'4'6]T10321C:A[L1c1'2'4'5'6]A297G:C[L1c]C186A:A[L1c]A189C:G[L1c]G316A:A[L1c]A13485G:T[L1]T13789C:T[L1]T14178C:G[L1]G14560A:C[L1'2'3'4'5'6]C182T	0	A	L1c2[33-15]:L1c2b[34-16]

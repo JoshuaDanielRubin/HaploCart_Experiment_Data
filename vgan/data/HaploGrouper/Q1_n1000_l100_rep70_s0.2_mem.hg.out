@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l100_rep70_s0.2_mem.bam	M42'74	30	35	5	T[M]T14783C:G[M]G15043A:C[L3]C16311T:C[L1'2'3'4'5'6]C146T	1	A	M42'74[35-5]:Q1_T16223C[44-14]

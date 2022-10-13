@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/B2b3a_n1000_l100_rep94_s0.07_mem.bam	B4b	41	45	4	G[B4b]G499A	3	A	B2b[48-7]:B4b[45-4]

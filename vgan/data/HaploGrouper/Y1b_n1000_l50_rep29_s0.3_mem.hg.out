@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Y1b_n1000_l50_rep29_s0.3_mem.bam	HV	39	42	3	A[R0]A11719G	2	A	H40a[44-5]:H77[44-5]:H[43-4]:HV[42-3]

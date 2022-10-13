@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_87.0.6.bam	H	43	45	2		2	A	H2a2a1[48-5]:H10_T16093C[46-3]:H40a[46-3]:H77[46-3]:H[45-2]

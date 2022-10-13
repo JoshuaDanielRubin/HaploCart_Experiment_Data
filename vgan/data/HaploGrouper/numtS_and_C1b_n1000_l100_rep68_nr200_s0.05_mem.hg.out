@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_C1b_n1000_l100_rep68_nr200_s0.05_mem.bam	HV	37	41	4	T[R]T16223C:C[N]C9540T	2	A	H2a2a1[45-8]:H26a[43-6]:H40a[43-6]:H77[43-6]:H[42-5]:HV0[42-5]:HV[41-4]

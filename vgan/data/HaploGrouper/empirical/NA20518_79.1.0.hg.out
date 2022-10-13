@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_79.1.0.bam	H2a	41	45	4	A[R0]A11719G:G[N]G10398A	2		H2a[45-4]

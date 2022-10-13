@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_P_n1000_l50_rep80_nr200_s0.1_mem.bam	HV	41	43	2		2	A	H2a2a1[47-6]:HV[43-2]

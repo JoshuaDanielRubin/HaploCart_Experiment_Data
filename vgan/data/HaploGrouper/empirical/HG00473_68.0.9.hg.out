@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_68.0.9.bam	D_T16189C	33	38	5	C[M80'D]C4883T:G[M]G15043A:G[L2'3'4'6]G15301A	2		D_T16189C[38-5]

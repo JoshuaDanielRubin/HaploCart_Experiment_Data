@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l100_rep66_nr200_s0.2_mem.bam	R_T16189C	37	40	3		3	A	R_T16189C[40-3]:U2e[49-12]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_0.0.8.bam	L3	33	34	1		1	A	H3_A73G[41-8]:H40a[41-8]:H77[41-8]:H[40-7]:L3[34-1]

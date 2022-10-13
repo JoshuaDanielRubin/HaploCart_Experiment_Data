@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_37.0.8.bam	H29	26	38	12	A[H29]A5582G:T[R]T16223C:C[N]C9540T:C[L3]C16311T:T[L3'4]T3594C:A[L2'3'4'6]A10688G:G[L2'3'4'6]G13105A:C[L2'3'4'5'6]C2885T:T[L1'2'3'4'5'6]T10664C:G[L1'2'3'4'5'6]G16230A	2	A	H2a2a1f[40-14]:H2a2a1h[40-14]:H29[38-12]

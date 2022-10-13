@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_U2e1b1_n1000_l50_rep19_nr200_s0.3_mem.bam	H9	38	43	5	T[H]T7028C:A[R0]A11719G	3		H9[43-5]

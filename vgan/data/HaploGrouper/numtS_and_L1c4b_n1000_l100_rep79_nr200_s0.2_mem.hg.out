@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c4b_n1000_l100_rep79_nr200_s0.2_mem.bam	L1c4	12	30	18	G[L1c4]G9266A:C[L1c4]C16301T:T[L1c1'2'4'6]T10321C:G[L1c]G316A:A[L1c]A2395:A[L1c]A5951G:A[L1c]A12810G:C[L1c]C14911T:C[L1c]C16294T:C[L1c]C16360T:G[L1]G3666A:A[L1]A7055G:T[L1]T7389C:T[L1]T14178C:G[L1]G14560A:C[L1'2'3'4'5'6]C146T	2	A	L1c4[30-18]:L1c4b[31-19]

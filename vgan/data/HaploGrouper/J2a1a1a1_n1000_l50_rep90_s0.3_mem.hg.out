@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l50_rep90_s0.3_mem.bam	J2a1a1a	44	57	13	A[J2a1a1]A13722G:G[J2a1a]G513A:G[J2a1a]G16145A:A[J2a1]A14133G:A[J2a]A10499G:C[J2]C150T:T[J2]T152C:G[J]G13708A:C[J]C16069T	4	A	J2a1a1a1[59-15]:J2a1a1a[57-13]

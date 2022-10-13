@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L3b1_n1000_l100_rep19_nr200_s0.1_mem.bam	N9	33	37	4	G[N]G8701A:C[L2'3'4'5'6]C152T	2		N9[37-4]

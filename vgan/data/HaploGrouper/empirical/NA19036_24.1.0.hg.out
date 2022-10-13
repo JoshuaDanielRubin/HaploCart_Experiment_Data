@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_24.1.0.bam	R0	38	41	3	A[N]A15301G:G[L2'3'4'6]G13105A	1	A	HV5[42-4]:R0[41-3]

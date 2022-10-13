@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep75_s0.3_mem.bam	L2a1j	39	47	8	A[L2a1]A16309G	7		L2a1j[47-8]

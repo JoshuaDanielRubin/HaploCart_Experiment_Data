@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_77.0.8.bam	U8b'c	42	45	3	A[U2'3'4'7'8'9]A1811G	2	A	H2a2a[47-5]:U8b'c[45-3]

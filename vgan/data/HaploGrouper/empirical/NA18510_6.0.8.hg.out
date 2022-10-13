@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA18510_6.0.8.bam	HV	25	35	10	C[N]C10873T:A[L3]A1018G:T[L3'4]T13650C:A[L3'4'6]A7521G:T[L2'3'4'6]T13506C:T[L2'3'4'6]T16187C:C[L2'3'4'5'6]C2885T:C[L1'2'3'4'5'6]C10915T	2	A	H3ap[37-12]:H3aq[37-12]:H40a[37-12]:H66a[37-12]:H77[37-12]:H[36-11]:HV[35-10]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG01051_41.0.2.bam	H2a2a1	45	49	4	G[H2a2a]G8860A:C[L3]C16311T	2		H2a2a1[49-4]

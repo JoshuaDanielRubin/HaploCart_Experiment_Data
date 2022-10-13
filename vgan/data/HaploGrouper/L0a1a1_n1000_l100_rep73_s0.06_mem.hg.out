@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep73_s0.06_mem.bam	H2a2a	24	38	14	G[H2]G1438A:T[R]T16223C:G[N]G8701A:C[N]C9540T:G[N]G10398A:C[L3]C16311T:T[L3'4]T3594C:A[L2'3'4'6]A247G:T[L2'3'4'6]T8655C:G[L2'3'4'6]G13105A:T[L1'2'3'4'5'6]T10664C:G[L1'2'3'4'5'6]G16230A	2	A	H2a2a1h[39-15]:H2a2a[38-14]

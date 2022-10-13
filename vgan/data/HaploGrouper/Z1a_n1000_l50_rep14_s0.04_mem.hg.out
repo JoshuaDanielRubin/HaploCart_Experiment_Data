@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Z1a_n1000_l50_rep14_s0.04_mem.bam	H2a2a1	43	48	5	G[H2a2]G750A:T[H]T7028C:T[R]T12705C	2		H2a2a1[48-5]

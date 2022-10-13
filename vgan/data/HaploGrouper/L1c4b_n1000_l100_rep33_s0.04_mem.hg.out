@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c4b_n1000_l100_rep33_s0.04_mem.bam	H	37	42	5	G[H]G2706A:T[L3'4]T182C:C[L2'3'4'6]C195T:A[L2'3'4'6]A247G	1	AM	H2a2[44-6]:H2a2a[45-7]:H28[43-5]:H_T195C[43-5]

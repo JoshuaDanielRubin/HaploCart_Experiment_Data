@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L1c2b_n1000_l50_rep77_nr200_s0.3_mem.bam	HV_A73G	14	30	16	G[N]G10398A:C[N]C10873T:A[L3]A769G:A[L3]A1018G:T[L3'4]T13650C:C[L2'3'4'6]C195T:T[L2'3'4'6]T8655C:A[L2'3'4'6]A10688G:T[L2'3'4'6]T13506C:T[L2'3'4'6]T16187C:C[L2'3'4'6]C16189T:G[L2'3'4'5'6]G7146A:T[L2'3'4'5'6]T8468C	3	A	H2a2a1g[34-20]:H66[31-17]:H66a1[32-18]:HV_A73G[30-16]:H_T195C[31-17]

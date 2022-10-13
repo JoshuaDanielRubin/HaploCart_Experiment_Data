@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_11.1.0.bam	HV_A73G	36	41	5	T[R]T16223C:A[N]A15301G:T[L3'4]T16278C	2		HV_A73G[41-5]

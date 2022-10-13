@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l50_rep79_nr200_s0.1_mem.bam	H	39	43	4	G[N]G10398A:C[L2'3'4'6]C195T	2	AM	H2[44-4]:H2a2[45-5]:H2a2a1d[47-7]:H2a2a[46-6]:H_T195C[44-4]

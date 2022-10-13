@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l100_rep9_s0.1_mem.bam	L3	33	34	1		1	A	H2a[41-8]:HV[39-6]:L3[34-1]

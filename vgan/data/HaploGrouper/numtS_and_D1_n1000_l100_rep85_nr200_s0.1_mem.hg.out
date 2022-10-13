@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l100_rep85_nr200_s0.1_mem.bam	H2a	39	44	5	G[N]G8701A:C[N]C9540T:G[N]G10398A	2		H2a[44-5]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_Q1_n1000_l100_rep46_nr200_s0.3_mem.bam	Q1	35	46	11	A[Q1]A16265C:A[Q1]A16343G:G[Q]G8790A:T[Q]T16311C:T[M]T489C:C[M]C10400T:G[M]G15043A:G[L2'3'4'6]G15301A	3		Q1[46-11]

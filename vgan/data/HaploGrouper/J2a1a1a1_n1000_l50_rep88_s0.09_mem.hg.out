@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/J2a1a1a1_n1000_l50_rep88_s0.09_mem.bam	H	39	43	4	T[HV]T14766C:C[L2'3'4'6]C195T	2	AM	H2[44-4]:H2a2[45-5]:H_T195C[44-4]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19661_19.0.8.bam	H	41	44	3	C[N]C10873T	2	AM	H1[45-3]:H1c15[46-4]:H2[45-3]

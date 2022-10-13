@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l50_rep58_s0.2_mem.bam	N1a1	39	44	5	G[N1a1]G15043A:G[N1'5]G1719A	3		N1a1[44-5]

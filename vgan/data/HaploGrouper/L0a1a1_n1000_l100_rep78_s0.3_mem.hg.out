@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep78_s0.3_mem.bam	L0a1a_A200G	35	39	4	C[L0a1a]C64T:A[L0a'b'g]A95C:G[L0a'b'g]G9755A	1	A	L0a1a2[40-5]:L0a1a_A200G[39-4]

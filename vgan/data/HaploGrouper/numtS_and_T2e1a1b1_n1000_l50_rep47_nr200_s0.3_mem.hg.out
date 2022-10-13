@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_T2e1a1b1_n1000_l50_rep47_nr200_s0.3_mem.bam	T	42	49	7	A[T]A4917G:G[T]G8697A:G[T]G13368A:A[T]A15607G:A[JT]A11251G	2	A	T2_C150T[51-9]:T[49-7]

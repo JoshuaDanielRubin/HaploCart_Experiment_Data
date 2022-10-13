@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_13.1.0.bam	HV	37	41	4	G[N]G8701A:A[N]A15301G:T[L3'4]T16278C	1	A	H1_C16278T[43-6]:H2a2a1[45-8]:H2a[43-6]:H40a[43-6]:H77[43-6]:H[42-5]:HV[41-4]

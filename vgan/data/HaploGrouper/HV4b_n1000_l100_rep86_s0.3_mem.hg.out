@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/HV4b_n1000_l100_rep86_s0.3_mem.bam	HV4b	42	45	3	T[HV4]T7094C	2		HV4b[45-3]

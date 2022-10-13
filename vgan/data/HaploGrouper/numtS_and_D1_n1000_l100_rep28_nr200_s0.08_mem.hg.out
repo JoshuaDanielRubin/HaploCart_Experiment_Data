@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_D1_n1000_l100_rep28_nr200_s0.08_mem.bam	M	35	37	2	C[M]C10400T	1	AM	H2a2[43-7]:H2a2a[44-8]:M32'56[38-2]:M80'D[38-2]

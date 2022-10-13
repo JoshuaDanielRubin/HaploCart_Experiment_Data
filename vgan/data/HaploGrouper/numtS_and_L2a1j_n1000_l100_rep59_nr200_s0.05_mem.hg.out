@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L2a1j_n1000_l100_rep59_nr200_s0.05_mem.bam	H65	42	45	3	G[N]G8701A:A[N]A15301G	1		H65[45-3]

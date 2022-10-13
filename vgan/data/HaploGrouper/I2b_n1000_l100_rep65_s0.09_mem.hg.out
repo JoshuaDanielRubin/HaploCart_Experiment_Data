@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/I2b_n1000_l100_rep65_s0.09_mem.bam	N	30	35	5	G[N]G10398A:A[L2'3'4'6]A16129G:C[L2'3'4'5'6]C152T	2	A	H2[39-9]:H2_T152C__T16311C[40-10]:H27[40-10]:H32[40-10]:HV2[39-9]:HV_A73G[38-8]:H_G16129A[39-9]:H_T152C[39-9]:N[35-5]:R[36-6]:S_T152C[36-6]

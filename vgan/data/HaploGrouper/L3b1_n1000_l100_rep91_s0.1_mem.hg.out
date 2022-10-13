@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep91_s0.1_mem.bam	R0	32	38	6	T[R]T16223C:G[N]G8701A:G[N]G10398A:T[L3'4]T16278C	2		R0[38-6]

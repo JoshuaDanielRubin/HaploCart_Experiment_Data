@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1j_n1000_l100_rep77_s0.1_mem.bam	L3	25	30	5	A[L3]A1018G:T[L3'4]T3594C:T[L3'4]T16278C:G[L2'3'4'6]G15301A	1		L3[30-5]

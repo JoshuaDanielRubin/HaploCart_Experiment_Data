@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_4.1.0.bam	R7	31	38	7	G[R7]G16319A:T[R]T16223C:G[N]G8701A:A[N]A15301G:T[L3'4]T16278C	2		R7[38-7]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_L0a1a1_n1000_l50_rep69_nr200_s0.3_mem.bam	HV5	14	30	16	T[R]T12705C:T[L3'4]T3594C:T[L3'4]T13650C:G[L3'4'6]G4104A:A[L2'3'4'6]A825T:A[L2'3'4'6]A10688G:C[L2'3'4'6]C10810T:T[L2'3'4'6]T13506C:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:G[L2'3'4'5'6]G7146A:T[L1'2'3'4'5'6]T4312C:G[L1'2'3'4'5'6]G16230A	3	A	H2[31-17]:H2a2a1f[34-20]:H29[32-18]:HV5[30-16]

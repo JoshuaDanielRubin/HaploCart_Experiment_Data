@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep5_s0.05_mem.bam	L3	31	33	2	G[L2'3'4'6]G13105A	1	A	H2a2a1[42-11]:L3[33-2]:L3c'd[34-3]

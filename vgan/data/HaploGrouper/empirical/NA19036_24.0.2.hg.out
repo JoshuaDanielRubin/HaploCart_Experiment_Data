@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA19036_24.0.2.bam	H2a2a1	45	49	4	T[HV]T14766C:G[L2'3'4'6]G13105A	2		H2a2a1[49-4]

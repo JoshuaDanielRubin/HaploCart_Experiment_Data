@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l100_rep94_s0.08_mem.bam	N	26	33	7	C[N]C10873T:A[N]A15301G:A[L3]A769G:G[L3'4'6]G4104A:C[L2'3'4'5'6]C152T:C[L1'2'3'4'5'6]C146T	1	A	N[33-7]:R0[35-9]:R[34-8]:S_T152C[34-8]

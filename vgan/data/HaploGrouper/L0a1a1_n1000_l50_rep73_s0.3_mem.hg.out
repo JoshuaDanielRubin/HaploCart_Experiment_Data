@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l50_rep73_s0.3_mem.bam	L0	0	5	5	G[L0]G263A:C[L0]C1048T:T[L0]T5442C:T[L0]T6185C:C[L0]C9042T	0		L0[5-5]

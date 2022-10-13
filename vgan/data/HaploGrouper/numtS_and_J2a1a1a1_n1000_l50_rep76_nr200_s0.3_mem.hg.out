@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_J2a1a1a1_n1000_l50_rep76_nr200_s0.3_mem.bam	J2a1a1	36	52	16	G[J2a1a]G513A:G[J2a1a]G7789A:G[J2a1a]G16145A:A[J2a1]A14133G:C[J2]C150T:T[J2]T152C:C[J2]C7476T:C[J]C295T:A[JT]A11251G:C[JT]C15452A:T[JT]T16126C:T[R2'JT]T4216C	4	A	J2a1a1[52-16]:J2a1a1a1[55-19]:J2a1a1a[53-17]

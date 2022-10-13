@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l50_rep20_s0.3_mem.bam	Q1_T16223C	36	47	11	T[Q1]T89C:G[Q1]G92A:T[Q1]T146C:A[Q1]A16343G:A[Q]A16241G:T[Q]T16311C:T[M]T489C:G[M]G15043A:G[L2'3'4'6]G15301A	2		Q1_T16223C[47-11]

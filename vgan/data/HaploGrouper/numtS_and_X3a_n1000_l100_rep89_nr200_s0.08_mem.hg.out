@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_X3a_n1000_l100_rep89_nr200_s0.08_mem.bam	X1'3	34	41	7	T[X]T6221C:T[X]T14470C	5		X1'3[41-7]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/Q1_n1000_l100_rep90_s0.2_mem.bam	Q1	41	49	8	G[Q]G8790A:C[M]C10400T:T[M]T14783C:G[M]G15043A	4		Q1[49-8]

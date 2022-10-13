@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep35_s0.1_mem.bam	L3b'f	32	34	2	C[L2'3'4'5'6]C152T	1	A	H2a2a1a[43-11]:HV2[40-8]:HV_A73G[39-7]:L3b'f[34-2]

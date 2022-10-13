@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L1c2b_n1000_l50_rep84_s0.3_mem.bam	L2'3'4'6	11	18	7	A[L2'3'4'6]A247G:T[L2'3'4'6]T8655C:A[L2'3'4'6]A10688G:G[L2'3'4'6]G15301A:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:C[L1'2'3'4'5'6]C182T	0	A	H1_T16311C[30-19]:H1ag[30-19]:H1ak[30-19]:H1bt[30-19]:H2a2a1[32-21]:H2a[30-19]:H3_A73G[30-19]:H3_T16311C[30-19]:H40a[30-19]:H76[30-19]:H77[30-19]:H80[30-19]:H[29-18]:L2'3'4'6[18-7]

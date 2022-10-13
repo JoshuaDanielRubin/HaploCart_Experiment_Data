@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/numt/numtS_and_B2b3a_n1000_l100_rep29_nr200_s0.09_mem.bam	B2b3a	42	53	11	G[B2b3a]G3918A:G[B2b3]G13708A:T[B2]T4977C:T[B2]T9950C:C[B2]C11177T:G[B4b]G499A:C[B4b'd'e'j]C15535T:T[R_T16189C]T16189C	3		B2b3a[53-11]

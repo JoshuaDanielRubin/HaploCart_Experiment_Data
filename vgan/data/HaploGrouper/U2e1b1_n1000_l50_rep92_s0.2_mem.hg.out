@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l50_rep92_s0.2_mem.bam	R	37	39	2		2	A	H2[42-5]:HV_A73G[41-4]:R0[40-3]:R[39-2]:U2'3'4'7'8'9[41-4]

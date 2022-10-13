@@ -1,0 +1,36 @@
+
+cd /home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes/
+
+find |grep -i bam$|awk '{print "/home/projects/mito_haplotype/vgan/src/simulations/thousand_genomes"substr($1,2,length($1))}' |grep  "\.0\." > /home/projects/gabriel/HaploGrouper/empirical/listbams
+cd /home/projects/gabriel/HaploGrouper/empirical/
+
+cat listbams  |tr "/" "\t"|awk '{print substr($NF,0,length($NF)-4)".vcf.gz"}'  > listvcf
+cat listbams  |tr "/" "\t"|awk '{print substr($NF,0,length($NF)-4)".hg.out"}'  > listhgout
+cat listbams |sed "s/.*\///g"  |awk '{print "/home/projects/gabriel/HaploGrouper/empirical/"$1}' > outputbams
+
+
+#map
+paste listbams outputbams   |awk '{print "/usr/bin/samtools fastq "$1" | /home/ctools/bwa-0.7.17/bwa mem -p /home/projects/benchmarkmito/bwaindex/gen_0.fa /dev/stdin  | /usr/bin/samtools view -F4  -bS - | /usr/bin/samtools sort - > "$2 }' > listcmdsmap
+
+
+
+cat outputbams   |awk '{print "nice -19  /usr/bin/samtools index "$1 }' > listcmdsindex
+
+
+
+#/usr/bin/bcftools  mpileup  -f /home/projects/benchmarkmito/simulations/gen_0.fa "$1"  | /usr/bin/bcftools call  --ploidy 1 -c -v -Oz -o /dev/stdout > /home/projects/gabriel/HaploGrouper/empirical/"$2}' > listcmdsvcf
+
+paste outputbams  listvcf  |awk '{print "nice -19  /usr/bin/bcftools  mpileup  -f /home/projects/benchmarkmito/simulations/gen_0.fa "$1"  | nice -19  /usr/bin/bcftools call  --ploidy 1 -c -v -Oz -o /dev/stdout > /home/projects/gabriel/HaploGrouper/empirical/"$2}' > listcmdsvcf
+
+paste   listvcf listhgout |awk '{print "nice -19  /usr/bin/python2.7 /home/ctools/haploGrouper/hGrpr2.py -v /home/projects/gabriel/HaploGrouper/empirical/"$1" -t /home/ctools/haploGrouper/data/mt_phyloTree_b17_Tree2.txt -l /home/ctools/haploGrouper/data/mt_phyloTree_b17_Mutation.txt   -f /home/projects/benchmarkmito/simulations/gen_0.fa  -o /home/projects/gabriel/HaploGrouper/empirical/"$2 }' > listcmdshg
+
+
+cat listcmdsmap  |shuf | parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+
+
+cat listcmdsindex | nice -19  parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+
+
+cat listcmdsvcf   | nice -19  parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+cat listcmdshg    | nice -19  parallel  --slf  ~/testParallel/list_serv_1_13minus10 
+

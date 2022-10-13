@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/C1b_n1000_l100_rep75_s0.05_mem.bam	HV	37	41	4	C[N]C9540T:C[N]C10873T	2	A	H26a[43-6]:H40a[43-6]:H77[43-6]:H[42-5]:HV[41-4]

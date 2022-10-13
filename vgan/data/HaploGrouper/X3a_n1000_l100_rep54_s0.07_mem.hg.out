@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/X3a_n1000_l100_rep54_s0.07_mem.bam	HV	39	42	3	C[L1'2'3'4'5'6]C146T	2	A	H2a2a1[46-7]:H40a[44-5]:H55_A153G[44-5]:H56d[44-5]:H77[44-5]:H[43-4]:HV[42-3]:H_T195C_T146C[44-5]

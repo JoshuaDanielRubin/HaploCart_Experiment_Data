@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l100_rep68_s0.07_mem.bam	H	39	43	4	A[R0]A11719G:A[L2'3'4'6]A16129G	2	AM	H2[44-4]:H27[45-5]:H_G16129A[44-4]

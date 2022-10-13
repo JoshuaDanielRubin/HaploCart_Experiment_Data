@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep39_s0.09_mem.bam	L3c'd	13	25	12	A[L3]A769G:A[L3]A1018G:T[L3'4]T3594C:A[L3'4'6]A7521G:A[L2'3'4'6]A825T:T[L2'3'4'6]T8655C:G[L2'3'4'6]G15301A:G[L2'3'4'5'6]G7146A:G[L1'2'3'4'5'6]G16230A	3		L3c'd[25-12]

@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_52.0.9.bam	R	34	38	4	C[L2'3'4'6]C195T:C[L2'3'4'5'6]C152T	2	A	J2a1a[50-16]:JT[40-6]:R[38-4]

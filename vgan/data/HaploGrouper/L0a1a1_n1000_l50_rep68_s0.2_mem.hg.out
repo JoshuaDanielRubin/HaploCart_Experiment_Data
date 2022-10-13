@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l50_rep68_s0.2_mem.bam	H2	16	32	16	T[R]T12705C:G[N]G8701A:C[N]C9540T:A[L3]A769G:T[L3'4]T7256C:T[L3'4]T13650C:A[L2'3'4'6]A247G:A[L2'3'4'6]A10688G:C[L2'3'4'6]C10810T:G[L2'3'4'6]G13105A:A[L2'3'4'5'6]A2758G:C[L2'3'4'5'6]C2885T:C[L1'2'3'4'5'6]C10915T:A[L1'2'3'4'5'6]A11914G	2	A	H2[32-16]:H29[33-17]

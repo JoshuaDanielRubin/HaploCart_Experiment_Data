@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L0a1a1_n1000_l100_rep88_s0.06_mem.bam	HV5	28	37	9	G[N]G8701A:A[L3]A1018G:T[L3'4]T3594C:T[L3'4]T7256C:A[L3'4'6]A7521G:A[L2'3'4'6]A247G	3	A	H2[38-10]:H2a2[39-11]:H2a2a1f[41-13]:H2a2a[40-12]:H29[39-11]:HV5[37-9]

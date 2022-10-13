@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/U2e1b1_n1000_l50_rep70_s0.3_mem.bam	H9	36	42	6	T[H]T7028C:T[HV]T14766C:A[R0]A11719G	3	A	H9[42-6]:U2e1b[50-14]

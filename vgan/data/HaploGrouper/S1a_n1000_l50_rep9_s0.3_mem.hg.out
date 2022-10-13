@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/S1a_n1000_l50_rep9_s0.3_mem.bam	S1a	34	43	9	C[S1a]C150G:A[S1a]A189G:C[S1a]C271G:G[S1]G14384C:T[S1]T16075C:C[L2'3'4'6]C195T	3		S1a[43-9]

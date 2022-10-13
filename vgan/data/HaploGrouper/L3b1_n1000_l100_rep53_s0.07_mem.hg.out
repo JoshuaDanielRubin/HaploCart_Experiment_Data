@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L3b1_n1000_l100_rep53_s0.07_mem.bam	H	33	40	7	T[HV]T14766C:T[R]T12705C:C[N]C10873T:G[L2'3'4'6]G13105A:C[L2'3'4'5'6]C152T	2	AM	H2[41-7]:H2_T152C__T16311C[42-8]:H_T152C[41-7]

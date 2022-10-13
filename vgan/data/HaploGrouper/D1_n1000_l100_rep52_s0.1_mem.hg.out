@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/D1_n1000_l100_rep52_s0.1_mem.bam	M	35	37	2	T[M]T489C	1	M	M32'56[38-2]:M80'D[38-2]

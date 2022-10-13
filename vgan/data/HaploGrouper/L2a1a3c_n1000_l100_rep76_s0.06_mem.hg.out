@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/L2a1a3c_n1000_l100_rep76_s0.06_mem.bam	H_T152C	28	38	10	A[R0]A11719G:T[R]T16223C:A[L3]A769G:T[L3'4]T13650C:T[L3'4]T16278C:G[L3'4'6]G4104A:C[L1'2'3'4'5'6]C146T	3		H_T152C[38-10]

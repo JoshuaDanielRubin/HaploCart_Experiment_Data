@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/HV4b_n1000_l50_rep35_s0.08_mem.bam	H2a2a1	47	50	3	G[H]G2706A	2		H2a2a1[50-3]

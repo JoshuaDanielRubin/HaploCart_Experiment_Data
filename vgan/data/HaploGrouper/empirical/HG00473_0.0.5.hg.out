@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/HG00473_0.0.5.bam	H	39	43	4	C[N]C9540T:C[N]C10873T:A[N]A15301G	1	A	H2a2a1[46-7]:H40a[44-5]:H77[44-5]:H[43-4]

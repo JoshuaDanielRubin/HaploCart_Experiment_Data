@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/mito_haplotype/vgan/src/simulations/alignments/F1a1_n1000_l50_rep66_s0.3_mem.bam	R9	39	42	3	T[R9]T16304C	2	A	H2a[44-5]:H3_A73G[44-5]:H3q[44-5]:H40a[44-5]:H77[44-5]:H[43-4]:R9[42-3]

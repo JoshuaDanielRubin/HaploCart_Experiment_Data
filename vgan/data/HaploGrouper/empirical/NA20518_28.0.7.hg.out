@@ -1,0 +1,2 @@
+ID	Haplogroup	netScore	matchScore	mismatchScore	mismatchLoci	backMutCnt	pruning	allMaxNetScore
+/home/projects/gabriel/HaploGrouper/empirical/NA20518_28.0.7.bam	J2	34	45	11	C[J2]C7476T:C[J]C295T:A[J]A12612G:C[J]C16069T:C[JT]C15452A:T[JT]T16126C:C[L2'3'4'6]C195T	4		J2[45-11]
